@@ -1,0 +1,28 @@
+﻿@model Hooxit.Presentation.Write.UserType
+
+@{
+    Layout = "_OnlyNameLayout";
+}
+
+<div class="halfLeft25 halfTop25">
+    <form asp-area="Account" asp-controller="UserType" asp-action="SetUserType" method="POST">
+        <div class="card text-center top col-lg-5">
+            <div class="card-body">
+                <section class="section">
+                    <div class="radioContainer">
+                        <input type="radio" id="company" value="@Hooxit.Presentation.Write.UserTypes.Company" asp-for="ChosenUserType">
+                        <label for="company" class="card-text"><span class="radio material-text">I am a company</span></label>
+                    </div>
+                    <div class="radioContainer">
+                        <input type="radio" id="candidate" value="@Hooxit.Presentation.Write.UserTypes.Candidate" asp-for="ChosenUserType">
+                        <label for="candidate" class="card-text"><span class="radio material-text">I am a candidate</span></label>
+                    </div>
+                </section>
+                <div class="col-lg-12">
+                    <div class="right-arrow-btn"></div>
+                    <input type="submit" class="col-lg-12 btn btn-sm btn-outline-default" value=" "/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

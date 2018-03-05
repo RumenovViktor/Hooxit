@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\bootstrap\dist\font\**" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\font\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\dist\font\**" />
+    <None Remove="wwwroot\lib\bootstrap\dist\font\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hooxit.Data\Hooxit.Data.csproj" />
+    <ProjectReference Include="..\Hooxit.Models\Hooxit.Models.csproj" />
+    <ProjectReference Include="..\Hooxit.Presentation\Hooxit.Presentation.csproj" />
+    <ProjectReference Include="..\Hooxit.Services\Hooxit.Services.csproj" />
+    <ProjectReference Include="..\Hooxit.Utils\Hooxit.Utils.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Candidate\Views\Shared\" />
+    <Folder Include="Areas\General\Controllers\" />
+    <Folder Include="Areas\General\Views\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Views\Common\" />
+    <Folder Include="wwwroot\js\libs\bootstrap\" />
+    <Folder Include="wwwroot\js\Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+    </ItemGroup>
+
+</Project>

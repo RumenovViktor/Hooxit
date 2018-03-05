@@ -1,0 +1,91 @@
+﻿.section {
+    margin-top:10%;
+}
+
+.section input[type="radio"],
+.section input[type="checkbox"] {
+    display: none;
+}
+
+.radioContainer {
+    margin-bottom: 12px;
+}
+
+.radioContainer label {
+    position: relative;
+}
+
+/* Base styles for spans */
+.radioContainer span::before,
+.radioContainer span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* Radio buttons */
+.radioContainer span.radio:hover {
+    cursor: pointer;
+}
+
+.radioContainer span.radio::before {
+    left: -50px;
+    width: 40px;
+    height: 20px;
+    background-color: #009688;
+    border-radius: 50px;
+}
+
+.radioContainer span.radio::after {
+    left: -48px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: white;
+    transition: left .25s, background-color .25s;
+}
+
+input[type="radio"]:checked + label span.radio::after {
+    left: -27px;
+    background-color: white;
+}
+
+.material-text {
+    font-size: 1.2em;
+    color: #747373;
+}
+
+/* Check-boxes */
+/*.radioContainer span.checkbox::before {
+    width: 27px;
+    height: 27px;
+    background-color: #fff;
+    left: -35px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: border-color .2s;
+}
+
+.radioContainer span.checkbox:hover::before {
+    border: 3px solid #F0FF76;
+}
+
+.radioContainer span.checkbox::after {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    left: -31px;
+    top: 2px;
+    color: transparent;
+    transition: color .2s;
+}
+
+input[type="checkbox"]:checked + label span.checkbox::after {
+    color: #62AFFF;
+}*/
+
+/*====================================================================================================================================================================================*/
+
+/************************************************************************************************      Arrow buttons      ************************************************************************************************/
+/*====================================================================================================================================================================================*/

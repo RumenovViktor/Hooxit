@@ -1,0 +1,445 @@
+2017-11-25T23:46:57.8214976+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:46:58.3717816+02:00 0HL9K9O6Q8E6E [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:46:58.4840799+02:00  [INF] Executed DbCommand (315ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:46:58.5562715+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:46:58.6891470+02:00 0HL9K9O6Q8E6E [INF] "Identity.Application" was not authenticated. Failure message: "Ticket expired" (48071232)
+2017-11-25T23:46:58.9102326+02:00 0HL9K9O6Q8E6E [INF] Request finished in 588.941ms 404  (15c52c40)
+2017-11-25T23:46:58.9373044+02:00 0HL9K9O6Q8E6F [INF] Request starting HTTP/1.1 GET http://localhost:49742/favicon.ico   (e5be5b71)
+2017-11-25T23:46:58.9523443+02:00 0HL9K9O6Q8E6F [INF] The file "/favicon.ico" was not modified (f1f8d725)
+2017-11-25T23:46:58.9718965+02:00 0HL9K9O6Q8E6F [INF] Request finished in 30.3446ms 304 image/x-icon (15c52c40)
+2017-11-25T23:48:18.5445520+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:48:18.8952531+02:00  [INF] Executed DbCommand (127ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:48:18.9388379+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:48:18.9924150+02:00 0HL9K9OUR41V1 [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:48:19.3103070+02:00 0HL9K9OUR41V1 [INF] Request finished in 329.9234ms 404  (15c52c40)
+2017-11-25T23:48:26.4105614+02:00 0HL9K9OUR41V2 [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:48:26.5937623+02:00 0HL9K9OUR41V2 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:48:26.7256186+02:00 0HL9K9OUR41V2 [ERR] The view '"Index"' was not found. Searched locations: ["/Areas/Account/Views/Account/Index.cshtml", "/Areas/Account/Views/Shared/Index.cshtml", "/Views/Shared/Index.cshtml"] (9bb2756c)
+2017-11-25T23:48:26.7420542+02:00 0HL9K9OUR41V2 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 210.5919ms (afa2e885)
+2017-11-25T23:48:26.8083607+02:00 0HL9K9OUR41V2 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Index.cshtml
+/Areas/Account/Views/Shared/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-11-25T23:48:26.9717608+02:00 0HL9K9OUR41V2 [INF] Request finished in 560.2298ms 500 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:49:19.9726664+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:49:20.3322884+02:00 0HL9K9PH44IEA [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:49:20.3428165+02:00  [INF] Executed DbCommand (126ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:49:20.3924493+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:49:20.6831974+02:00 0HL9K9PH44IEA [INF] Request finished in 370.714ms 404  (15c52c40)
+2017-11-25T23:49:25.4842034+02:00 0HL9K9PH44IEB [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:49:25.6684832+02:00 0HL9K9PH44IEB [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:49:27.2637671+02:00 0HL9K9PH44IEB [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:49:27.4078603+02:00 0HL9K9PH44IEB [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 1803.1156ms (afa2e885)
+2017-11-25T23:49:27.4562009+02:00 0HL9K9PH44IEB [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Areas_Account_Views_Account_Index_cshtml.<ExecuteAsync>d__21.MoveNext() in /Areas/Account/Views/Account/Index.cshtml:line 18
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-11-25T23:49:27.6436993+02:00 0HL9K9PH44IEB [INF] Request finished in 2151.6911ms 500 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:49:44.2826016+02:00 0HL9K9PH44IEC [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:49:44.2948739+02:00 0HL9K9PH44IEC [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:49:50.2489062+02:00 0HL9K9PH44IEC [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:49:50.2778150+02:00 0HL9K9PH44IEC [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 5982.2157ms (afa2e885)
+2017-11-25T23:49:50.3043921+02:00 0HL9K9PH44IEC [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Areas_Account_Views_Account_Index_cshtml.<ExecuteAsync>d__21.MoveNext() in /Areas/Account/Views/Account/Index.cshtml:line 18
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-11-25T23:49:50.3610431+02:00 0HL9K9PH44IEC [INF] Request finished in 6071.1217ms 500 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:50:50.0601420+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:50:50.4394009+02:00  [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:50:50.5060789+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:50:50.5366641+02:00 0HL9K9QC0BM8Q [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:50:50.8474495+02:00 0HL9K9QC0BM8Q [INF] Request finished in 382.9294ms 404  (15c52c40)
+2017-11-25T23:50:54.5620482+02:00 0HL9K9QC0BM8R [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:50:54.7385556+02:00 0HL9K9QC0BM8R [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:50:57.9969152+02:00 0HL9K9QC0BM8R [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:50:58.5540461+02:00 0HL9K9QC0BM8S [INF] Request starting HTTP/1.1 GET http://localhost:49742/css/site.css   (e5be5b71)
+2017-11-25T23:50:58.5650756+02:00 0HL9K9QC0BM8R [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 3863.6935ms (afa2e885)
+2017-11-25T23:50:58.6452898+02:00 0HL9K9QC0BM8R [INF] Request finished in 4020.0988ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:50:58.6912142+02:00 0HL9K9QC0BM8T [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:50:58.7132677+02:00 0HL9K9QC0BM8U [INF] Request starting HTTP/1.1 GET http://localhost:49742/lib/jquery/dist/jquery.js   (e5be5b71)
+2017-11-25T23:50:58.7818731+02:00 0HL9K9QC0BM8V [INF] Request starting HTTP/1.1 GET http://localhost:49742/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (e5be5b71)
+2017-11-25T23:50:58.7833767+02:00 0HL9K9QC0BM8U [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2017-11-25T23:50:58.8069335+02:00 0HL9K9QC0BM8V [INF] The file "/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" was not modified (f1f8d725)
+2017-11-25T23:50:58.8291532+02:00 0HL9K9QC0BM8S [INF] The file "/css/site.css" was not modified (f1f8d725)
+2017-11-25T23:50:58.8502084+02:00 0HL9K9QC0BM8T [INF] Request finished in 264.15ms 404  (15c52c40)
+2017-11-25T23:50:58.8622410+02:00 0HL9K9QC0BM90 [INF] Request starting HTTP/1.1 GET http://localhost:49742/lib/jquery-validation/dist/jquery.validate.js   (e5be5b71)
+2017-11-25T23:50:58.8772811+02:00 0HL9K9QC0BM8V [INF] Request finished in 177.8011ms 304 application/javascript (15c52c40)
+2017-11-25T23:50:58.8777816+02:00 0HL9K9QC0BM90 [INF] The file "/lib/jquery-validation/dist/jquery.validate.js" was not modified (f1f8d725)
+2017-11-25T23:50:58.9836763+02:00 0HL9K9QC0BM8S [INF] Request finished in 423.1147ms 304 text/css (15c52c40)
+2017-11-25T23:50:58.9906952+02:00 0HL9K9QC0BM8U [INF] Request finished in 372.5897ms 304 application/javascript (15c52c40)
+2017-11-25T23:50:58.9972129+02:00 0HL9K9QC0BM90 [INF] Request finished in 50.9664ms 304 application/javascript (15c52c40)
+2017-11-25T23:50:59.0709087+02:00 0HL9K9QC0BM91 [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:50:59.0849464+02:00 0HL9K9QC0BM91 [INF] Request finished in 11.9148ms 404  (15c52c40)
+2017-11-25T23:51:03.0862893+02:00 0HL9K9QC0BM92 [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account/Account/Register   (e5be5b71)
+2017-11-25T23:51:03.1068437+02:00 0HL9K9QC0BM92 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:51:03.1656601+02:00 0HL9K9QC0BM92 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Register.cshtml". (9707eebe)
+2017-11-25T23:51:03.2197938+02:00 0HL9K9QC0BM92 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" in 119.1303ms (afa2e885)
+2017-11-25T23:51:03.2694594+02:00 0HL9K9QC0BM92 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Areas_Account_Views_Account_Register_cshtml.<ExecuteAsync>d__21.MoveNext() in /Areas/Account/Views/Account/Register.cshtml:line 17
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-11-25T23:51:03.4684883+02:00 0HL9K9QC0BM92 [INF] Request finished in 379.7805ms 500 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:51:48.1434478+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:51:48.4377295+02:00  [INF] Executed DbCommand (81ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:51:48.4828496+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:51:48.6822180+02:00 0HL9K9QTASEQS [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:51:49.0348943+02:00 0HL9K9QTASEQS [INF] Request finished in 369.6203ms 404  (15c52c40)
+2017-11-25T23:51:52.8585175+02:00 0HL9K9QTASEQT [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:51:53.0385023+02:00 0HL9K9QTASEQT [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:51:59.2083335+02:00 0HL9K9QTASEQT [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:51:59.8495469+02:00 0HL9K9QTASEQU [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:51:59.8555616+02:00 0HL9K9QTASEQT [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 6883.957ms (afa2e885)
+2017-11-25T23:51:59.8751138+02:00 0HL9K9QTASEQT [INF] Request finished in 7014.1428ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:51:59.8911568+02:00 0HL9K9QTASEQU [INF] Request finished in 41.0719ms 404  (15c52c40)
+2017-11-25T23:52:00.0390499+02:00 0HL9K9QTASEQV [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:52:00.0575990+02:00 0HL9K9QTASEQV [INF] Request finished in 13.6526ms 404  (15c52c40)
+2017-11-25T23:52:01.0877037+02:00 0HL9K9QTASER0 [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account/Account/Register   (e5be5b71)
+2017-11-25T23:52:01.1047492+02:00 0HL9K9QTASER0 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:52:01.1843064+02:00 0HL9K9QTASER0 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Register.cshtml". (9707eebe)
+2017-11-25T23:52:01.1993334+02:00 0HL9K9QTASER0 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" in 95.4057ms (afa2e885)
+2017-11-25T23:52:01.2444519+02:00 0HL9K9QTASER0 [INF] Request finished in 142.6149ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:52:01.2514710+02:00 0HL9K9QTASER1 [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:52:01.2645052+02:00 0HL9K9QTASER1 [INF] Request finished in 56.4187ms 404  (15c52c40)
+2017-11-25T23:58:02.9236890+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:58:03.2527757+02:00  [INF] Executed DbCommand (85ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:58:03.3400069+02:00  [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:58:03.4172129+02:00 0HL9K9UD0KG8Q [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:58:03.7786657+02:00 0HL9K9UD0KG8Q [INF] Request finished in 376.7101ms 404  (15c52c40)
+2017-11-25T23:58:07.6742573+02:00 0HL9K9UD0KG8R [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account   (e5be5b71)
+2017-11-25T23:58:07.7239183+02:00 0HL9K9UD0KG8R [INF] Request finished in 48.3268ms 404  (15c52c40)
+2017-11-25T23:58:20.1389579+02:00 0HL9K9UD0KG8S [INF] Request starting HTTP/1.1 GET http://localhost:49742/Account/Index   (e5be5b71)
+2017-11-25T23:58:20.1560011+02:00 0HL9K9UD0KG8S [INF] Request finished in 12.3916ms 404  (15c52c40)
+2017-11-25T23:58:24.0794966+02:00 0HL9K9UD0KG8T [INF] Request starting HTTP/1.1 GET http://localhost:49742/Index   (e5be5b71)
+2017-11-25T23:58:24.2358015+02:00 0HL9K9UD0KG8T [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:58:25.7541270+02:00 0HL9K9UD0KG8T [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:58:26.2621387+02:00 0HL9K9UD0KG8U [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:58:26.2751735+02:00 0HL9K9UD0KG8T [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 2109.0947ms (afa2e885)
+2017-11-25T23:58:26.2992371+02:00 0HL9K9UD0KG8U [INF] Request finished in 26.9367ms 404  (15c52c40)
+2017-11-25T23:58:26.3132741+02:00 0HL9K9UD0KG8T [INF] Request finished in 2231.4924ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:58:26.4426188+02:00 0HL9K9UD0KG8V [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:58:26.4591623+02:00 0HL9K9UD0KG8V [INF] Request finished in 15.5194ms 404  (15c52c40)
+2017-11-25T23:59:16.4597593+02:00  [INF] User profile is available. Using '"C:\Users\Viktor\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest. (7ac5e29c)
+2017-11-25T23:59:16.8166426+02:00  [INF] Executed DbCommand (83ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:59:16.8948502+02:00  [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3); (6438bdd5)
+2017-11-25T23:59:16.9810807+02:00 0HL9K9V2U6DDF [INF] Request starting HTTP/1.1 GET http://localhost:49742/   (e5be5b71)
+2017-11-25T23:59:17.3312307+02:00 0HL9K9V2U6DDF [INF] Request finished in 366.1926ms 404  (15c52c40)
+2017-11-25T23:59:22.9469757+02:00 0HL9K9V2U6DDG [INF] Request starting HTTP/1.1 GET http://localhost:49742/Login   (e5be5b71)
+2017-11-25T23:59:23.1103077+02:00 0HL9K9V2U6DDG [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:59:24.6491613+02:00 0HL9K9V2U6DDG [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2017-11-25T23:59:25.1931127+02:00 0HL9K9V2U6DDG [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 2156.7831ms (afa2e885)
+2017-11-25T23:59:25.2061475+02:00 0HL9K9V2U6DDG [INF] Request finished in 2259.5084ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:59:25.2823495+02:00 0HL9K9V2U6DDH [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:59:25.3129315+02:00 0HL9K9V2U6DDH [INF] Request finished in 31.563ms 404  (15c52c40)
+2017-11-25T23:59:26.5345831+02:00 0HL9K9V2U6DDI [INF] Request starting HTTP/1.1 GET http://localhost:49742/Register   (e5be5b71)
+2017-11-25T23:59:26.5697439+02:00 0HL9K9V2U6DDI [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2017-11-25T23:59:26.6360844+02:00 0HL9K9V2U6DDI [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Register.cshtml". (9707eebe)
+2017-11-25T23:59:26.6516019+02:00 0HL9K9V2U6DDI [INF] Executed action "Hooxit.Account.Controllers.AccountController.Register (Hooxit)" in 102.2606ms (afa2e885)
+2017-11-25T23:59:26.6616289+02:00 0HL9K9V2U6DDI [INF] Request finished in 127.9597ms 200 text/html; charset=utf-8 (15c52c40)
+2017-11-25T23:59:26.6801770+02:00 0HL9K9V2U6DDJ [INF] Request starting HTTP/1.1 GET http://localhost:49742/js/site.js   (e5be5b71)
+2017-11-25T23:59:26.6952172+02:00 0HL9K9V2U6DDJ [INF] Request finished in 25.7347ms 404  (15c52c40)

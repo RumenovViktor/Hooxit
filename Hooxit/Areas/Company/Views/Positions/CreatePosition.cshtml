@@ -1,0 +1,66 @@
+﻿@using Hooxit.Presentation.Write.Company
+@model CreatePosition
+
+<div class="top">
+    <div class="row">
+        <div class="col-md-4 position-skills-panel">
+            <div class="card">
+                <div class="card-block">
+                    <div class="input-group md-form">
+                        <input type="text" id="searchSkill" />
+                        <label for="searchSkill">Search</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card top">
+                <div class="card-block">
+                    <p class="selected-skills">No skills selected...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center">Company Description</p>
+                    <div id="company-description-text-editor"></div>
+                </div>
+            </div>
+            <div class="row top-editor">
+                <div class="col-lg-12">
+                    <p class="text-center">Looking For</p>
+                    <div id="looking-for-text-editor"></div>
+                </div>
+            </div>
+            <div class="row top-editor">
+                <div class="col-lg-12 md-form">
+                    <input id="MinimumYearsOfExperience" type="text" asp-for="MinimumYearsOfExperience" />
+                    <label for="MinimumYearsOfExperience">Minimum years of experience (Optional)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center">Responsibilities</p>
+                    <div id="responsibilities-text-editor"></div>
+                </div>
+            </div>
+            <div class="row top-editor">
+                <div class="col-lg-12">
+                    <p class="text-center">What we offer</p>
+                    <div id="what-we-offer-text-editor"></div>
+                </div>
+            </div>
+            <div class="row top-editor"></div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" asp-for="Description" />
+<input type="hidden" asp-for="LookingFor" />
+<input type="hidden" asp-for="MinimumYearsOfExperience" />
+<input type="hidden" asp-for="Responsibilities" />
+<input type="hidden" asp-for="WhatWeOffer" />
+
+@section PositionManager {
+    <script src="~/js/base/TextEditor.js"></script>
+    <script src="~/js/company/createPosition.js"></script>
+}

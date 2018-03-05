@@ -1,0 +1,9 @@
+﻿@model IList<Hooxit.Presentation.Read.CountryReadModel>
+<div class="list-group countryList">
+    <ul>
+        @foreach (var country in Model)
+        {
+            <li> <a href="#" class="list-group-item" data-value="@country.Id">@country.Name</a></li>
+        }
+    </ul>
+</div>
