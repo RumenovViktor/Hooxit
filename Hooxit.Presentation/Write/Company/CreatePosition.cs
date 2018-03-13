@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hooxit.Presentation.Write.Company
 {
@@ -12,14 +13,14 @@ namespace Hooxit.Presentation.Write.Company
         [Required]
         public string LookingFor { get; set; }
 
-        //public IList<int> RequiredSkills { get; set; }
-
-        //public IList<int> RecommendedSkills { get; set; }
-
         [Required]
         public string Responsibilities { get; set; }
 
         [Required]
         public string WhatWeOffer { get; set; }
+
+        public IList<int> RequiredSkills { get; set; }
+
+        //public IList<int> RecommendedSkills { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Data
         public DbSet<Company> Companies { get; set; }
         public DbSet<Experience> Experience { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Skill> Skills { get; set; }
 
         public override int SaveChanges()
         {

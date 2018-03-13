@@ -10,15 +10,22 @@ namespace Hooxit.Services.Implementation.Managers
     public class CommonDataReadManager : ICommonDataManager
     {
         private readonly IReadRepository<Country> countriesRepository;
+        private readonly IReadByNameRepository<Skill> skillsRepository;
 
         public CommonDataReadManager(IUnitOfWork unitOfWork)
         {
             this.countriesRepository = unitOfWork.BuildCountriesRepository();
+            this.skillsRepository = unitOfWork.BuildSkillsRepository();
         }
 
         public IList<CountryReadModel> GetAllCountries()
         {
             return countriesRepository.GetAll().Select(x => new CountryReadModel(x)).ToList();
+        }
+
+        public IList<SkillReadModel> GetSkillsByName(string name)
+        {
+            return this.skillsRepository.GetByName(name).Select(x => new SkillReadModel(x)).ToList();
         }
     }
 }

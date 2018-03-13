@@ -33,5 +33,10 @@ namespace Hooxit.Data.UnitOfWork
         {
             return new CompaniesRepository(dbContext);
         }
+
+        public IReadByNameRepository<Skill> BuildSkillsRepository()
+        {
+            return new SkillsRepository(dbContext);
+        }
     }
 }
