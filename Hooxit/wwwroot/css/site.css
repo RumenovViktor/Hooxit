@@ -26,6 +26,7 @@
     padding-right: 10%;
     border: 1px;
 }
+
 .rounded-button {
     border: none;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -35,7 +36,7 @@
     left: 12.9em;
 }
 
-.toast-container{
+.toast-container {
     margin-top: 122px;
 }
 
@@ -43,7 +44,7 @@
     display: none;
 }
 
-.countryList{
+.countryList {
     position: absolute;
     z-index: 100000;
     overflow: auto;
@@ -86,10 +87,36 @@
 
 
 
-.top-editor{
+.top-editor {
     margin-top: 8em;
 }
 
-.position-skills-panel{
+.position-skills-panel {
     margin-top: 2.5em;
+}
+
+.skillsList {
+    position: absolute;
+    z-index: 100;
+    width: 19.3em;
+    display: none;
+    overflow: auto;
+}
+
+.autoHeight {
+    height: auto;
+}
+
+.fixedHeight {
+    height: 32.5em;
+}
+
+.selectedSkill {
+    padding: 1.1em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.selectedSkill .fa{
+    margin-left: 1em;
 }

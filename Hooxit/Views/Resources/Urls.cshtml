@@ -1,4 +1,7 @@
-﻿<script type="text/javascript">
+﻿@{ 
+    var searchSkillsUrl = Url.Action("GetSkills", "Skills", new { Area = "" });
+}
+<script type="text/javascript">
     var urls = {};
 
     urls.buildChangePositionUrl = function buildChangePositionUrl() {

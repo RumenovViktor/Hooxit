@@ -11,12 +11,23 @@
                             <input type="text" id="searchSkill" />
                             <label for="searchSkill">Search</label>
                         </div>
+                        <div class="list-group skillsList">
+                        </div>
                     </div>
                 </div>
                 <div class="card top">
                     <div class="card-block">
+                        <h4 class="card-title">Skills</h4>
                         <div id="skillsContainer">
-                            <p class="selected-skills">No skills selected...</p>
+                            <p class="noSkillsText">No skills selected...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card top">
+                    <div class="card-block">
+                        <div class="input-group md-form">
+                            <input id="MinimumYearsOfExperience" type="text" asp-for="MinimumYearsOfExperience" />
+                            <label for="MinimumYearsOfExperience">Minimum years of experience (Optional)</label>
                         </div>
                     </div>
                 </div>
@@ -35,12 +46,6 @@
                     </div>
                 </div>
                 <div class="row top-editor">
-                    <div class="col-lg-12 md-form">
-                        <input id="MinimumYearsOfExperience" type="text" asp-for="MinimumYearsOfExperience" />
-                        <label for="MinimumYearsOfExperience">Minimum years of experience (Optional)</label>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-lg-12">
                         <p class="text-center">Responsibilities</p>
                         <div id="responsibilities-text-editor"></div>
@@ -65,6 +70,7 @@
 </div>
 
 @section PositionManager {
+    <script src="~/js/skills/skillsManager.js"></script>
     <script src="~/js/base/TextEditor.js"></script>
     <script src="~/js/company/createPosition.js"></script>
 }

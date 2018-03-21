@@ -37,7 +37,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user"></i></a>
                         <div class="dropdown-menu dropdown-secondary dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-                            <a class="dropdown-item waves-effect waves-light" href=@string.Concat("Profile/", User.Identity.Name)>
+                            <a class="dropdown-item waves-effect waves-light" href="@Url.Action("Profile", "Profile", new { area = "Company", username = User.Identity.Name })">
                                 <i class="fa fa-user" aria-hidden="true"></i> Profile
                             </a>
                             <a class="dropdown-item waves-effect waves-light" href="#">
@@ -47,7 +47,7 @@
                                 <i class="fa fa-gear" aria-hidden="true"></i>
                                 Settings
                             </a>
-                            <a class="dropdown-item waves-effect waves-light" href="@Url.Action("Logout", "Account")">
+                            <a class="dropdown-item waves-effect waves-light" href="@Url.Action("Logout", "Account", new { area = "Account" })">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i> Logut
                             </a>
                         </div>

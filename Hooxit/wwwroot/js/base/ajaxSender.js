@@ -9,5 +9,8 @@
             success: success,
             error: error
         });
+    },
+    getData: function (url, successCallback) {
+        $.get(url, successCallback);
     }
 }

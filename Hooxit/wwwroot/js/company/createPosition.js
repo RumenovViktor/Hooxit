@@ -55,14 +55,12 @@ class CreatePositionManager {
     }
 
     onSkillFieldChange() {
-        let skillName = $(this.editorSettings.searchSkillFieldId).val();
-
-        this.skillsManager.search(skillName);
+        this.skillsManager.search();
     }
 
     attachEventListeners() {
         $(this.editorSettings.btnCreateId).on('click', this.prepareTextForSubmit.bind(this, event));
-        $(this.editorSettings.searchSkillFieldId).on('change', this.onSkillFieldChange);
+        $(this.editorSettings.searchSkillFieldId).on('change', this.onSkillFieldChange.bind(this));
     }
 }
 

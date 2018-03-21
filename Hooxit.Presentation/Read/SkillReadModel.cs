@@ -7,7 +7,7 @@ namespace Hooxit.Presentation.Read
         public SkillReadModel(Skill skill)
         {
             this.ID = skill.ID;
-            this.Name = skill.Name;
+            this.Name = skill.SkillName;
         }
 
         public int ID { get; set; }

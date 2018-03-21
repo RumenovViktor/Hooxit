@@ -57,7 +57,11 @@ namespace Hooxit.Account.Controllers
             if (isSuccess)
             {
                 logger.LogInformation(1, "User logged in.");
-                return RedirectToAction("Index", "Dashboard");
+
+                var isCompany = User.HasClaim("CompanyRole", "Company");
+                var areaName = isCompany ? "Company" : "Candidate";
+
+                return RedirectToAction("Index", "Dashboard", new { area = areaName });
             }
             
             return View(userLogin);

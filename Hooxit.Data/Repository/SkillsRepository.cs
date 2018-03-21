@@ -17,7 +17,7 @@ namespace Hooxit.Data.Repository
 
         public IEnumerable<Skill> GetByName(string name)
         {
-            return dbContext.Skills.Where(x => x.Name.StartsWith(name)).ToList();
+            return dbContext.Skills.Where(x => x.SkillName.StartsWith(name)).ToList();
         }
     }
 }

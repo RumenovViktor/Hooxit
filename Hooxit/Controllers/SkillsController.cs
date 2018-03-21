@@ -13,12 +13,13 @@ namespace Hooxit.Controllers
         }
 
         [HttpGet]
+        [Route("Skills/GetSkills/{skillName}")]
         public IActionResult GetSkills(string skillName)
         {
             if (ModelState.IsValid)
             {
                 var result = this.commonDataManager.GetSkillsByName(skillName);
-                return PartialView(result);
+                return Json(result);
             }
 
             return View();
