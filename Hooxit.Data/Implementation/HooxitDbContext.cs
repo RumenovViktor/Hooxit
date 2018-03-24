@@ -17,6 +17,7 @@ namespace Data
         public DbSet<Experience> Experience { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Skill> Skills { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         public override int SaveChanges()
         {
@@ -26,6 +27,20 @@ namespace Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            // Manually create many to many relationship
+            builder.Entity<PositionSkill>()
+                .HasKey(bc => new { bc.SkillId, bc.PositionId });
+
+            builder.Entity<PositionSkill>()
+                .HasOne(bc => bc.Skill)
+                .WithMany(b => b.PositionSkill)
+                .HasForeignKey(bc => bc.SkillId);
+
+            builder.Entity<PositionSkill>()
+                .HasOne(bc => bc.Position)
+                .WithMany(c => c.PositionSkill)
+                .HasForeignKey(bc => bc.PositionId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)

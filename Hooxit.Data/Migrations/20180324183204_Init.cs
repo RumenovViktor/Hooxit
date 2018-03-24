@@ -67,6 +67,36 @@ namespace Hooxit.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Positions",
+                columns: table => new
+                {
+                    PositionID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Description = table.Column<string>(nullable: true),
+                    LookingFor = table.Column<string>(nullable: true),
+                    MinimumYearsOfExperience = table.Column<int>(nullable: true),
+                    Responsibilities = table.Column<string>(nullable: true),
+                    WhatWeOffer = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Positions", x => x.PositionID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Skills",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    SkillName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Skills", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -221,6 +251,30 @@ namespace Hooxit.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "PositionSkill",
+                columns: table => new
+                {
+                    SkillId = table.Column<int>(nullable: false),
+                    PositionId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PositionSkill", x => new { x.SkillId, x.PositionId });
+                    table.ForeignKey(
+                        name: "FK_PositionSkill_Positions_PositionId",
+                        column: x => x.PositionId,
+                        principalTable: "Positions",
+                        principalColumn: "PositionID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PositionSkill_Skills_SkillId",
+                        column: x => x.SkillId,
+                        principalTable: "Skills",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Experience",
                 columns: table => new
                 {
@@ -303,6 +357,11 @@ namespace Hooxit.Data.Migrations
                 name: "IX_Experience_CandidateID",
                 table: "Experience",
                 column: "CandidateID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PositionSkill_PositionId",
+                table: "PositionSkill",
+                column: "PositionId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -329,10 +388,19 @@ namespace Hooxit.Data.Migrations
                 name: "Experience");
 
             migrationBuilder.DropTable(
+                name: "PositionSkill");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Candidates");
+
+            migrationBuilder.DropTable(
+                name: "Positions");
+
+            migrationBuilder.DropTable(
+                name: "Skills");
 
             migrationBuilder.DropTable(
                 name: "Countries");

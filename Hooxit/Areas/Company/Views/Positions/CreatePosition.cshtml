@@ -35,6 +35,14 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="input-group md-form">
+                            <input type="text" asp-for="PositionName" />
+                            <label for="PositionName">Position Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
                         <p class="text-center">Company Description</p>
                         <div id="company-description-text-editor"></div>
                     </div>
@@ -58,14 +66,17 @@
                     </div>
                 </div>
                 <div class="row top-editor"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnCreate" value="Create" class="btn btn-md btn-outline-info" />
+                    </div>
+                </div>
             </div>
         </div>
         <input type="hidden" asp-for="Description" id="description" />
         <input type="hidden" asp-for="LookingFor" id="lookingFor" />
         <input type="hidden" asp-for="Responsibilities" id="responsibilities" />
         <input type="hidden" asp-for="WhatWeOffer" id="whatWeOffer" />
-
-        <input type="button" id="btnCreate" value="Create" />
     </form>
 </div>
 

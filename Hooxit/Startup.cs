@@ -23,6 +23,7 @@ using Hooxit.Presentation.Write;
 using Hooxit.Services.Implementation.Profile;
 using Hooxit.Services.Implementation.Company.Interfaces;
 using Hooxit.Services.Implementation.Company;
+using Hooxit.Services.Implementation.Company.Implemenation;
 
 namespace Hooxit
 {
@@ -74,7 +75,9 @@ namespace Hooxit
             services.AddTransient<IUserPersonalInfoHandler<ChangeEmail>, ChangeEmailHandler>();
             services.AddTransient<IUserPersonalInfoHandler<ChangeCountry>, ChangeCountryHandler>();
             services.AddTransient<IUserPersonalInfoHandler<ChangeCurrentPosition>, ChangeCurrentPositionHandler>();
+            services.AddTransient<IPositionsApplicationService, PositionsApplicationService>();
             services.AddTransient<IPositionsManager, PositionsManager>();
+            services.AddTransient<ICompanyProfileManager, CompanyProfileManager>();
             services.AddTransient<DatabaseSeed>();
 
             services.Configure<IdentityOptions>(options =>

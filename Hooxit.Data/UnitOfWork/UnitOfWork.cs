@@ -38,5 +38,10 @@ namespace Hooxit.Data.UnitOfWork
         {
             return new SkillsRepository(dbContext);
         }
+
+        public IRepository<Position> BuildPositionsRepository()
+        {
+            return new PositionsRepository(dbContext);
+        }
     }
 }

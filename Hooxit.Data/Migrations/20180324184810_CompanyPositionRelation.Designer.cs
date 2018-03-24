@@ -11,9 +11,10 @@ using System;
 namespace Hooxit.Data.Migrations
 {
     [DbContext(typeof(HooxitDbContext))]
-    partial class HooxitDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180324184810_CompanyPositionRelation")]
+    partial class CompanyPositionRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,8 +79,6 @@ namespace Hooxit.Data.Migrations
                     b.Property<string>("LookingFor");
 
                     b.Property<int?>("MinimumYearsOfExperience");
-
-                    b.Property<string>("PositionName");
 
                     b.Property<string>("Responsibilities");
 

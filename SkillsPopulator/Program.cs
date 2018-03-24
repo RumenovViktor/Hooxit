@@ -13,16 +13,9 @@ namespace SkillsPopulator
 
         internal static void Main(string[] args)
         {
-            var sqlCreateTable = @"CREATE TABLE Skills (
-                                    ID int IDENTITY(1, 1) PRIMARY KEY,
-                                    SkillName varchar(255)
-                                 );";
-
             var sqlInsert = "insert into Skills (SkillName) values(@SkillName)";
             var skills = GetAllSkills();
             var sqlInstertStatements = new Dictionary<IList<string>, string>();
-
-            ExecuteQuery(sqlCreateTable);
 
             var numberOfIterations = (skills.Count % 1000) > 0 ? (skills.Count / 1000) + 1 : skills.Count / 1000;
             var skip = 0;

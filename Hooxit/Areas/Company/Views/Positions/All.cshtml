@@ -1,42 +1,16 @@
-﻿<div class="top row">
+﻿@using Hooxit.Presentation
+@model IEnumerable<IdNameReadModel>
+
+<div class="top row">
     <div class="col">
         <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Software developer</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Software developer</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Accountant</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Chief Executive Officer</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Chief Operations Officer</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Web Designer</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Creative</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">QA Specialist</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Senior Big Data Specialist</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Software Analyst</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Software Architect</a>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#">Automation Developer/QA</a>
-            </li>
+
+            @foreach (var position in Model)
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="@Url.Action("Profile", "Profile", new { area = "Company", username = User.Identity.Name, positionId = position.Id })" >@position.Name</a>
+                </li>
+            }
         </ul>
     </div>
     <div class="col">

@@ -11,7 +11,7 @@ using System;
 namespace Hooxit.Data.Migrations
 {
     [DbContext(typeof(HooxitDbContext))]
-    [Migration("20180114221437_Init")]
+    [Migration("20180324183204_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,6 +65,51 @@ namespace Hooxit.Data.Migrations
                     b.HasIndex("CandidateID");
 
                     b.ToTable("Experience");
+                });
+
+            modelBuilder.Entity("Hooxit.Models.Position", b =>
+                {
+                    b.Property<int>("PositionID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("LookingFor");
+
+                    b.Property<int?>("MinimumYearsOfExperience");
+
+                    b.Property<string>("Responsibilities");
+
+                    b.Property<string>("WhatWeOffer");
+
+                    b.HasKey("PositionID");
+
+                    b.ToTable("Positions");
+                });
+
+            modelBuilder.Entity("Hooxit.Models.PositionSkill", b =>
+                {
+                    b.Property<int>("SkillId");
+
+                    b.Property<int>("PositionId");
+
+                    b.HasKey("SkillId", "PositionId");
+
+                    b.HasIndex("PositionId");
+
+                    b.ToTable("PositionSkill");
+                });
+
+            modelBuilder.Entity("Hooxit.Models.Skill", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("SkillName");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("Hooxit.Models.Users.Candidate", b =>
@@ -271,6 +316,19 @@ namespace Hooxit.Data.Migrations
                     b.HasOne("Hooxit.Models.Users.Candidate", "Candidate")
                         .WithMany("Experience")
                         .HasForeignKey("CandidateID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Hooxit.Models.PositionSkill", b =>
+                {
+                    b.HasOne("Hooxit.Models.Position", "Position")
+                        .WithMany("PositionSkill")
+                        .HasForeignKey("PositionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Hooxit.Models.Skill", "Skill")
+                        .WithMany("PositionSkill")
+                        .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

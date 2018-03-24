@@ -1,4 +1,7 @@
-﻿<div class="top">
+﻿@using Hooxit.Presentation.Company.Read
+@model ProfileInfoRead
+
+<div class="top">
     <div class="row">
         <div class="col-lg-3">
             <div class="card">
@@ -32,7 +35,7 @@
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <a href="@Url.Action("All", "Positions", new { companyId = User.Identity.Name })">Positions</a>
-                    <span class="badge badge-primary badge-pill">0</span>
+                    <span class="badge badge-primary badge-pill">@Model.CreatedPositions</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <a>Interested in</a>
@@ -43,17 +46,6 @@
                     <span class="badge badge-primary badge-pill">0</span>
                 </li>
             </ul>
-            @*<div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">Positions
-            <span class="pull-right badge badge-primary badge-pill">14</span>
-        </a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">Interested in
-            <span class="badge badge-primary badge-pill">2</span>
-        </a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#" role="tab">Subscriptions
-            <span class="badge badge-primary badge-pill">1</span>
-        </a>
-    </div>*@
         </div>
         <div class="col-lg-9">
             <div class="card">

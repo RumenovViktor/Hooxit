@@ -13,6 +13,7 @@ namespace Data
         DbSet<Candidate> Candidates { get; set; }
         DbSet<Company> Companies { get; set; }
         DbSet<Skill> Skills { get; set; }
+        DbSet<Position> Positions { get; set; }
 
         int SaveChanges();
     }

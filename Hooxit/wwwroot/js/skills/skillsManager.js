@@ -29,7 +29,10 @@
 
         response.forEach((item) => {
             skillsListWrapper.append(
-                $('<a>' + item.name + '</a>').attr('href', '#').attr('class', 'list-group-item waves-effect skillElement')
+                $('<a>' + item.name + '</a>')
+                    .attr('href', '#')
+                    .attr('class', 'list-group-item waves-effect skillElement')
+                    .attr('value', item.id)
             );
         });
 
@@ -57,6 +60,8 @@
 
     createSkillTags(event) {
         let elementValue = event.target.text.trim();
+        let selectedSkillId = new Number($(event.target).attr('value'));
+
         $(event.target).addClass('disabled');
         $('.noSkillsText').hide();
 
@@ -70,7 +75,7 @@
 
         $(this.containerId).append(
             $('<label class="badge badge-info selectedSkill">' + elementValue + '<a class="fa fa-remove"></a></label>')
-        );
+                    .attr('value', selectedSkillId));
 
         let lastAddedElement = $(this.containerId).find('.selectedSkill').last();
 

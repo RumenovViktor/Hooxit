@@ -9,10 +9,7 @@
             lookingForHiddenId: '#lookingFor',
             responsibilitiesHiddenId: '#responsibilities',
             whatWeOfferHiddenId: '#whatWeOffer',
-            createPosition: '#createPosition',
-            btnCreateId: '#btnCreate',
-            skillsContainerId: '#skillsContainer',
-            searchSkillFieldId: '#searchSkill'
+            skillsContainerId: '#skillsContainer'
         });
     }
 
@@ -26,11 +23,23 @@
     }
 }
 
+class CreatePositionSettings {
+    static get elementsIds() {
+        return Object.freeze({
+            btnCreateId: '#btnCreate',
+            selectedSkillClass: '.selectedSkill',
+            createPosition: '#createPosition',
+            searchSkillFieldId: '#searchSkill'
+        });
+    }
+}
+
 class CreatePositionManager {
     constructor() {
         this.editorSettings = CreatePositionEditorSettings.getElementsIds;
+        this.createPositionSettings = CreatePositionSettings.elementsIds;
 
-        this.skillsManager = new SkillsManager(this.editorSettings.skillsContainerId, this.editorSettings.searchSkillFieldId);
+        this.skillsManager = new SkillsManager(this.editorSettings.skillsContainerId, this.createPositionSettings.searchSkillFieldId);
 
         this.descriptionTextEditor = new TextEditor(this.editorSettings.companyDescriptionId);
         this.lookingForTextEditor = new TextEditor(this.editorSettings.lookingForId);
@@ -51,7 +60,22 @@ class CreatePositionManager {
         $(this.editorSettings.responsibilitiesHiddenId).val(JSON.stringify(responsibilities));
         $(this.editorSettings.whatWeOfferHiddenId).val(JSON.stringify(whatWeOffer));
 
-        $(this.editorSettings.createPosition).submit();
+        let selectedSkills = [];
+
+        $(this.createPositionSettings.selectedSkillClass).toArray().forEach((item, index) => {
+            let selectedSkillId = new Number($(item).attr('value'));
+
+            selectedSkills.push(selectedSkillId)
+
+            let skillHiddenInput = $('<input />').attr('type', 'hidden')
+                .attr('name', "RequiredSkills[" + index + "]")
+                .attr('value', selectedSkillId);
+
+            $(this.createPositionSettings.createPosition).append(skillHiddenInput);
+        });
+
+
+        $(this.createPositionSettings.createPosition).submit();
     }
 
     onSkillFieldChange() {
@@ -59,8 +83,8 @@ class CreatePositionManager {
     }
 
     attachEventListeners() {
-        $(this.editorSettings.btnCreateId).on('click', this.prepareTextForSubmit.bind(this, event));
-        $(this.editorSettings.searchSkillFieldId).on('change', this.onSkillFieldChange.bind(this));
+        $(this.createPositionSettings.btnCreateId).on('click', this.prepareTextForSubmit.bind(this, event));
+        $(this.createPositionSettings.searchSkillFieldId).on('change', this.onSkillFieldChange.bind(this));
     }
 }
 

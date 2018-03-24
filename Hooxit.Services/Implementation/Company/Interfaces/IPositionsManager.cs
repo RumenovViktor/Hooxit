@@ -1,10 +1,10 @@
-﻿using Hooxit.Presentation.Write.Company;
-using System.Threading.Tasks;
+﻿using Hooxit.Presentation;
+using System.Collections.Generic;
 
 namespace Hooxit.Services.Implementation.Company.Interfaces
 {
     public interface IPositionsManager
     {
-        Task CreatePosition(CreatePosition createPosition);
+        IEnumerable<IdNameReadModel> GetAll(int id);
     }
 }

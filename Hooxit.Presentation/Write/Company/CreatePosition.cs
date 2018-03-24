@@ -6,6 +6,9 @@ namespace Hooxit.Presentation.Write.Company
     public class CreatePosition
     {
         [Required]
+        public string PositionName { get; set; }
+
+        [Required]
         public string Description { get; set; }
 
         public int? MinimumYearsOfExperience { get; set; }
