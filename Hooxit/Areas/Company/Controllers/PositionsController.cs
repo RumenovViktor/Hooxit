@@ -60,5 +60,17 @@ namespace Hooxit.Areas.Company.Controllers
 
             return RedirectToAction("All", "Positions", new { companyId = UserInfo.UserName });
         }
+
+        [HttpGet]
+        [Route("Company/Positions/View/{userName}/{positionId}")]
+        public async Task<IActionResult> View(string userName, int positionId)
+        {
+            var user = await this.userRepository.GetByName(UserInfo.UserName);
+            var companyInfo = this.companiesRepository.GetBydId(user.Id);
+
+            var position = this.positionsManager.GetPosition(companyInfo.Id, positionId);
+
+            return View(position);
+        }
     }
 }

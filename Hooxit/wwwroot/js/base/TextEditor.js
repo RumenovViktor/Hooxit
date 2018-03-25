@@ -1,10 +1,17 @@
 ﻿class TextEditor {
-    constructor(textEditorId) {
-        this.Id = textEditorId;
-        this.textEditor = new Quill(this.Id, CreatePositionEditorSettings.getSettings);
+    constructor(textEditorId, settings) {
+        this.textEditor = new Quill(textEditorId, settings);
     }
 
-    get editor() {
-        return this.textEditor;
+    setText(text) {
+        this.textEditor.setContents(JSON.parse(text));
+    }
+
+    deleteText() {
+        this.textEditor.deleteText(0, this.textEditor.getLength() - 1);
+    }
+
+    getText() {
+        return this.textEditor.getText();
     }
 }

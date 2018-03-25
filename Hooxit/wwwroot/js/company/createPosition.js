@@ -41,10 +41,10 @@ class CreatePositionManager {
 
         this.skillsManager = new SkillsManager(this.editorSettings.skillsContainerId, this.createPositionSettings.searchSkillFieldId);
 
-        this.descriptionTextEditor = new TextEditor(this.editorSettings.companyDescriptionId);
-        this.lookingForTextEditor = new TextEditor(this.editorSettings.lookingForId);
-        this.responsibilitiesTextEditor = new TextEditor(this.editorSettings.responsibilitiesId);
-        this.whatWeOfferTextEditor = new TextEditor(this.editorSettings.whatWeOfferId);
+        this.descriptionTextEditor = new TextEditor(this.editorSettings.companyDescriptionId, CreatePositionEditorSettings.getSettings);
+        this.lookingForTextEditor = new TextEditor(this.editorSettings.lookingForId, CreatePositionEditorSettings.getSettings);
+        this.responsibilitiesTextEditor = new TextEditor(this.editorSettings.responsibilitiesId, CreatePositionEditorSettings.getSettings);
+        this.whatWeOfferTextEditor = new TextEditor(this.editorSettings.whatWeOfferId, CreatePositionEditorSettings.getSettings);
 
         this.attachEventListeners();
     }

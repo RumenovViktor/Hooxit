@@ -120,3 +120,30 @@
 .selectedSkill .fa{
     margin-left: 1em;
 }
+
+#positionContainer {
+    margin-bottom: 1.5em !important;
+    margin-left: 3em;
+}
+
+#positionContainer .card {
+    border-radius: 3em;
+    height: 100%;
+}
+
+.positionEditorView{
+    display: none;
+}
+
+#generalEditor{
+    display: none;
+}
+
+#positionContainer .ql-toolbar {
+    display: none;
+}
+
+#positionContainer ul, #positionContainer li {
+    list-style-type:initial !important;
+    margin-left: .5em;
+}

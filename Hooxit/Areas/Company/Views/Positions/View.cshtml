@@ -1,0 +1,88 @@
+﻿@using Hooxit.Presentation.Company.Read
+@model PositionReadModel
+
+<div class="row top">
+    <div id="positionContainer" class="col-lg-10">
+        <div class="card">
+            <div class="card-block">
+                <h3 class="h3-responsive card-title">@Model.PositionName <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h3>
+                @if (Model.MinimumYearsOfExperience > 1)
+                {
+                        <p>@Model.MinimumYearsOfExperience years of minimum experience</p>
+                        <hr />
+                }   
+                else if (Model.MinimumYearsOfExperience == 1)
+                {
+                        <p>@Model.MinimumYearsOfExperience year of minimum experience</p>
+                        <hr />
+                }
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div>
+                                <h4 class="shades-text font-weight-normal">Description <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                            </div>
+                            <div id="description" class="top text-left">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row top">
+                        <div class="col-lg-12">
+                            <div>
+                                <h4 class="shades-text font-weight-normal">We are looking for <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                            </div>
+                            <div class="top text-left" id="lookingFor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row top">
+                        <div class="col-lg-12">
+                            <div>
+                                <h4 class="shades-text font-weight-normal">Responsibilities <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                            </div>
+                            <div class="top text-left" id="responsibilities">
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.RequiredSkills.Any())
+        {
+            <div class="row top">
+                <div class="col-lg-12">
+                    <div>
+                        <h4 class="shades-text font-weight-normal">Required Skills <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                    </div>
+                    <div class="top">
+                        <p class="text-left">
+                        </p>
+                    </div>
+                </div>
+            </div>
+}
+
+                    <div class="row top">
+                        <div class="col-lg-12">
+                            <div>
+                                <h4 class="shades-text font-weight-normal">What we offer <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                            </div>
+                            <div class="top text-left" id="whatWeOffer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="generalEditor"></div>
+    </div>
+    @Html.HiddenFor(x => x.Description, new { @class = "hiddenEditorContent", id = "hiddenDescription" })
+    @Html.HiddenFor(x => x.LookingFor, new { @class = "hiddenEditorContent", id = "hiddenLookingFor" })
+    @Html.HiddenFor(x => x.Responsibilities, new { @class = "hiddenEditorContent", id = "hiddenResponsibilities" })
+    @Html.HiddenFor(x => x.WhatWeOffer, new { @class = "hiddenEditorContent", id = "hiddenWhatWeOffer" })
+</div>
+
+@section PositionView {
+    <script src="~/js/base/TextEditor.js"></script>
+    <script src="~/js/company/positionManager.js"></script>
+}
