@@ -1,0 +1,644 @@
+2018-03-26T21:50:34.8902998+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:50:35.3532226+03:00  [WRN] Unable to bind to "http://localhost:49743" on the "IPv4 loopback" interface: '"Error -4092 EACCES permission denied"'. (38217649)
+2018-03-26T21:50:35.4010160+03:00  [INF] Executed DbCommand ("177"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-26T21:50:35.4333638+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-26T21:50:37.3029035+03:00 0HLCJ99QRP01G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-03-26T21:50:37.3634446+03:00 0HLCJ99QRP01G:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:50:37.4060813+03:00 0HLCJ99QRP01G:00000001 [INF] Executed DbCommand ("12"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-03-26T21:50:37.6074403+03:00 0HLCJ99QRP01G:00000001 [INF] Executed DbCommand ("50"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-26T21:50:37.6913006+03:00 0HLCJ99QRP01G:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-26T21:50:37.7050518+03:00 0HLCJ99QRP01G:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:37.9354482+03:00 0HLCJ99QRP01G:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:50:40.8724498+03:00 0HLCJ99QRP01G:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-03-26T21:50:41.1776391+03:00 0HLCJ99QRP01G:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 3245.0905ms (afa2e885)
+2018-03-26T21:50:41.2287699+03:00 0HLCJ99QRP01I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-03-26T21:50:41.2287994+03:00 0HLCJ99QRP01H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-03-26T21:50:41.2622427+03:00 0HLCJ99QRP01G:00000001 [INF] Request finished in 3918.9986ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:50:41.2719123+03:00 0HLCJ99QRP01H:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:41.3076093+03:00 0HLCJ99QRP01H:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-03-26T21:50:41.3094193+03:00 0HLCJ99QRP01I:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:41.3402356+03:00 0HLCJ99QRP01H:00000001 [INF] Request finished in 128.5834ms 304 text/css (791a596a)
+2018-03-26T21:50:41.3615429+03:00 0HLCJ99QRP01I:00000001 [INF] Request finished in 162.3802ms 404  (791a596a)
+2018-03-26T21:50:48.1692299+03:00 0HLCJ99QRP01I:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 262 (ca22a1cb)
+2018-03-26T21:50:48.1741769+03:00 0HLCJ99QRP01I:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:48.2554966+03:00 0HLCJ99QRP01I:00000002 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:50:48.2647575+03:00 0HLCJ99QRP01I:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:50:48.2799144+03:00 0HLCJ99QRP01I:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:50:48.3275022+03:00 0HLCJ99QRP01I:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-26T21:50:48.3370317+03:00 0HLCJ99QRP01I:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-26T21:50:48.3432129+03:00 0HLCJ99QRP01I:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-26T21:50:48.3471283+03:00 0HLCJ99QRP01I:00000002 [INF] User logged in. (fdce0db4)
+2018-03-26T21:50:48.3540458+03:00 0HLCJ99QRP01I:00000002 [INF] Executing RedirectResult, redirecting to "/Company/Dashboard". (d98d540e)
+2018-03-26T21:50:48.3580529+03:00 0HLCJ99QRP01I:00000002 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 158.0558ms (afa2e885)
+2018-03-26T21:50:48.3624024+03:00 0HLCJ99QRP01I:00000002 [INF] Request finished in 194.5817ms 302  (791a596a)
+2018-03-26T21:50:48.3886870+03:00 0HLCJ99QRP01I:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-03-26T21:50:48.3930031+03:00 0HLCJ99QRP01I:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:48.3985651+03:00 0HLCJ99QRP01I:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:50:48.5690479+03:00 0HLCJ99QRP01I:00000003 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Index.cshtml". (9707eebe)
+2018-03-26T21:50:48.9777653+03:00 0HLCJ99QRP01I:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Index (Hooxit)" in 576.278ms (afa2e885)
+2018-03-26T21:50:48.9910511+03:00 0HLCJ99QRP01I:00000003 [INF] Request finished in 593.6273ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:50:49.0390598+03:00 0HLCJ99QRP01I:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/ajaxSender.js   (ca22a1cb)
+2018-03-26T21:50:49.0837534+03:00 0HLCJ99QRP01I:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:49.0869928+03:00 0HLCJ99QRP01H:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:50:49.0911809+03:00 0HLCJ99QRP01I:00000004 [INF] The file "/js/base/ajaxSender.js" was not modified (f1f8d725)
+2018-03-26T21:50:49.0981888+03:00 0HLCJ99QRP01H:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:49.1240908+03:00 0HLCJ99QRP01I:00000004 [INF] Request finished in 79.4663ms 304 application/javascript (791a596a)
+2018-03-26T21:50:49.1580470+03:00 0HLCJ99QRP01H:00000002 [INF] Request finished in 109.4568ms 404  (791a596a)
+2018-03-26T21:50:52.0319091+03:00 0HLCJ99QRP01H:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T21:50:52.0576850+03:00 0HLCJ99QRP01H:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:52.0681765+03:00 0HLCJ99QRP01H:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:50:52.0764930+03:00 0HLCJ99QRP01H:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:50:52.0817795+03:00 0HLCJ99QRP01H:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:50:52.0895753+03:00 0HLCJ99QRP01H:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:50:52.1074199+03:00 0HLCJ99QRP01H:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:50:52.1312857+03:00 0HLCJ99QRP01H:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:50:52.2640889+03:00 0HLCJ99QRP01H:00000003 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T21:50:52.2837897+03:00 0HLCJ99QRP01H:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 215.7877ms (afa2e885)
+2018-03-26T21:50:52.3006998+03:00 0HLCJ99QRP01H:00000003 [INF] Request finished in 264.9921ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:50:52.3168185+03:00 0HLCJ99QRP01H:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:50:52.3417004+03:00 0HLCJ99QRP01H:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:50:52.3696326+03:00 0HLCJ99QRP01H:00000004 [INF] Request finished in 29.3871ms 404  (791a596a)
+2018-03-26T21:51:00.1505830+03:00 0HLCJ99QRP01H:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:51:00.1559114+03:00 0HLCJ99QRP01H:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:00.1640194+03:00 0HLCJ99QRP01H:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:51:00.1706219+03:00 0HLCJ99QRP01H:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:51:00.1778867+03:00 0HLCJ99QRP01H:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:51:00.1824918+03:00 0HLCJ99QRP01H:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:51:00.1893323+03:00 0HLCJ99QRP01H:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:51:00.1951584+03:00 0HLCJ99QRP01H:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:51:00.3420657+03:00 0HLCJ99QRP01H:00000005 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:51:00.3684020+03:00 0HLCJ99QRP01H:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 191.0263ms (afa2e885)
+2018-03-26T21:51:00.3869518+03:00 0HLCJ99QRP01H:00000005 [INF] Request finished in 223.6249ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:51:00.4178377+03:00 0HLCJ99QRP01H:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:51:00.4303079+03:00 0HLCJ99QRP01H:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:00.4613567+03:00 0HLCJ99QRP01H:00000006 [INF] Request finished in 39.1032ms 404  (791a596a)
+2018-03-26T21:51:25.7126269+03:00 0HLCJ99QRP01H:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/View/viktor123/11   (ca22a1cb)
+2018-03-26T21:51:25.7172910+03:00 0HLCJ99QRP01H:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:25.7334297+03:00 0HLCJ99QRP01H:00000007 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" with arguments (["viktor123", "11"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:51:25.7395769+03:00 0HLCJ99QRP01H:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:51:25.7477795+03:00 0HLCJ99QRP01H:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:51:25.7541125+03:00 0HLCJ99QRP01H:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:51:25.7597207+03:00 0HLCJ99QRP01H:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:51:25.7652536+03:00 0HLCJ99QRP01H:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:51:25.9249926+03:00 0HLCJ99QRP01H:00000007 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/View.cshtml". (9707eebe)
+2018-03-26T21:51:25.9568051+03:00 0HLCJ99QRP01H:00000007 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" in 225.3502ms (afa2e885)
+2018-03-26T21:51:25.9734203+03:00 0HLCJ99QRP01H:00000007 [INF] Request finished in 249.9933ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:51:25.9992864+03:00 0HLCJ99QRP01I:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/positionManager.js   (ca22a1cb)
+2018-03-26T21:51:26.0118958+03:00 0HLCJ99QRP01I:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:26.0220325+03:00 0HLCJ99QRP01H:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/TextEditor.js   (ca22a1cb)
+2018-03-26T21:51:26.0487169+03:00 0HLCJ99QRP01H:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:26.0941258+03:00 0HLCJ99QRP01I:00000005 [INF] The file "/js/company/positionManager.js" was not modified (f1f8d725)
+2018-03-26T21:51:26.1190140+03:00 0HLCJ99QRP01I:00000005 [INF] Request finished in 110.3204ms 304 application/javascript (791a596a)
+2018-03-26T21:51:26.1214922+03:00 0HLCJ99QRP01G:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:51:26.1467519+03:00 0HLCJ99QRP01H:00000008 [INF] The file "/js/base/TextEditor.js" was not modified (f1f8d725)
+2018-03-26T21:51:26.1724658+03:00 0HLCJ99QRP01G:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:51:26.1994151+03:00 0HLCJ99QRP01H:00000008 [INF] Request finished in 158.5867ms 304 application/javascript (791a596a)
+2018-03-26T21:51:26.2421547+03:00 0HLCJ99QRP01G:00000002 [INF] Request finished in 192.937ms 404  (791a596a)
+2018-03-26T21:52:23.8368313+03:00 0HLCJ99QRP01G:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T21:52:23.8419751+03:00 0HLCJ99QRP01G:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:23.8475609+03:00 0HLCJ99QRP01G:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:52:23.8515193+03:00 0HLCJ99QRP01G:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:52:23.8627057+03:00 0HLCJ99QRP01G:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:52:23.8677862+03:00 0HLCJ99QRP01G:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:52:23.8735431+03:00 0HLCJ99QRP01G:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:52:23.8796181+03:00 0HLCJ99QRP01G:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:52:23.8837433+03:00 0HLCJ99QRP01G:00000003 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T21:52:23.8916700+03:00 0HLCJ99QRP01G:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 42.4489ms (afa2e885)
+2018-03-26T21:52:23.9133588+03:00 0HLCJ99QRP01G:00000003 [INF] Request finished in 60.2297ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:52:23.9375694+03:00 0HLCJ99QRP01G:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:52:23.9615349+03:00 0HLCJ99QRP01G:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:23.9657799+03:00 0HLCJ99QRP01G:00000004 [INF] Request finished in 27.639ms 404  (791a596a)
+2018-03-26T21:52:25.3673832+03:00 0HLCJ99QRP01G:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:52:25.3734351+03:00 0HLCJ99QRP01G:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:25.3779902+03:00 0HLCJ99QRP01G:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:52:25.3814048+03:00 0HLCJ99QRP01G:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:52:25.3865094+03:00 0HLCJ99QRP01G:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:52:25.3933184+03:00 0HLCJ99QRP01G:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:52:25.3986386+03:00 0HLCJ99QRP01G:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:52:25.4241078+03:00 0HLCJ99QRP01G:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:52:25.4286205+03:00 0HLCJ99QRP01G:00000005 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:52:25.4668245+03:00 0HLCJ99QRP01G:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 55.9328ms (afa2e885)
+2018-03-26T21:52:25.4790407+03:00 0HLCJ99QRP01G:00000005 [INF] Request finished in 104.6396ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:52:25.5239623+03:00 0HLCJ99QRP01H:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:52:25.5492095+03:00 0HLCJ99QRP01H:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:25.5557263+03:00 0HLCJ99QRP01H:00000009 [INF] Request finished in 87.8989ms 404  (791a596a)
+2018-03-26T21:52:36.7231358+03:00 0HLCJ99QRP01H:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/Create   (ca22a1cb)
+2018-03-26T21:52:36.7488975+03:00 0HLCJ99QRP01H:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:36.7557072+03:00 0HLCJ99QRP01H:0000000A [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:52:36.8973748+03:00 0HLCJ99QRP01H:0000000A [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/CreatePosition.cshtml". (9707eebe)
+2018-03-26T21:52:36.9391991+03:00 0HLCJ99QRP01H:0000000A [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" in 183.063ms (afa2e885)
+2018-03-26T21:52:36.9853167+03:00 0HLCJ99QRP01H:0000000A [INF] Request finished in 221.3472ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:52:36.9943184+03:00 0HLCJ99QRP01I:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:52:37.0203660+03:00 0HLCJ99QRP01H:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/skills/skillsManager.js   (ca22a1cb)
+2018-03-26T21:52:37.0471985+03:00 0HLCJ99QRP01G:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/createPosition.js   (ca22a1cb)
+2018-03-26T21:52:37.0720123+03:00 0HLCJ99QRP01I:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:37.0756647+03:00 0HLCJ99QRP01H:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:37.1016747+03:00 0HLCJ99QRP01G:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:37.1303322+03:00 0HLCJ99QRP01H:0000000B [INF] The file "/js/skills/skillsManager.js" was not modified (f1f8d725)
+2018-03-26T21:52:37.1322872+03:00 0HLCJ99QRP01G:00000006 [INF] The file "/js/company/createPosition.js" was not modified (f1f8d725)
+2018-03-26T21:52:37.1796691+03:00 0HLCJ99QRP01G:00000006 [INF] Request finished in 169.9765ms 304 application/javascript (791a596a)
+2018-03-26T21:52:37.1844734+03:00 0HLCJ99QRP01H:0000000B [INF] Request finished in 137.9174ms 304 application/javascript (791a596a)
+2018-03-26T21:52:37.1920719+03:00 0HLCJ99QRP01I:00000006 [INF] Request finished in 88.3326ms 404  (791a596a)
+2018-03-26T21:52:41.9018484+03:00 0HLCJ99QRP01G:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Skills/GetSkills/java   (ca22a1cb)
+2018-03-26T21:52:41.9145483+03:00 0HLCJ99QRP01G:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:52:41.9308910+03:00 0HLCJ99QRP01G:00000007 [INF] Executing action method "Hooxit.Controllers.SkillsController.GetSkills (Hooxit)" with arguments (["java"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:52:41.9445976+03:00 0HLCJ99QRP01G:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:52:41.9949674+03:00 0HLCJ99QRP01G:00000007 [INF] Executed DbCommand ("34"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ID], [x].[SkillName]
+FROM [Skills] AS [x]
+WHERE ([x].[SkillName] LIKE @__name_0 + N'%' AND (LEFT([x].[SkillName], LEN(@__name_0)) = @__name_0)) OR (@__name_0 = N'')" (0723d8ff)
+2018-03-26T21:52:42.0083696+03:00 0HLCJ99QRP01G:00000007 [INF] Executing JsonResult, writing value "System.Collections.Generic.List`1[Hooxit.Presentation.Read.SkillReadModel]". (7bb75e80)
+2018-03-26T21:52:42.0692576+03:00 0HLCJ99QRP01G:00000007 [INF] Executed action "Hooxit.Controllers.SkillsController.GetSkills (Hooxit)" in 144.883ms (afa2e885)
+2018-03-26T21:52:42.0945452+03:00 0HLCJ99QRP01G:00000007 [INF] Request finished in 176.6505ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-26T21:53:26.2520252+03:00 0HLCJ99QRP01G:00000008 [INF] Request starting HTTP/1.1 POST http://localhost:49743/Company/Positions/Create application/x-www-form-urlencoded 1120 (ca22a1cb)
+2018-03-26T21:53:26.2575622+03:00 0HLCJ99QRP01G:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:26.2853151+03:00 0HLCJ99QRP01G:00000008 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" with arguments (["Hooxit.Presentation.Write.Company.CreatePosition"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:26.2919105+03:00 0HLCJ99QRP01G:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:26.2963915+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:26.3009263+03:00 0HLCJ99QRP01G:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:26.3054574+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:53:26.3181149+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:26.3829697+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("4"ms) [Parameters=["@p15='?' (Size = 450), @p0='?', @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?', @p4='?', @p5='?', @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?', @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [Password] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-26T21:53:26.4248735+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?', @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Positions] ([CompanyID], [Description], [LookingFor], [MinimumYearsOfExperience], [PositionName], [Responsibilities], [WhatWeOffer])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [PositionID]
+FROM [Positions]
+WHERE @@ROWCOUNT = 1 AND [PositionID] = scope_identity();" (0723d8ff)
+2018-03-26T21:53:26.4431246+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[PositionID], [x].[CompanyID], [x].[Description], [x].[LookingFor], [x].[MinimumYearsOfExperience], [x].[PositionName], [x].[Responsibilities], [x].[WhatWeOffer]
+FROM [Positions] AS [x]
+WHERE [x].[PositionID] = @__id_0" (0723d8ff)
+2018-03-26T21:53:26.4637824+03:00 0HLCJ99QRP01G:00000008 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?', @p8='?', @p9='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [PositionSkill] ([SkillId], [PositionId])
+VALUES (@p0, @p1),
+(@p2, @p3),
+(@p4, @p5),
+(@p6, @p7),
+(@p8, @p9);" (0723d8ff)
+2018-03-26T21:53:26.4693877+03:00 0HLCJ99QRP01G:00000008 [INF] Executing RedirectResult, redirecting to "/Company/Positions/All/viktor123". (d98d540e)
+2018-03-26T21:53:26.4748648+03:00 0HLCJ99QRP01G:00000008 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" in 206.0004ms (afa2e885)
+2018-03-26T21:53:26.4998704+03:00 0HLCJ99QRP01G:00000008 [INF] Request finished in 229.5665ms 302  (791a596a)
+2018-03-26T21:53:26.5050074+03:00 0HLCJ99QRP01G:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:53:26.5297098+03:00 0HLCJ99QRP01G:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:26.5528372+03:00 0HLCJ99QRP01G:00000009 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:26.5571914+03:00 0HLCJ99QRP01G:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:26.5634739+03:00 0HLCJ99QRP01G:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:26.5681442+03:00 0HLCJ99QRP01G:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:26.5763173+03:00 0HLCJ99QRP01G:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:53:26.5807447+03:00 0HLCJ99QRP01G:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:53:26.5848452+03:00 0HLCJ99QRP01G:00000009 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:53:26.5993381+03:00 0HLCJ99QRP01G:00000009 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 56.3159ms (afa2e885)
+2018-03-26T21:53:26.6267186+03:00 0HLCJ99QRP01G:00000009 [INF] Request finished in 98.9383ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:53:26.6510373+03:00 0HLCJ99QRP01G:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:26.6546261+03:00 0HLCJ99QRP01G:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:26.6602662+03:00 0HLCJ99QRP01G:0000000A [INF] Request finished in 6.783ms 404  (791a596a)
+2018-03-26T21:53:28.3157500+03:00 0HLCJ99QRP01G:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/View/viktor123/12   (ca22a1cb)
+2018-03-26T21:53:28.3227672+03:00 0HLCJ99QRP01G:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:28.3275061+03:00 0HLCJ99QRP01G:0000000B [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" with arguments (["viktor123", "12"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:28.3313082+03:00 0HLCJ99QRP01G:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:28.3362358+03:00 0HLCJ99QRP01G:0000000B [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:28.3413825+03:00 0HLCJ99QRP01G:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:28.3461152+03:00 0HLCJ99QRP01G:0000000B [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:53:28.3744389+03:00 0HLCJ99QRP01G:0000000B [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:53:28.3789862+03:00 0HLCJ99QRP01G:0000000B [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/View.cshtml". (9707eebe)
+2018-03-26T21:53:28.3857388+03:00 0HLCJ99QRP01G:0000000B [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" in 57.6841ms (afa2e885)
+2018-03-26T21:53:28.4028533+03:00 0HLCJ99QRP01G:0000000B [INF] Request finished in 74.4669ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:53:28.4304596+03:00 0HLCJ99QRP01G:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:28.4351466+03:00 0HLCJ99QRP01G:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:28.4407471+03:00 0HLCJ99QRP01G:0000000C [INF] Request finished in 10.2951ms 404  (791a596a)
+2018-03-26T21:53:33.9098312+03:00 0HLCJ99QRP01G:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-03-26T21:53:33.9133084+03:00 0HLCJ99QRP01G:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:33.9165588+03:00 0HLCJ99QRP01G:0000000D [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:33.9202271+03:00 0HLCJ99QRP01G:0000000D [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Index.cshtml". (9707eebe)
+2018-03-26T21:53:33.9266676+03:00 0HLCJ99QRP01G:0000000D [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Index (Hooxit)" in 7.5994ms (afa2e885)
+2018-03-26T21:53:33.9359173+03:00 0HLCJ99QRP01G:0000000D [INF] Request finished in 22.5613ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:53:33.9774189+03:00 0HLCJ99QRP01G:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:33.9812575+03:00 0HLCJ99QRP01G:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:33.9859993+03:00 0HLCJ99QRP01G:0000000E [INF] Request finished in 29.3624ms 404  (791a596a)
+2018-03-26T21:53:35.6856544+03:00 0HLCJ99QRP01G:0000000F [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T21:53:35.7108971+03:00 0HLCJ99QRP01G:0000000F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:35.7160461+03:00 0HLCJ99QRP01G:0000000F [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:35.7195059+03:00 0HLCJ99QRP01G:0000000F [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:35.7261882+03:00 0HLCJ99QRP01G:0000000F [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:35.7304754+03:00 0HLCJ99QRP01G:0000000F [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:35.7362889+03:00 0HLCJ99QRP01G:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:53:35.7427929+03:00 0HLCJ99QRP01G:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:53:35.7468937+03:00 0HLCJ99QRP01G:0000000F [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T21:53:35.7518893+03:00 0HLCJ99QRP01G:0000000F [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 35.9988ms (afa2e885)
+2018-03-26T21:53:35.7668172+03:00 0HLCJ99QRP01G:0000000F [INF] Request finished in 73.5423ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:53:35.8023021+03:00 0HLCJ99QRP01G:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:35.8066660+03:00 0HLCJ99QRP01G:00000010 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:35.8113349+03:00 0HLCJ99QRP01G:00000010 [INF] Request finished in 28.9748ms 404  (791a596a)
+2018-03-26T21:53:37.9203693+03:00 0HLCJ99QRP01G:00000011 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:53:37.9452844+03:00 0HLCJ99QRP01G:00000011 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:37.9502819+03:00 0HLCJ99QRP01G:00000011 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:53:37.9538483+03:00 0HLCJ99QRP01G:00000011 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:37.9591197+03:00 0HLCJ99QRP01G:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:53:37.9838214+03:00 0HLCJ99QRP01G:00000011 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:53:37.9882348+03:00 0HLCJ99QRP01G:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:53:37.9927599+03:00 0HLCJ99QRP01G:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:53:37.9977725+03:00 0HLCJ99QRP01G:00000011 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:53:38.0068351+03:00 0HLCJ99QRP01G:00000011 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 52.7556ms (afa2e885)
+2018-03-26T21:53:38.0274287+03:00 0HLCJ99QRP01G:00000011 [INF] Request finished in 92.7571ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:53:38.0356253+03:00 0HLCJ99QRP01G:00000012 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:38.0434641+03:00 0HLCJ99QRP01G:00000012 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:38.0515448+03:00 0HLCJ99QRP01G:00000012 [INF] Request finished in 13.721ms 404  (791a596a)
+2018-03-26T21:53:55.3080154+03:00 0HLCJ99QRP01G:00000013 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:53:55.3356990+03:00 0HLCJ99QRP01G:00000013 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:55.3592405+03:00 0HLCJ99QRP01G:00000013 [INF] Request finished in 37.1242ms 404  (791a596a)
+2018-03-26T21:53:55.4312526+03:00 0HLCJ99QRP01G:00000014 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:53:55.4580179+03:00 0HLCJ99QRP01H:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:53:55.4619672+03:00 0HLCJ99QRP01G:00000014 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:55.4858853+03:00 0HLCJ99QRP01H:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:53:55.5102916+03:00 0HLCJ99QRP01G:00000014 [INF] Request finished in 58.2535ms 404  (791a596a)
+2018-03-26T21:53:55.5177670+03:00 0HLCJ99QRP01H:0000000C [INF] Request finished in 82.2964ms 404  (791a596a)
+2018-03-26T21:56:44.5780478+03:00 0HLCJ99QRP01H:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/View/viktor123/11   (ca22a1cb)
+2018-03-26T21:56:44.6032426+03:00 0HLCJ99QRP01H:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:56:44.6070242+03:00 0HLCJ99QRP01H:0000000D [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" with arguments (["viktor123", "11"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:56:44.6104096+03:00 0HLCJ99QRP01H:0000000D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:56:44.6182552+03:00 0HLCJ99QRP01H:0000000D [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:56:44.6216800+03:00 0HLCJ99QRP01H:0000000D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:56:44.6252282+03:00 0HLCJ99QRP01H:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:56:44.6499289+03:00 0HLCJ99QRP01H:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:56:44.6553296+03:00 0HLCJ99QRP01H:0000000D [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/View.cshtml". (9707eebe)
+2018-03-26T21:56:44.6637048+03:00 0HLCJ99QRP01H:0000000D [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" in 52.2619ms (afa2e885)
+2018-03-26T21:56:44.6724695+03:00 0HLCJ99QRP01H:0000000D [INF] Request finished in 91.3513ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:56:44.6991365+03:00 0HLCJ99QRP01H:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:56:44.7253647+03:00 0HLCJ99QRP01H:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:56:44.7358636+03:00 0HLCJ99QRP01H:0000000E [INF] Request finished in 30.5631ms 404  (791a596a)
+2018-03-26T21:56:44.8736675+03:00 0HLCJ99QRP01H:0000000F [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:56:44.8842556+03:00 0HLCJ99QRP01H:0000000F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:56:44.9113313+03:00 0HLCJ99QRP01H:0000000F [INF] Request finished in 24.2356ms 404  (791a596a)
+2018-03-26T21:56:44.9393887+03:00 0HLCJ99QRP01H:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:56:44.9475313+03:00 0HLCJ99QRP01H:00000010 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:56:44.9724172+03:00 0HLCJ99QRP01H:00000010 [INF] Request finished in 14.6205ms 404  (791a596a)
+2018-03-26T21:57:03.6569930+03:00 0HLCJ99QRP01H:00000011 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:57:03.6658899+03:00 0HLCJ99QRP01H:00000011 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:57:03.6865441+03:00 0HLCJ99QRP01H:00000011 [INF] Request finished in 23.629ms 404  (791a596a)
+2018-03-26T21:57:03.7183131+03:00 0HLCJ99QRP01H:00000012 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:57:03.7421562+03:00 0HLCJ99QRP01G:00000015 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:57:03.7476890+03:00 0HLCJ99QRP01H:00000012 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:57:03.7722586+03:00 0HLCJ99QRP01G:00000015 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:57:03.7760582+03:00 0HLCJ99QRP01H:00000012 [INF] Request finished in 34.5051ms 404  (791a596a)
+2018-03-26T21:57:03.8231452+03:00 0HLCJ99QRP01G:00000015 [INF] Request finished in 54.4533ms 404  (791a596a)
+2018-03-26T21:58:09.8646302+03:00 0HLCJ99QRP01G:00000016 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:58:09.8722403+03:00 0HLCJ99QRP01G:00000016 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:09.9005145+03:00 0HLCJ99QRP01G:00000016 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:09.9268308+03:00 0HLCJ99QRP01G:00000016 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:09.9395639+03:00 0HLCJ99QRP01G:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:58:09.9439932+03:00 0HLCJ99QRP01G:00000016 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:09.9490086+03:00 0HLCJ99QRP01G:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:58:09.9750433+03:00 0HLCJ99QRP01G:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:58:10.0010826+03:00 0HLCJ99QRP01G:00000016 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:58:10.0074662+03:00 0HLCJ99QRP01G:00000016 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 129.9493ms (afa2e885)
+2018-03-26T21:58:10.0139557+03:00 0HLCJ99QRP01G:00000016 [INF] Request finished in 154.1776ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:10.0370336+03:00 0HLCJ99QRP01G:00000017 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:10.0413682+03:00 0HLCJ99QRP01G:00000017 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:10.0501374+03:00 0HLCJ99QRP01G:00000017 [INF] Request finished in 11.2697ms 404  (791a596a)
+2018-03-26T21:58:10.2061975+03:00 0HLCJ99QRP01G:00000018 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:10.2389772+03:00 0HLCJ99QRP01H:00000013 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:10.2630515+03:00 0HLCJ99QRP01G:00000018 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:10.2873445+03:00 0HLCJ99QRP01H:00000013 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:10.3137335+03:00 0HLCJ99QRP01G:00000018 [INF] Request finished in 93.3233ms 404  (791a596a)
+2018-03-26T21:58:10.3206499+03:00 0HLCJ99QRP01H:00000013 [INF] Request finished in 90.601ms 404  (791a596a)
+2018-03-26T21:58:16.0686188+03:00 0HLCJ99QRP01H:00000014 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T21:58:16.0938740+03:00 0HLCJ99QRP01H:00000014 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:16.0995074+03:00 0HLCJ99QRP01H:00000014 [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:16.1042106+03:00 0HLCJ99QRP01H:00000014 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:16.1099882+03:00 0HLCJ99QRP01H:00000014 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:58:16.1173112+03:00 0HLCJ99QRP01H:00000014 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:16.1206713+03:00 0HLCJ99QRP01H:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:58:16.1254737+03:00 0HLCJ99QRP01H:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:58:16.1316235+03:00 0HLCJ99QRP01H:00000014 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T21:58:16.1395352+03:00 0HLCJ99QRP01H:00000014 [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 39.4753ms (afa2e885)
+2018-03-26T21:58:16.1501951+03:00 0HLCJ99QRP01H:00000014 [INF] Request finished in 77.5482ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:16.1875813+03:00 0HLCJ99QRP01H:00000015 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:16.1934674+03:00 0HLCJ99QRP01H:00000015 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:16.2022466+03:00 0HLCJ99QRP01H:00000015 [INF] Request finished in 24.9167ms 404  (791a596a)
+2018-03-26T21:58:16.3708026+03:00 0HLCJ99QRP01H:00000016 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:16.3858158+03:00 0HLCJ99QRP01H:00000016 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:16.4127029+03:00 0HLCJ99QRP01H:00000016 [INF] Request finished in 43.1296ms 404  (791a596a)
+2018-03-26T21:58:16.4368757+03:00 0HLCJ99QRP01G:00000019 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:16.4636460+03:00 0HLCJ99QRP01G:00000019 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:16.4680310+03:00 0HLCJ99QRP01G:00000019 [INF] Request finished in 118.8124ms 404  (791a596a)
+2018-03-26T21:58:18.6480962+03:00 0HLCJ99QRP01G:0000001A [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:58:18.6515101+03:00 0HLCJ99QRP01G:0000001A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:18.6571316+03:00 0HLCJ99QRP01G:0000001A [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:18.6627893+03:00 0HLCJ99QRP01G:0000001A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:18.6703124+03:00 0HLCJ99QRP01G:0000001A [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:58:18.6749720+03:00 0HLCJ99QRP01G:0000001A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:18.6828003+03:00 0HLCJ99QRP01G:0000001A [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:58:18.6901072+03:00 0HLCJ99QRP01G:0000001A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:58:18.6965583+03:00 0HLCJ99QRP01G:0000001A [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:58:18.7046610+03:00 0HLCJ99QRP01G:0000001A [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 45.6152ms (afa2e885)
+2018-03-26T21:58:18.7476161+03:00 0HLCJ99QRP01G:0000001A [INF] Request finished in 63.4457ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:18.7629701+03:00 0HLCJ99QRP01G:0000001B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:18.7678637+03:00 0HLCJ99QRP01G:0000001B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:18.7730552+03:00 0HLCJ99QRP01G:0000001B [INF] Request finished in 14.0861ms 404  (791a596a)
+2018-03-26T21:58:18.9647591+03:00 0HLCJ99QRP01G:0000001C [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:18.9689538+03:00 0HLCJ99QRP01G:0000001C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:18.9891458+03:00 0HLCJ99QRP01H:00000017 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:19.0125355+03:00 0HLCJ99QRP01G:0000001C [INF] Request finished in 73.8118ms 404  (791a596a)
+2018-03-26T21:58:19.0367044+03:00 0HLCJ99QRP01H:00000017 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:19.0437563+03:00 0HLCJ99QRP01H:00000017 [INF] Request finished in 124.5072ms 404  (791a596a)
+2018-03-26T21:58:20.3253969+03:00 0HLCJ99QRP01H:00000018 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/Create   (ca22a1cb)
+2018-03-26T21:58:20.3319114+03:00 0HLCJ99QRP01H:00000018 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:20.3377054+03:00 0HLCJ99QRP01H:00000018 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:20.3421299+03:00 0HLCJ99QRP01H:00000018 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/CreatePosition.cshtml". (9707eebe)
+2018-03-26T21:58:20.3540531+03:00 0HLCJ99QRP01H:00000018 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.Create (Hooxit)" in 11.2258ms (afa2e885)
+2018-03-26T21:58:20.3755162+03:00 0HLCJ99QRP01H:00000018 [INF] Request finished in 33.8735ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:20.4037076+03:00 0HLCJ99QRP01H:00000019 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:20.4299547+03:00 0HLCJ99QRP01H:00000019 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:20.4343074+03:00 0HLCJ99QRP01H:00000019 [INF] Request finished in 47.6115ms 404  (791a596a)
+2018-03-26T21:58:20.5966776+03:00 0HLCJ99QRP01H:0000001A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:20.5993128+03:00 0HLCJ99QRP01G:0000001D [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:20.6311088+03:00 0HLCJ99QRP01H:0000001A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:20.6583387+03:00 0HLCJ99QRP01G:0000001D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:20.6822433+03:00 0HLCJ99QRP01H:0000001A [INF] Request finished in 68.3979ms 404  (791a596a)
+2018-03-26T21:58:20.6875687+03:00 0HLCJ99QRP01G:0000001D [INF] Request finished in 91.9503ms 404  (791a596a)
+2018-03-26T21:58:29.3617918+03:00 0HLCJ99QRP01G:0000001E [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T21:58:29.3682272+03:00 0HLCJ99QRP01G:0000001E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:29.3720883+03:00 0HLCJ99QRP01G:0000001E [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:29.3977420+03:00 0HLCJ99QRP01G:0000001E [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:29.4057967+03:00 0HLCJ99QRP01G:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:58:29.4113382+03:00 0HLCJ99QRP01G:0000001E [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:29.4189297+03:00 0HLCJ99QRP01G:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:58:29.4229705+03:00 0HLCJ99QRP01G:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:58:29.4482824+03:00 0HLCJ99QRP01G:0000001E [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T21:58:29.4541503+03:00 0HLCJ99QRP01G:0000001E [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 81.171ms (afa2e885)
+2018-03-26T21:58:29.4595760+03:00 0HLCJ99QRP01G:0000001E [INF] Request finished in 97.3555ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:29.4919745+03:00 0HLCJ99QRP01G:0000001F [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:29.5083684+03:00 0HLCJ99QRP01G:0000001F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:29.5206471+03:00 0HLCJ99QRP01G:0000001F [INF] Request finished in 26.8402ms 404  (791a596a)
+2018-03-26T21:58:29.6864356+03:00 0HLCJ99QRP01G:00000020 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:29.7108323+03:00 0HLCJ99QRP01H:0000001B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:29.7532912+03:00 0HLCJ99QRP01G:00000020 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:29.7806056+03:00 0HLCJ99QRP01G:00000020 [INF] Request finished in 96.3796ms 404  (791a596a)
+2018-03-26T21:58:29.7844844+03:00 0HLCJ99QRP01H:0000001B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:29.7896092+03:00 0HLCJ99QRP01H:0000001B [INF] Request finished in 122.8692ms 404  (791a596a)
+2018-03-26T21:58:31.3002661+03:00 0HLCJ99QRP01H:0000001C [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T21:58:31.3245313+03:00 0HLCJ99QRP01H:0000001C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:31.3299198+03:00 0HLCJ99QRP01H:0000001C [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T21:58:31.3346953+03:00 0HLCJ99QRP01H:0000001C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:31.3426884+03:00 0HLCJ99QRP01H:0000001C [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T21:58:31.3484679+03:00 0HLCJ99QRP01H:0000001C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T21:58:31.3537731+03:00 0HLCJ99QRP01H:0000001C [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T21:58:31.3817224+03:00 0HLCJ99QRP01H:0000001C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T21:58:31.4069859+03:00 0HLCJ99QRP01H:0000001C [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T21:58:31.4146261+03:00 0HLCJ99QRP01H:0000001C [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 82.6865ms (afa2e885)
+2018-03-26T21:58:31.4337376+03:00 0HLCJ99QRP01H:0000001C [INF] Request finished in 120.8709ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T21:58:31.4403385+03:00 0HLCJ99QRP01H:0000001D [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T21:58:31.4728242+03:00 0HLCJ99QRP01H:0000001D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:31.4826841+03:00 0HLCJ99QRP01H:0000001D [INF] Request finished in 39.4984ms 404  (791a596a)
+2018-03-26T21:58:31.6352333+03:00 0HLCJ99QRP01H:0000001E [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T21:58:31.6591264+03:00 0HLCJ99QRP01G:00000021 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T21:58:31.6827342+03:00 0HLCJ99QRP01H:0000001E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:31.7062699+03:00 0HLCJ99QRP01G:00000021 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T21:58:31.7327200+03:00 0HLCJ99QRP01H:0000001E [INF] Request finished in 82.0622ms 404  (791a596a)
+2018-03-26T21:58:31.7578921+03:00 0HLCJ99QRP01G:00000021 [INF] Request finished in 81.4466ms 404  (791a596a)
+2018-03-26T22:00:17.7417029+03:00 0HLCJ99QRP01G:00000022 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor123   (ca22a1cb)
+2018-03-26T22:00:17.7486088+03:00 0HLCJ99QRP01G:00000022 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:17.7529399+03:00 0HLCJ99QRP01G:00000022 [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T22:00:17.7568155+03:00 0HLCJ99QRP01G:00000022 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:17.7637936+03:00 0HLCJ99QRP01G:00000022 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T22:00:17.7906380+03:00 0HLCJ99QRP01G:00000022 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:17.7964853+03:00 0HLCJ99QRP01G:00000022 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T22:00:17.8043793+03:00 0HLCJ99QRP01G:00000022 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T22:00:17.8082806+03:00 0HLCJ99QRP01G:00000022 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-03-26T22:00:17.8190932+03:00 0HLCJ99QRP01G:00000022 [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 61.391ms (afa2e885)
+2018-03-26T22:00:17.8433606+03:00 0HLCJ99QRP01G:00000022 [INF] Request finished in 84.6292ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T22:00:17.8734811+03:00 0HLCJ99QRP01G:00000023 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T22:00:17.8994800+03:00 0HLCJ99QRP01G:00000023 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:17.9042153+03:00 0HLCJ99QRP01G:00000023 [INF] Request finished in 34.2116ms 404  (791a596a)
+2018-03-26T22:00:18.0665378+03:00 0HLCJ99QRP01H:0000001F [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T22:00:18.0884261+03:00 0HLCJ99QRP01G:00000024 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T22:00:18.1154284+03:00 0HLCJ99QRP01G:00000024 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:18.1208442+03:00 0HLCJ99QRP01G:00000024 [INF] Request finished in 66.9671ms 404  (791a596a)
+2018-03-26T22:00:18.1245200+03:00 0HLCJ99QRP01H:0000001F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:18.1292582+03:00 0HLCJ99QRP01H:0000001F [INF] Request finished in 70.4363ms 404  (791a596a)
+2018-03-26T22:00:19.5240423+03:00 0HLCJ99QRP01H:00000020 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/All/viktor123   (ca22a1cb)
+2018-03-26T22:00:19.5279275+03:00 0HLCJ99QRP01H:00000020 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:19.5318034+03:00 0HLCJ99QRP01H:00000020 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" with arguments (["viktor123"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T22:00:19.5553359+03:00 0HLCJ99QRP01H:00000020 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:19.5607763+03:00 0HLCJ99QRP01H:00000020 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T22:00:19.5873179+03:00 0HLCJ99QRP01H:00000020 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:19.5932120+03:00 0HLCJ99QRP01H:00000020 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T22:00:19.5978505+03:00 0HLCJ99QRP01H:00000020 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T22:00:19.6242333+03:00 0HLCJ99QRP01H:00000020 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/All.cshtml". (9707eebe)
+2018-03-26T22:00:19.6300197+03:00 0HLCJ99QRP01H:00000020 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.All (Hooxit)" in 96.8117ms (afa2e885)
+2018-03-26T22:00:19.6419265+03:00 0HLCJ99QRP01H:00000020 [INF] Request finished in 111.3389ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T22:00:19.6588341+03:00 0HLCJ99QRP01H:00000021 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T22:00:19.6678083+03:00 0HLCJ99QRP01H:00000021 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:19.6758571+03:00 0HLCJ99QRP01H:00000021 [INF] Request finished in 14.3485ms 404  (791a596a)
+2018-03-26T22:00:19.8454751+03:00 0HLCJ99QRP01H:00000022 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T22:00:19.8697229+03:00 0HLCJ99QRP01G:00000025 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T22:00:19.8918452+03:00 0HLCJ99QRP01H:00000022 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:19.9165947+03:00 0HLCJ99QRP01G:00000025 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:19.9420215+03:00 0HLCJ99QRP01H:00000022 [INF] Request finished in 74.8987ms 404  (791a596a)
+2018-03-26T22:00:19.9688897+03:00 0HLCJ99QRP01G:00000025 [INF] Request finished in 97.3808ms 404  (791a596a)
+2018-03-26T22:00:21.3777923+03:00 0HLCJ99QRP01G:00000026 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Positions/View/viktor123/11   (ca22a1cb)
+2018-03-26T22:00:21.3839535+03:00 0HLCJ99QRP01G:00000026 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:21.4098782+03:00 0HLCJ99QRP01G:00000026 [INF] Executing action method "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" with arguments (["viktor123", "11"]) - ModelState is Valid (ba7f4ac2)
+2018-03-26T22:00:21.4156261+03:00 0HLCJ99QRP01G:00000026 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:21.4241135+03:00 0HLCJ99QRP01G:00000026 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-26T22:00:21.4296573+03:00 0HLCJ99QRP01G:00000026 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-26T22:00:21.4343234+03:00 0HLCJ99QRP01G:00000026 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-03-26T22:00:21.4383286+03:00 0HLCJ99QRP01G:00000026 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-03-26T22:00:21.4632453+03:00 0HLCJ99QRP01G:00000026 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Positions/View.cshtml". (9707eebe)
+2018-03-26T22:00:21.4707569+03:00 0HLCJ99QRP01G:00000026 [INF] Executed action "Hooxit.Areas.Company.Controllers.PositionsController.View (Hooxit)" in 80.4052ms (afa2e885)
+2018-03-26T22:00:21.4959745+03:00 0HLCJ99QRP01G:00000026 [INF] Request finished in 99.0926ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-26T22:00:21.5070044+03:00 0HLCJ99QRP01G:00000027 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-03-26T22:00:21.5321541+03:00 0HLCJ99QRP01G:00000027 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:21.5398484+03:00 0HLCJ99QRP01G:00000027 [INF] Request finished in 32.8767ms 404  (791a596a)
+2018-03-26T22:00:21.7246872+03:00 0HLCJ99QRP01H:00000023 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-03-26T22:00:21.7508797+03:00 0HLCJ99QRP01G:00000028 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-03-26T22:00:21.7766219+03:00 0HLCJ99QRP01H:00000023 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:21.8244375+03:00 0HLCJ99QRP01G:00000028 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-26T22:00:21.8502845+03:00 0HLCJ99QRP01H:00000023 [INF] Request finished in 101.8647ms 404  (791a596a)
+2018-03-26T22:00:21.8743149+03:00 0HLCJ99QRP01G:00000028 [INF] Request finished in 152.6339ms 404  (791a596a)

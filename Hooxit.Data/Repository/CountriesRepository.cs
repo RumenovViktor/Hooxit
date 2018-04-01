@@ -25,5 +25,10 @@ namespace Hooxit.Data.Repository
         {
             return dbContext.Countries.Where(x => x.Id == id).FirstOrDefault();
         }
+
+        public IList<Country> GetManyById(int[] ids)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

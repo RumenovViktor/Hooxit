@@ -1,6 +1,8 @@
 ﻿using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Models;
+using Hooxit.Presentation.Company.Contracts;
+using Hooxit.Presentation.Company.Write;
 using Hooxit.Presentation.Write.Company;
 using Hooxit.Services.Implementation.Company.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -17,7 +19,6 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
     // 3. User Automapper for mapping 
     public class PositionsApplicationService : IPositionsApplicationService
     {
-        private readonly IUnitOfWork unitOfWork;
         private readonly IRepository<Position> positionsRepository;
         private readonly ICompaniesRepository companiesRepository;
         private readonly IUserRepository userRepository;
@@ -42,14 +43,14 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
                 company.Positions.Add(position);
 
                 await userRepository.Update(loggedUser);
+
                 this.companiesRepository.Save();
 
                 var addedPosition = this.positionsRepository.Get(position.PositionID);
 
                 addedPosition.PositionSkill = createPosition.RequiredSkills.Select(x => new PositionSkill()
                 {
-                    PositionId = addedPosition.PositionID,
-                    SkillId = x
+                    PositionId = addedPosition.PositionID, SkillId = x
                 }).ToList();
 
                 this.companiesRepository.Save();
@@ -61,6 +62,106 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
                 this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(createPosition));
 
                 return false;
+            }
+        }
+
+        public bool ChangeDescription(IPresentationSegment presentationSegment)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(presentationSegment.Id);
+                position.Description = presentationSegment.Content;
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(presentationSegment));
+                throw ex;
+            }
+        }
+
+        public bool ChangeLookingForDescription(IPresentationSegment presentationSegment)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(presentationSegment.Id);
+                position.LookingFor = presentationSegment.Content;
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(presentationSegment));
+                throw ex;
+            }
+        }
+
+        public bool ChangeWhatWeOfferDescription(IPresentationSegment presentationSegment)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(presentationSegment.Id);
+                position.WhatWeOffer = presentationSegment.Content;
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(presentationSegment));
+                throw ex;
+            }
+        }
+
+        public bool ChangeResponsibilitiesDescription(IPresentationSegment presentationSegment)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(presentationSegment.Id);
+                position.Responsibilities = presentationSegment.Content;
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(presentationSegment));
+                throw ex;
+            }
+        }
+
+        public bool ChangeSkills(ChangeSkills changePositionRequiredSkills)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(changePositionRequiredSkills.PositionId);
+
+                position.PositionSkill = changePositionRequiredSkills.RequiredSkills.Select(x => new PositionSkill()
+                {
+                    PositionId = changePositionRequiredSkills.PositionId,
+                    SkillId = x
+                }).ToList();
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(changePositionRequiredSkills));
+                throw ex;
             }
         }
 

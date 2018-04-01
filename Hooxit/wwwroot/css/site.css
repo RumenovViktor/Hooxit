@@ -2,6 +2,10 @@
     margin-top: 5%;
 }
 
+.topx2 {
+    margin-top: 10%;
+}
+
 .halfLeft25 {
     margin-left: 25%;
 }
@@ -128,7 +132,6 @@
 
 #positionContainer .card {
     border-radius: 3em;
-    height: 100%;
 }
 
 .positionEditorView{
@@ -141,9 +144,23 @@
 
 #positionContainer .ql-toolbar {
     display: none;
+    z-index: 1000;
+}
+
+#positionContainer {
+    height: auto;
 }
 
 #positionContainer ul, #positionContainer li {
-    list-style-type:initial !important;
+    list-style-type: initial !important;
     margin-left: .5em;
+}
+
+.editor, .updateSkill, .skill-close, .skill-save {
+    display: none;
+}
+
+.positionSectionHeader .toggle-close, .positionSectionHeader .toggle-save, .skill-close, .skill-save {
+    display: none;
+    padding-left: 0.5em;
 }

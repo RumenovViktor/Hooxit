@@ -18,6 +18,7 @@ namespace Data
         public DbSet<Country> Countries { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<PositionSkill> PositionSkill { get; set; }
 
         public override int SaveChanges()
         {

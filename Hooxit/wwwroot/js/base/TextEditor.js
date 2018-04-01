@@ -11,7 +11,7 @@
         this.textEditor.deleteText(0, this.textEditor.getLength() - 1);
     }
 
-    getText() {
-        return this.textEditor.getText();
+    getContents() {
+        return this.textEditor.getContents();
     }
 }

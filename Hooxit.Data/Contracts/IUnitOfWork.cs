@@ -9,7 +9,9 @@ namespace Hooxit.Data.Contracts
         IReadRepository<Country> BuildCountriesRepository();
         ICandidateRepository BuildCandidateRepository();
         ICompaniesRepository BuildCompaniesRepository();
-        IReadByNameRepository<Skill> BuildSkillsRepository();
+        IReadByNameRepository<Skill> BuildSkillsReadByNameRepository();
+        IReadRepository<Skill> BuildSkillsReadRepository();
+        IReadRepository<PositionSkill> BuildPositionSkillRepository();
         IRepository<Position> BuildPositionsRepository();
     }
 }

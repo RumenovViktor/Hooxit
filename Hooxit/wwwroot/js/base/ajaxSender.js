@@ -7,7 +7,7 @@
             headers: headers,
             contentType: type,
             success: success,
-            error: error
+            error: error,
         });
     },
     getData: function (url, successCallback) {

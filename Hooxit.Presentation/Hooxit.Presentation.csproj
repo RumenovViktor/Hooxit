@@ -9,8 +9,4 @@
     <ProjectReference Include="..\Hooxit.Utils\Hooxit.Utils.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Company\Write\" />
-  </ItemGroup>
-
 </Project>

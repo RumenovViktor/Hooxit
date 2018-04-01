@@ -11,14 +11,15 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
 {
     public class PositionsManager : IPositionsManager
     {
-        private readonly IUnitOfWork unitOfWork;
         private readonly IRepository<Position> positionsRepository;
+        private readonly IReadRepository<PositionSkill> positionSkillsReadRepository;
+        private readonly IReadRepository<Skill> skillsReadRepository;
 
         public PositionsManager(IUnitOfWork unitOfWork)
         {
-            this.unitOfWork = unitOfWork;
-
-            this.positionsRepository = this.unitOfWork.BuildPositionsRepository();
+            this.positionsRepository = unitOfWork.BuildPositionsRepository();
+            this.positionSkillsReadRepository = unitOfWork.BuildPositionSkillRepository();
+            this.skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
         }
 
         public IEnumerable<IdNameReadModel> GetAll(int id)
@@ -34,19 +35,23 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
 
         public PositionReadModel GetPosition(int companyId, int positionId)
         {
-            var position = this.positionsRepository.All().Where(x => x.CompanyID == companyId && x.PositionID == positionId).Select(x => this.BuildPositionModel(x)).FirstOrDefault();
+            var requiredSkillsIds = this.positionSkillsReadRepository.GetManyById(new[] { positionId }).Select(x => x.SkillId);
+            var requiredSkills = this.skillsReadRepository.GetManyById(requiredSkillsIds.ToArray());
+            var position = this.positionsRepository.All().Where(x => x.CompanyID == companyId && x.PositionID == positionId).Select(x => this.BuildPositionModel(x, requiredSkills)).FirstOrDefault();
+
             return position;
         }
 
-        private PositionReadModel BuildPositionModel(Position position)
+        private PositionReadModel BuildPositionModel(Position position, IList<Skill> requiredSkills)
         {
             return new PositionReadModel
             {
+                PositionId = position.PositionID,
                 Description = position.Description,
                 LookingFor = position.LookingFor,
                 MinimumYearsOfExperience = position.MinimumYearsOfExperience,
                 PositionName = position.PositionName,
-                RequiredSkills = position.PositionSkill.Select(o => new IdNameReadModel { Id = o.Skill.ID, Name = o.Skill.SkillName }).ToList(),
+                RequiredSkills = requiredSkills.Select(o => new IdNameReadModel { Id = o.ID, Name = o.SkillName }).ToList(),
                 Responsibilities = position.Responsibilities,
                 WhatWeOffer = position.WhatWeOffer
             };

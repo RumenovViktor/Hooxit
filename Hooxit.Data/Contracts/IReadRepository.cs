@@ -6,5 +6,6 @@ namespace Hooxit.Data.Contracts
     {
         IList<T> GetAll();
         T GetById(int id);
+        IList<T> GetManyById(int[] ids);
     }
 }

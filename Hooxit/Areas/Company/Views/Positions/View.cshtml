@@ -1,88 +1,176 @@
 ﻿@using Hooxit.Presentation.Company.Read
 @model PositionReadModel
-
+@* TODO: Refactor: Think of a better structure !!! *@
 <div class="row top">
+    @Html.HiddenFor(x => x.PositionId, new { id = "positionId" })
     <div id="positionContainer" class="col-lg-10">
-        <div class="card">
+        <div class="card auto">
             <div class="card-block">
                 <h3 class="h3-responsive card-title">@Model.PositionName <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h3>
                 @if (Model.MinimumYearsOfExperience > 1)
                 {
-                        <p>@Model.MinimumYearsOfExperience years of minimum experience</p>
-                        <hr />
-                }   
+                    <p>@Model.MinimumYearsOfExperience years of minimum experience</p>
+                    <hr />
+                }
                 else if (Model.MinimumYearsOfExperience == 1)
                 {
-                        <p>@Model.MinimumYearsOfExperience year of minimum experience</p>
-                        <hr />
+                    <p>@Model.MinimumYearsOfExperience year of minimum experience</p>
+                    <hr />
                 }
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div>
-                                <h4 class="shades-text font-weight-normal">Description <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    Description
+                                    <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-close pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-save pull-right" data-toggle="modal" data-target="#saveModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                </h4>
                             </div>
-                            <div id="description" class="top text-left">
+                            <div class="top text-left sectionPresentation">
 
                             </div>
+                            <div id="descriptionEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.Description, new { @class = "hiddenEditorContent", id = "hiddenDescription" })
                         </div>
                     </div>
 
                     <div class="row top">
-                        <div class="col-lg-12">
-                            <div>
-                                <h4 class="shades-text font-weight-normal">We are looking for <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    We are looking for
+                                    <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-close pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-save pull-right" data-toggle="modal" data-target="#saveModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                </h4>
                             </div>
-                            <div class="top text-left" id="lookingFor">
+                            <div class="top text-left sectionPresentation">
                             </div>
+                            <div id="lookingForEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.LookingFor, new { @class = "hiddenEditorContent", id = "hiddenLookingFor" })
                         </div>
                     </div>
 
                     <div class="row top">
-                        <div class="col-lg-12">
-                            <div>
-                                <h4 class="shades-text font-weight-normal">Responsibilities <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    Responsibilities
+                                    <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-close pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-save pull-right" data-toggle="modal" data-target="#saveModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                </h4>
                             </div>
-                            <div class="top text-left" id="responsibilities">
+                            <div class="top text-left sectionPresentation">
                             </div>
+                            <div id="responsibilitiesEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.Responsibilities, new { @class = "hiddenEditorContent", id = "hiddenResponsibilities" })
                         </div>
                     </div>
                     @if (Model.RequiredSkills.Any())
-        {
-            <div class="row top">
-                <div class="col-lg-12">
-                    <div>
-                        <h4 class="shades-text font-weight-normal">Required Skills <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
-                    </div>
-                    <div class="top">
-                        <p class="text-left">
-                        </p>
-                    </div>
-                </div>
-            </div>
-}
+                    {
+                        <div class="row top">
+                            <div class="col-lg-12 topx2">
+                                <div class="positionSectionHeader">
+                                    <h4 class="shades-text font-weight-normal">
+                                        Required Skills
+                                        <a href="#" class="skill-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="#" class="skill-close pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                        <a href="#" class="skill-save pull-right" data-toggle="modal" data-target="#skillsSaveModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                    </h4>
+                                </div>
+                                <div class="top text-left sectionPresentation skillsPresentation">
+                                    <ul>
+                                        @foreach (var skill in Model.RequiredSkills)
+                                        {
+                                            <li value="@skill.Id">@skill.Name</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 topx2 updateSkill">
+                                <div class="card">
+                                    <div class="card-block">
+                                        <div class="input-group md-form">
+                                            <input type="text" id="searchSkill" />
+                                            <label for="searchSkill">Search</label>
+                                        </div>
+                                        <div class="list-group skillsList">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card top">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Skills</h4>
+                                        <div id="skillsContainer">
+                                            <p class="noSkillsText">No skills selected...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
 
                     <div class="row top">
-                        <div class="col-lg-12">
-                            <div>
-                                <h4 class="shades-text font-weight-normal">What we offer <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h4>
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    What we offer
+                                    <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-close pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                    <a href="#" class="toggle-save pull-right" data-toggle="modal" data-target="#saveModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                </h4>
                             </div>
-                            <div class="top text-left" id="whatWeOffer">
+                            <div class="top text-left sectionPresentation">
                             </div>
+                            <div id="whatWeOfferEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.WhatWeOffer, new { @class = "hiddenEditorContent", id = "hiddenWhatWeOffer" })
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="generalEditor"></div>
     </div>
-    @Html.HiddenFor(x => x.Description, new { @class = "hiddenEditorContent", id = "hiddenDescription" })
-    @Html.HiddenFor(x => x.LookingFor, new { @class = "hiddenEditorContent", id = "hiddenLookingFor" })
-    @Html.HiddenFor(x => x.Responsibilities, new { @class = "hiddenEditorContent", id = "hiddenResponsibilities" })
-    @Html.HiddenFor(x => x.WhatWeOffer, new { @class = "hiddenEditorContent", id = "hiddenWhatWeOffer" })
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Save changes?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure you want to save the changes?</div>
+                <div class="modal-footer">
+                    <button type="button" id="doSave" class="btn btn-success" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="skillsSaveModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Save changes?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure you want to save the changes?</div>
+                <div class="modal-footer">
+                    <button type="button" id="doSkillsSave" class="btn btn-success" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section PositionView {
+    <script src="~/js/skills/skillsManager.js"></script>
     <script src="~/js/base/TextEditor.js"></script>
     <script src="~/js/company/positionManager.js"></script>
 }

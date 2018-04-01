@@ -8,6 +8,9 @@ using Hooxit.Data.Repository;
 using Hooxit.Services;
 using Hooxit.Services.Contracts;
 using Hooxit.Data.Contracts;
+using Hooxit.Presentation.Company.Write;
+using Hooxit.Presentation.Company.Contracts;
+using Newtonsoft.Json;
 
 namespace Hooxit.Areas.Company.Controllers
 {
@@ -71,6 +74,72 @@ namespace Hooxit.Areas.Company.Controllers
             var position = this.positionsManager.GetPosition(companyInfo.Id, positionId);
 
             return View(position);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangeDescription")]
+        public IActionResult ChangeDescription([FromBody] ChangeDescription changedPresentationSegment)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = this.positionsApplicationService.ChangeDescription(changedPresentationSegment);
+                return Json(response);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangeLookingForDescription")]
+        public IActionResult ChangeLookingForDescription([FromBody] ChangeLookingForDescription changedLookingForDescription)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = this.positionsApplicationService.ChangeLookingForDescription(changedLookingForDescription);
+                return Json(response);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangeWhatWeOfferDescription")]
+        public IActionResult ChangeWhatWeOfferDescription([FromBody] ChangeWhatWeOfferDescription changedWhatWeOfferDescription)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = this.positionsApplicationService.ChangeWhatWeOfferDescription(changedWhatWeOfferDescription);
+                return Json(response);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangeResponsibilitiesDescription")]
+        public IActionResult ChangeResponsibilitiesDescription([FromBody] ChangeResponsibilitiesDescription changedResponsibilitiesDescription)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = this.positionsApplicationService.ChangeResponsibilitiesDescription(changedResponsibilitiesDescription);
+                return Json(response);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangeSkills")]
+        public IActionResult ChangeSkills([FromBody] object changeSkills)
+        {
+            if (ModelState.IsValid)
+            {
+                var asd = JsonConvert.DeserializeObject<ChangeSkills>(changeSkills.ToString());
+                var response = this.positionsApplicationService.ChangeSkills(asd);
+                return Json(response);
+            }
+
+            return Json(false);
         }
     }
 }

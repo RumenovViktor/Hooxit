@@ -59,6 +59,8 @@
     }
 
     createSkillTags(event) {
+        event.preventDefault();
+
         let elementValue = event.target.text.trim();
         let selectedSkillId = new Number($(event.target).attr('value'));
 
@@ -83,6 +85,7 @@
     }
 
     onRemoveSelectedSkill(event) {
+        event.preventDefault();
         $(event.target).off()
         $(event.target).parent().remove()
 

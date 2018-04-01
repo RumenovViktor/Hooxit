@@ -15,7 +15,7 @@ namespace Hooxit.Services.Implementation.Managers
         public CommonDataReadManager(IUnitOfWork unitOfWork)
         {
             this.countriesRepository = unitOfWork.BuildCountriesRepository();
-            this.skillsRepository = unitOfWork.BuildSkillsRepository();
+            this.skillsRepository = unitOfWork.BuildSkillsReadByNameRepository();
         }
 
         public IList<CountryReadModel> GetAllCountries()

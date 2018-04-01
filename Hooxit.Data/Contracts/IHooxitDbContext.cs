@@ -14,6 +14,7 @@ namespace Data
         DbSet<Company> Companies { get; set; }
         DbSet<Skill> Skills { get; set; }
         DbSet<Position> Positions { get; set; }
+        DbSet<PositionSkill> PositionSkill { get; set; }
 
         int SaveChanges();
     }
