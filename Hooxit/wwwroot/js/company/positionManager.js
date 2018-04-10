@@ -113,7 +113,16 @@ class PositionManager{
     }
 
     onPositionUpdateError(response) {
-        toastr.error("Something wrong happened! Position was not update");
+        toastr.error("Something wrong happened! Position was not updated.");
+    }
+
+    onPositionSuccessfulyUpdatedCallBack(newValue) {
+        $('.positionName').text(newValue);
+        $('.positionNameContainer').hide();
+        $('.positionName').show();
+        $('.togglePositionNameUpdate').show();
+
+        toastr.success("Position updated successfuly!");
     }
 
     onSkillsUpdateClick(event) {
@@ -156,6 +165,24 @@ class PositionManager{
         $('.toggle-update').on('click', this.updateClick.bind(this));
         $('.toggle-close').on('click', this.closeClick.bind(this));
         $('#searchSkill').on('change', this.onSkillFieldChange.bind(this));
+
+        $('.togglePositionClose').on('click', (event) => {
+            $('.positionNameContainer').hide();
+            $('.positionName').show();
+            $('.togglePositionNameUpdate').show();
+        });
+
+        $('#doPositionNameSave').on('click', (event) => {
+            let newPositionName = $('.positionNameUpdate').val();
+            ajaxRequest.sendAjax('/Company/Positions/ChangePositionName',
+                { 'PositionId': new Number($('#positionId').val()), 'PositionName': newPositionName },
+                'POST',
+                'application/json',
+                null,
+                this.onPositionSuccessfulyUpdatedCallBack.bind(this, newPositionName),
+                this.onPositionUpdateError);
+        });
+
         $('.skill-update').on('click', (event) => {
             this.onSkillsUpdateClick.call(this, event)
         });
@@ -207,6 +234,16 @@ class PositionManager{
             $(wrapper).find('.sectionPresentation').empty();
             $(wrapper).find('.sectionPresentation').append(this.editorConfirmedToUpdate.instance.textEditor.root.innerHTML);
             $(wrapper).find('.sectionPresentation').find('br').remove();
+        });
+
+        $('.togglePositionNameUpdate').on('click', (event) => {
+            $('.positionNameContainer').show();
+            $('.positionName').hide();
+            $('.togglePositionNameUpdate').hide();
+
+            let positionName = $('.positionName').text();
+            $('.positionNameUpdate').val(positionName);
+
         });
     }
 }

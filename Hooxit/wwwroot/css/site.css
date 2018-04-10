@@ -134,11 +134,7 @@
     border-radius: 3em;
 }
 
-.positionEditorView{
-    display: none;
-}
-
-#generalEditor{
+.positionEditorView, #companyDescriptionEditor, .ql-toolbar {
     display: none;
 }
 
@@ -160,7 +156,15 @@
     display: none;
 }
 
-.positionSectionHeader .toggle-close, .positionSectionHeader .toggle-save, .skill-close, .skill-save {
+.positionSectionHeader .toggle-close, .positionSectionHeader .toggle-save, .skill-close, .skill-save, .positionNameContainer {
     display: none;
     padding-left: 0.5em;
+}
+
+.closeIcon i, .update i, .save i {
+    font-size: 1.3em;
+    padding-right: .5em;
+}
+.closeIcon, .update, .save {
+    display: none;
 }

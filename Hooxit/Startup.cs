@@ -24,6 +24,7 @@ using Hooxit.Services.Implementation.Profile;
 using Hooxit.Services.Implementation.Company.Interfaces;
 using Hooxit.Services.Implementation.Company;
 using Hooxit.Services.Implementation.Company.Implemenation;
+using Hooxit.Services.Implementation.Company.Implementation;
 
 namespace Hooxit
 {
@@ -78,6 +79,7 @@ namespace Hooxit
             services.AddTransient<IPositionsApplicationService, PositionsApplicationService>();
             services.AddTransient<IPositionsManager, PositionsManager>();
             services.AddTransient<ICompanyProfileManager, CompanyProfileManager>();
+            services.AddTransient<ICompanyProfileApplicationService, CompanyProfileApplicationService>();
             services.AddTransient<DatabaseSeed>();
 
             services.Configure<IdentityOptions>(options =>

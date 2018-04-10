@@ -130,12 +130,24 @@ namespace Hooxit.Areas.Company.Controllers
 
         [HttpPost]
         [Route("Company/Positions/ChangeSkills")]
-        public IActionResult ChangeSkills([FromBody] object changeSkills)
+        public IActionResult ChangeSkills([FromBody] ChangeSkills changeSkills)
         {
             if (ModelState.IsValid)
             {
-                var asd = JsonConvert.DeserializeObject<ChangeSkills>(changeSkills.ToString());
-                var response = this.positionsApplicationService.ChangeSkills(asd);
+                var response = this.positionsApplicationService.ChangeSkills(changeSkills);
+                return Json(response);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Route("Company/Positions/ChangePositionName")]
+        public IActionResult ChangePositionName([FromBody] ChangePositionName positionName)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = this.positionsApplicationService.ChangePositionName(positionName);
                 return Json(response);
             }
 

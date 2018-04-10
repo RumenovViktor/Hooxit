@@ -32,7 +32,8 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
 
             return new ProfileInfoRead
             {
-                CreatedPositions = positionsCount
+                CreatedPositions = positionsCount,
+                CompanyDescription = company.CompanyDescription
             };
         }
     }

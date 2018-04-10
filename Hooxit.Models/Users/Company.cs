@@ -18,6 +18,8 @@ namespace Hooxit.Models.Users
 
         public virtual User User { get; set; }
 
+        public virtual string CompanyDescription { get; set; }
+
         public virtual ICollection<Position> Positions { get; set; }
     }
 }

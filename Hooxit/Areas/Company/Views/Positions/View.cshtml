@@ -6,7 +6,18 @@
     <div id="positionContainer" class="col-lg-10">
         <div class="card auto">
             <div class="card-block">
-                <h3 class="h3-responsive card-title">@Model.PositionName <a href="#" class="toggle-update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a></h3>
+                <h4>
+                    <a href="#" class="togglePositionNameUpdate pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                </h4>
+                <h3 class="h3-responsive card-title positionName">@Model.PositionName</h3>
+                <div class="positionNameContainer">
+                    <h4>
+                        <a href="#" class="togglePositionClose pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                        <a href="#" class="togglePositionSave pull-right" data-toggle="modal" data-target="#positionNameModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                    </h4>
+                    <input class="positionNameUpdate col-lg-10" type="text" />
+                </div>
+
                 @if (Model.MinimumYearsOfExperience > 1)
                 {
                     <p>@Model.MinimumYearsOfExperience years of minimum experience</p>
@@ -162,6 +173,24 @@
                 <div class="modal-body">Are you sure you want to save the changes?</div>
                 <div class="modal-footer">
                     <button type="button" id="doSkillsSave" class="btn btn-success" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="positionNameModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Save changes?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure you want to save the changes?</div>
+                <div class="modal-footer">
+                    <button type="button" id="doPositionNameSave" class="btn btn-success" data-dismiss="modal">Yes</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
                 </div>
             </div>

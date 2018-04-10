@@ -3,6 +3,7 @@ using System.Linq;
 using Data;
 using Hooxit.Data.Contracts;
 using Hooxit.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hooxit.Data.Repository
 {

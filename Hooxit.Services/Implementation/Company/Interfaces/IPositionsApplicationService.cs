@@ -13,5 +13,6 @@ namespace Hooxit.Services.Implementation.Company.Interfaces
         bool ChangeWhatWeOfferDescription(IPresentationSegment presentationSegment);
         bool ChangeResponsibilitiesDescription(IPresentationSegment presentationSegment);
         bool ChangeSkills(ChangeSkills changePositionRequiredSkills);
+        bool ChangePositionName(ChangePositionName changePositionName);
     }
 }

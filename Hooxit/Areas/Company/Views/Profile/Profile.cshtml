@@ -15,21 +15,54 @@
                 </div>
                 <div class="card-block">
                 </div>
-           </div>
+            </div>
         </div>
         <div class="col-lg-9">
             <div class="card">
                 <div class="card-block">
                     <div class="card-text">
-                        <h3 class="flex-center">About Us</h3>
-                        <br />
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        @if (!string.IsNullOrWhiteSpace(Model.CompanyDescription))
+                        {
+                            <div class="updateIcons">
+                                <a href="#" class="update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a href="#" class="closeIcon pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                <a href="#" class="save pull-right" data-toggle="modal" data-target="#companyDescriptionModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                            </div>
+                            <h3 class="flex-center">About Us</h3>
+                            <br />
+
+                            <div class="companyDescriptionPresentation text-left">
+
+                            </div>
+
+                            @Html.HiddenFor(x => x.CompanyDescription, new { id = "companyDescriptionHidden" })
+                        }
+                        else
+                        {
+                            <div class="updateIcons">
+                                <a href="#" class="update pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a href="#" class="closeIcon pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                                <a href="#" class="save pull-right" data-toggle="modal" data-target="#companyDescriptionModal"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                            </div>
+                            <h3 class="flex-center">About Us</h3>
+                            <br />
+
+                            <div class="descriptionReminder">
+                                <p>
+                                    Looks like you haven't added description of your company.
+                                </p>
+                                <a href="#" class="btn btn-unique descriptionUpdateBtn">Add description</a>
+                            </div>
+                        }
+                        <div id="companyDescriptionEditor">
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br/>
+    <br />
     <div class="row">
         <div class="col-lg-3">
             <ul class="list-group">
@@ -66,4 +99,26 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="companyDescriptionModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Save changes?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure you want to save the changes?</div>
+                <div class="modal-footer">
+                    <button type="button" id="doSaveDescription" class="btn btn-success" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section CompanyProfileScripts {
+    <script src="~/js/base/TextEditor.js"></script>
+    <script src="~/js/company/companyDescriptionManager.js"></script>
+}

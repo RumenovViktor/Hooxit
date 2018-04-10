@@ -165,6 +165,25 @@ namespace Hooxit.Services.Implementation.Company.Implemenation
             }
         }
 
+        public bool ChangePositionName(ChangePositionName changePositionName)
+        {
+            try
+            {
+                var position = this.positionsRepository.Get(changePositionName.PositionId);
+                position.PositionName = changePositionName.PositionName;
+
+                this.positionsRepository.Update(position);
+                this.companiesRepository.Save();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError(ex.InnerException, JsonConvert.SerializeObject(changePositionName));
+                throw ex;
+            }
+        }
+
         private Position BuildPositionModel(CreatePosition createPosition)
         {
             return new Position
