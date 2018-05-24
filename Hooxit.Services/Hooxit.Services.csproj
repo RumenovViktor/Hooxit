@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Hooxit.Data\Hooxit.Data.csproj" />
     <ProjectReference Include="..\Hooxit.Models\Hooxit.Models.csproj" />
     <ProjectReference Include="..\Hooxit.Presentation\Hooxit.Presentation.csproj" />
+    <ProjectReference Include="..\MatchingExecutors\MatchingExecutors.csproj" />
   </ItemGroup>
 
   <ItemGroup>

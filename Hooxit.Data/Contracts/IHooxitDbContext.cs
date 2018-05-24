@@ -1,6 +1,7 @@
 ﻿using Hooxit.Models;
 using Hooxit.Models.Users;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Models;
 
 namespace Data
@@ -15,6 +16,8 @@ namespace Data
         DbSet<Skill> Skills { get; set; }
         DbSet<Position> Positions { get; set; }
         DbSet<PositionSkill> PositionSkill { get; set; }
+        DbSet<CandidateSkill> CandidateSkill { get; set; }
+        EntityEntry Entry(object entity);
 
         int SaveChanges();
     }

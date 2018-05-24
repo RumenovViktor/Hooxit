@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Hooxit.Presentation.ExperienceReadModel>
+
+@if (!Model.Any())
+{
+    <p class="card-text">You haven't added any experience yet.</p>
+}
+else
+{
+
+    foreach (var experience in Model)
+    {
+
+         @Html.Partial("../Experience/_SingleExperiencePartial", experience)
+    }
+}

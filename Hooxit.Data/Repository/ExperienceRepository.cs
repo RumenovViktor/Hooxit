@@ -34,14 +34,19 @@ namespace Hooxit.Data.Repository
             return dbContext.Experience.Where(x => x.ExperienceID == id).SingleOrDefault();
         }
 
-        public IQueryable GetMany(int[] id)
+        public IList<Experience> GetMany(int[] id)
         {
-            return dbContext.Experience.Where(x => id.Contains(x.ExperienceID));
+            return dbContext.Experience.Where(x => id.Contains(x.ExperienceID)).ToList();
         }
 
         public void Update(Experience entity)
         {
             dbContext.Experience.Update(entity);
+        }
+
+        public void Save()
+        {
+            dbContext.SaveChanges();
         }
     }
 }

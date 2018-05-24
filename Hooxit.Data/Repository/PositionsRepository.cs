@@ -36,9 +36,14 @@ namespace Hooxit.Data.Repository
             return this.dbContext.Positions.Where(x => x.PositionID == id).FirstOrDefault();
         }
 
-        public IQueryable GetMany(int[] id)
+        public IList<Position> GetMany(int[] id)
         {
-            return this.dbContext.Positions.Where(x => id.Contains(x.PositionID));
+            return this.dbContext.Positions.Where(x => id.Contains(x.PositionID)).ToList();
+        }
+
+        public void Save()
+        {
+            dbContext.SaveChanges();
         }
 
         public void Update(Position entity)

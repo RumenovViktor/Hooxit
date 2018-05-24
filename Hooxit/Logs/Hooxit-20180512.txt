@@ -1,0 +1,1238 @@
+2018-05-12T18:23:51.8211832+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:23:52.3331827+03:00  [WRN] Unable to bind to "http://localhost:49743" on the "IPv4 loopback" interface: '"Error -4092 EACCES permission denied"'. (38217649)
+2018-05-12T18:23:52.4875581+03:00  [INF] Executed DbCommand ("121"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-12T18:23:52.5250397+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-12T18:23:54.3204453+03:00 0HLDO3HF528J3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-05-12T18:23:54.3748296+03:00 0HLDO3HF528J3:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:23:54.3976136+03:00 0HLDO3HF528J3:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:23:54.4553371+03:00 0HLDO3HF528J3:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-05-12T18:23:54.5115185+03:00 0HLDO3HF528J3:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-05-12T18:23:54.5222766+03:00 0HLDO3HF528J3:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:23:54.8369594+03:00 0HLDO3HF528J3:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:23:57.7523683+03:00 0HLDO3HF528J3:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-05-12T18:23:58.1443429+03:00 0HLDO3HF528J5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-05-12T18:23:58.1473956+03:00 0HLDO3HF528J3:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 3263.6242ms (afa2e885)
+2018-05-12T18:23:58.1596442+03:00 0HLDO3HF528J5:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:23:58.1946620+03:00 0HLDO3HF528J3:00000001 [INF] Request finished in 3870.7844ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:23:58.2170328+03:00 0HLDO3HF528J5:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-05-12T18:23:58.2186009+03:00 0HLDO3HF528J4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-05-12T18:23:58.2418276+03:00 0HLDO3HF528J4:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:23:58.2849149+03:00 0HLDO3HF528J4:00000001 [INF] Request finished in 156.8407ms 404  (791a596a)
+2018-05-12T18:23:58.3026994+03:00 0HLDO3HF528J5:00000001 [INF] Request finished in 156.0839ms 304 text/css (791a596a)
+2018-05-12T18:23:58.3478953+03:00 0HLDO3HF528J4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-05-12T18:23:58.3993286+03:00 0HLDO3HF528J4:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:23:58.4099526+03:00 0HLDO3HF528J4:00000002 [INF] Request finished in 57.2606ms 404  (791a596a)
+2018-05-12T18:24:08.8790384+03:00 0HLDO3HF528J4:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 290 (ca22a1cb)
+2018-05-12T18:24:08.8844788+03:00 0HLDO3HF528J4:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:08.9720385+03:00 0HLDO3HF528J4:00000003 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:08.9820594+03:00 0HLDO3HF528J4:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:08.9963129+03:00 0HLDO3HF528J4:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:24:09.0311970+03:00 0HLDO3HF528J4:00000003 [WRN] Invalid password for user "154fbe66-9c55-4f99-bfd8-51081eb64f4d". (c2dce6c7)
+2018-05-12T18:24:09.0346873+03:00 0HLDO3HF528J4:00000003 [WRN] User "154fbe66-9c55-4f99-bfd8-51081eb64f4d" failed to provide the correct password. (ec8d2479)
+2018-05-12T18:24:09.0394359+03:00 0HLDO3HF528J4:00000003 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Account/Views/Account/Login.cshtml", "/Areas/Account/Views/Shared/Login.cshtml", "/Views/Shared/Login.cshtml"] (9bb2756c)
+2018-05-12T18:24:09.4120868+03:00 0HLDO3HF528J4:00000003 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 494.6264ms (afa2e885)
+2018-05-12T18:24:09.7613226+03:00 0HLDO3HF528J4:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Login.cshtml
+/Areas/Account/Views/Shared/Login.cshtml
+/Views/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:24:09.8308766+03:00 0HLDO3HF528J4:00000003 [INF] Request finished in 953.0063ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:24:17.3800096+03:00 0HLDO3HF528J4:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 291 (ca22a1cb)
+2018-05-12T18:24:17.3850834+03:00 0HLDO3HF528J4:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:17.3898206+03:00 0HLDO3HF528J4:00000004 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:17.3936856+03:00 0HLDO3HF528J4:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:17.3997062+03:00 0HLDO3HF528J4:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:24:17.4331074+03:00 0HLDO3HF528J4:00000004 [WRN] Invalid password for user "154fbe66-9c55-4f99-bfd8-51081eb64f4d". (c2dce6c7)
+2018-05-12T18:24:17.4380102+03:00 0HLDO3HF528J4:00000004 [WRN] User "154fbe66-9c55-4f99-bfd8-51081eb64f4d" failed to provide the correct password. (ec8d2479)
+2018-05-12T18:24:17.4460726+03:00 0HLDO3HF528J4:00000004 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Account/Views/Account/Login.cshtml", "/Areas/Account/Views/Shared/Login.cshtml", "/Views/Shared/Login.cshtml"] (9bb2756c)
+2018-05-12T18:24:17.7555648+03:00 0HLDO3HF528J4:00000004 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 366.0136ms (afa2e885)
+2018-05-12T18:24:18.0956480+03:00 0HLDO3HF528J4:00000004 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Login.cshtml
+/Areas/Account/Views/Shared/Login.cshtml
+/Views/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:24:18.1437312+03:00 0HLDO3HF528J4:00000004 [INF] Request finished in 761.0788ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:24:23.3487535+03:00 0HLDO3HF528J4:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 290 (ca22a1cb)
+2018-05-12T18:24:23.3535736+03:00 0HLDO3HF528J4:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:23.3614973+03:00 0HLDO3HF528J4:00000005 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:23.3658955+03:00 0HLDO3HF528J4:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:23.3705870+03:00 0HLDO3HF528J4:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:24:23.3854472+03:00 0HLDO3HF528J4:00000005 [WRN] Invalid password for user "154fbe66-9c55-4f99-bfd8-51081eb64f4d". (c2dce6c7)
+2018-05-12T18:24:23.3899290+03:00 0HLDO3HF528J4:00000005 [WRN] User "154fbe66-9c55-4f99-bfd8-51081eb64f4d" failed to provide the correct password. (ec8d2479)
+2018-05-12T18:24:23.3939404+03:00 0HLDO3HF528J4:00000005 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Account/Views/Account/Login.cshtml", "/Areas/Account/Views/Shared/Login.cshtml", "/Views/Shared/Login.cshtml"] (9bb2756c)
+2018-05-12T18:24:23.6965315+03:00 0HLDO3HF528J4:00000005 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 338.5125ms (afa2e885)
+2018-05-12T18:24:24.0395773+03:00 0HLDO3HF528J4:00000005 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Login.cshtml
+/Areas/Account/Views/Shared/Login.cshtml
+/Views/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:24:24.0862325+03:00 0HLDO3HF528J4:00000005 [INF] Request finished in 731.2288ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:24:33.2277332+03:00 0HLDO3HF528J4:00000006 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 260 (ca22a1cb)
+2018-05-12T18:24:33.2329873+03:00 0HLDO3HF528J4:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:33.2380527+03:00 0HLDO3HF528J4:00000006 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:33.2417830+03:00 0HLDO3HF528J4:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:33.2499355+03:00 0HLDO3HF528J4:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:24:33.2717748+03:00 0HLDO3HF528J4:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-05-12T18:24:33.2839951+03:00 0HLDO3HF528J4:00000006 [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-05-12T18:24:33.2916892+03:00 0HLDO3HF528J4:00000006 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-05-12T18:24:33.3181461+03:00 0HLDO3HF528J4:00000006 [INF] User logged in. (fdce0db4)
+2018-05-12T18:24:33.3273246+03:00 0HLDO3HF528J4:00000006 [INF] Executing RedirectResult, redirecting to "/Company/Dashboard". (d98d540e)
+2018-05-12T18:24:33.3518357+03:00 0HLDO3HF528J4:00000006 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 94.454ms (afa2e885)
+2018-05-12T18:24:33.3568223+03:00 0HLDO3HF528J4:00000006 [INF] Request finished in 130.2475ms 302  (791a596a)
+2018-05-12T18:24:33.3838579+03:00 0HLDO3HF528J4:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-12T18:24:33.3877877+03:00 0HLDO3HF528J4:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:33.4144307+03:00 0HLDO3HF528J4:00000007 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:33.4208942+03:00 0HLDO3HF528J4:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:33.4286509+03:00 0HLDO3HF528J4:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:24:33.4350159+03:00 0HLDO3HF528J4:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:33.4548318+03:00 0HLDO3HF528J4:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-12T18:24:33.4851922+03:00 0HLDO3HF528J4:00000007 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-12T18:24:33.7961460+03:00 0HLDO3HF528J4:00000007 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-12T18:24:34.3507932+03:00 0HLDO3HF528J4:00000007 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 896.1907ms (afa2e885)
+2018-05-12T18:24:34.4108698+03:00 0HLDO3HF528J5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:24:34.4184686+03:00 0HLDO3HF528J5:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:34.4399963+03:00 0HLDO3HF528J4:00000007 [INF] Request finished in 972.1964ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:24:34.4753372+03:00 0HLDO3HF528J5:00000002 [INF] Request finished in 100.9685ms 404  (791a596a)
+2018-05-12T18:24:34.4897283+03:00 0HLDO3HF528J4:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardManager.js   (ca22a1cb)
+2018-05-12T18:24:34.4954072+03:00 0HLDO3HF528J4:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:34.5000373+03:00 0HLDO3HF528J4:00000008 [INF] The file "/js/company/dashboardManager.js" was not modified (f1f8d725)
+2018-05-12T18:24:34.5055403+03:00 0HLDO3HF528J4:00000008 [INF] Request finished in 51.2744ms 304 application/javascript (791a596a)
+2018-05-12T18:24:34.6186937+03:00 0HLDO3HF528J4:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:24:34.6379013+03:00 0HLDO3HF528J4:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:34.6543672+03:00 0HLDO3HF528J4:00000009 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:24:34.6637359+03:00 0HLDO3HF528J4:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:34.6780154+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:24:34.7035003+03:00 0HLDO3HF528J4:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:24:34.7152070+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:24:34.7392026+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:24:34.7595527+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:24:34.7694594+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:24:34.7794472+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:24:34.7836677+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:24:34.8180535+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:24:34.8225496+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:24:34.8303582+03:00 0HLDO3HF528J4:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:24:34.9453398+03:00 0HLDO3HF528J4:00000009 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-12T18:24:34.9574645+03:00 0HLDO3HF528J4:00000009 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 311.8035ms (afa2e885)
+2018-05-12T18:24:34.9830077+03:00 0HLDO3HF528J4:00000009 [INF] Request finished in 358.5197ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:24:46.7571137+03:00 0HLDO3HF528J4:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:24:46.7663579+03:00 0HLDO3HF528J4:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:46.7781855+03:00 0HLDO3HF528J4:0000000A [INF] Request finished in 21.5858ms 404  (791a596a)
+2018-05-12T18:24:46.8987192+03:00 0HLDO3HF528J4:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:24:46.9274595+03:00 0HLDO3HF528J5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:24:46.9322895+03:00 0HLDO3HF528J5:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:46.9382023+03:00 0HLDO3HF528J5:00000003 [INF] Request finished in 56.6841ms 404  (791a596a)
+2018-05-12T18:24:46.9836342+03:00 0HLDO3HF528J4:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:24:46.9889185+03:00 0HLDO3HF528J4:0000000B [INF] Request finished in 112.8456ms 404  (791a596a)
+2018-05-12T18:52:55.0805845+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:52:55.4850065+03:00  [WRN] Unable to bind to "http://localhost:49743" on the "IPv4 loopback" interface: '"Error -4092 EACCES permission denied"'. (38217649)
+2018-05-12T18:52:55.5662069+03:00  [INF] Executed DbCommand ("73"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-12T18:52:55.6153714+03:00  [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-12T18:52:56.9255890+03:00 0HLDO41MLJKNO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-05-12T18:52:56.9760797+03:00 0HLDO41MLJKNO:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:52:57.1754924+03:00 0HLDO41MLJKNO:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:52:59.8126281+03:00 0HLDO41MLJKNO:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-05-12T18:53:00.1670743+03:00 0HLDO41MLJKNO:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 2939.9269ms (afa2e885)
+2018-05-12T18:53:00.1676610+03:00 0HLDO41MLJKNQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-05-12T18:53:00.2106732+03:00 0HLDO41MLJKNO:00000001 [INF] Request finished in 3267.5813ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:00.2179201+03:00 0HLDO41MLJKNQ:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:00.2280238+03:00 0HLDO41MLJKNQ:00000001 [INF] Request finished in 102.5559ms 404  (791a596a)
+2018-05-12T18:53:07.3115343+03:00 0HLDO41MLJKNQ:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 260 (ca22a1cb)
+2018-05-12T18:53:07.3171849+03:00 0HLDO41MLJKNQ:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:07.3925494+03:00 0HLDO41MLJKNQ:00000002 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:07.4049362+03:00 0HLDO41MLJKNQ:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:07.4272505+03:00 0HLDO41MLJKNQ:00000002 [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:53:07.5248170+03:00 0HLDO41MLJKNQ:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-05-12T18:53:07.5739126+03:00 0HLDO41MLJKNQ:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-05-12T18:53:07.5845244+03:00 0HLDO41MLJKNQ:00000002 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-05-12T18:53:07.6075086+03:00 0HLDO41MLJKNQ:00000002 [INF] User logged in. (fdce0db4)
+2018-05-12T18:53:07.6171272+03:00 0HLDO41MLJKNQ:00000002 [INF] Executing RedirectResult, redirecting to "/Company/Dashboard". (d98d540e)
+2018-05-12T18:53:07.6216791+03:00 0HLDO41MLJKNQ:00000002 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 275.7123ms (afa2e885)
+2018-05-12T18:53:07.6276562+03:00 0HLDO41MLJKNQ:00000002 [INF] Request finished in 315.0856ms 302  (791a596a)
+2018-05-12T18:53:07.6347472+03:00 0HLDO41MLJKNQ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-12T18:53:07.6602712+03:00 0HLDO41MLJKNQ:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:07.6778647+03:00 0HLDO41MLJKNQ:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:07.6846662+03:00 0HLDO41MLJKNQ:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:07.6902008+03:00 0HLDO41MLJKNQ:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:53:07.7010593+03:00 0HLDO41MLJKNQ:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:07.7201262+03:00 0HLDO41MLJKNQ:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-12T18:53:07.7420821+03:00 0HLDO41MLJKNQ:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-12T18:53:08.0493367+03:00 0HLDO41MLJKNQ:00000003 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-12T18:53:08.5666253+03:00 0HLDO41MLJKNQ:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 881.5082ms (afa2e885)
+2018-05-12T18:53:08.6226588+03:00 0HLDO41MLJKNQ:00000003 [INF] Request finished in 936.0853ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:08.6227166+03:00 0HLDO41MLJKNO:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:53:08.6511585+03:00 0HLDO41MLJKNO:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:08.6587262+03:00 0HLDO41MLJKNO:00000002 [INF] Request finished in 76.4375ms 404  (791a596a)
+2018-05-12T18:53:08.7860596+03:00 0HLDO41MLJKNO:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:53:08.7900244+03:00 0HLDO41MLJKNO:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:08.7984608+03:00 0HLDO41MLJKNO:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:08.8053674+03:00 0HLDO41MLJKNO:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:08.8215718+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:53:08.8689115+03:00 0HLDO41MLJKNO:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:08.8862698+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:08.9090593+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:08.9272395+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:53:08.9355964+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:08.9436783+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:08.9568005+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:53:08.9721136+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:08.9758811+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:08.9800557+03:00 0HLDO41MLJKNO:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:53:09.2899116+03:00 0HLDO41MLJKNO:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 494.3152ms (afa2e885)
+2018-05-12T18:53:09.4670665+03:00 0HLDO41MLJKNO:00000003 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\Areas\Company\Views\Dashboard\SuggestedCandidates.cshtml(40,13): error CS1061: 'MatchModel<SuggestedCandidate>' does not contain a definition for 'Any' and no extension method 'Any' accepting a first argument of type 'MatchModel<SuggestedCandidate>' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.PartialViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:53:09.4914306+03:00 0HLDO41MLJKNO:00000003 [INF] Request finished in 704.5182ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:12.1716660+03:00 0HLDO41MLJKNO:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:53:12.1851400+03:00 0HLDO41MLJKNO:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:12.2073860+03:00 0HLDO41MLJKNO:00000004 [INF] Request finished in 26.3208ms 404  (791a596a)
+2018-05-12T18:53:12.2621700+03:00 0HLDO41MLJKNO:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:53:12.2907505+03:00 0HLDO41MLJKNQ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:53:12.3019237+03:00 0HLDO41MLJKNO:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:12.3341371+03:00 0HLDO41MLJKNQ:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:12.3600688+03:00 0HLDO41MLJKNO:00000005 [INF] Request finished in 68.0802ms 404  (791a596a)
+2018-05-12T18:53:12.3832285+03:00 0HLDO41MLJKNQ:00000004 [INF] Request finished in 96.1629ms 404  (791a596a)
+2018-05-12T18:53:14.2286330+03:00 0HLDO41MLJKNQ:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:53:14.2395624+03:00 0HLDO41MLJKNQ:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:14.2514831+03:00 0HLDO41MLJKNQ:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:14.2573775+03:00 0HLDO41MLJKNQ:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:14.2697801+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:53:14.2756767+03:00 0HLDO41MLJKNQ:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:14.3062822+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:14.3100956+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:14.3201460+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:53:14.3262470+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:14.3517042+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:14.3577036+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:53:14.3663004+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:14.3703130+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:14.3755844+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:53:14.5215831+03:00 0HLDO41MLJKNQ:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 277.2066ms (afa2e885)
+2018-05-12T18:53:14.6691408+03:00 0HLDO41MLJKNQ:00000005 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\Areas\Company\Views\Dashboard\SuggestedCandidates.cshtml(40,13): error CS1061: 'MatchModel<SuggestedCandidate>' does not contain a definition for 'Any' and no extension method 'Any' accepting a first argument of type 'MatchModel<SuggestedCandidate>' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.PartialViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:53:14.7063791+03:00 0HLDO41MLJKNQ:00000005 [INF] Request finished in 487.9963ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:32.4585297+03:00 0HLDO41MLJKNQ:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:53:32.4621423+03:00 0HLDO41MLJKNQ:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:32.4668918+03:00 0HLDO41MLJKNQ:00000006 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:32.4715155+03:00 0HLDO41MLJKNQ:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:32.4756227+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:53:32.5006084+03:00 0HLDO41MLJKNQ:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:32.5052606+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:32.5288935+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:32.5343279+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:53:32.5409592+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:32.5651916+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:32.5699206+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:53:32.5753684+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:32.5997894+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:32.6043130+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:53:32.7458879+03:00 0HLDO41MLJKNQ:00000006 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 279.5344ms (afa2e885)
+2018-05-12T18:53:32.8919547+03:00 0HLDO41MLJKNQ:00000006 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\Areas\Company\Views\Dashboard\SuggestedCandidates.cshtml(40,13): error CS1061: 'MatchModel<SuggestedCandidate>' does not contain a definition for 'Any' and no extension method 'Any' accepting a first argument of type 'MatchModel<SuggestedCandidate>' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.PartialViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:53:32.9206287+03:00 0HLDO41MLJKNQ:00000006 [INF] Request finished in 457.6173ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:32.9266483+03:00 0HLDO41MLJKNQ:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/favicon.ico   (ca22a1cb)
+2018-05-12T18:53:32.9312996+03:00 0HLDO41MLJKNQ:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:32.9373983+03:00 0HLDO41MLJKNQ:00000007 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\favicon.ico"' (27b0a520)
+2018-05-12T18:53:32.9523916+03:00 0HLDO41MLJKNQ:00000007 [INF] Request finished in 18.4984ms 200 image/x-icon (791a596a)
+2018-05-12T18:53:37.3260475+03:00 0HLDO41MLJKNQ:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-12T18:53:37.3382132+03:00 0HLDO41MLJKNQ:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.3634491+03:00 0HLDO41MLJKNQ:00000008 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:37.3692729+03:00 0HLDO41MLJKNQ:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:37.3756376+03:00 0HLDO41MLJKNQ:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:53:37.3832096+03:00 0HLDO41MLJKNQ:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:37.3894449+03:00 0HLDO41MLJKNQ:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-12T18:53:37.3948357+03:00 0HLDO41MLJKNQ:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-12T18:53:37.4004985+03:00 0HLDO41MLJKNQ:00000008 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-12T18:53:37.4084086+03:00 0HLDO41MLJKNQ:00000008 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 64.5142ms (afa2e885)
+2018-05-12T18:53:37.4551369+03:00 0HLDO41MLJKNQ:00000008 [INF] Request finished in 96.2306ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:53:37.4845451+03:00 0HLDO41MLJKNQ:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-05-12T18:53:37.5117408+03:00 0HLDO41MLJKO2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css   (ca22a1cb)
+2018-05-12T18:53:37.5237340+03:00 0HLDO41MLJKO3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/MaterialButtons.css   (ca22a1cb)
+2018-05-12T18:53:37.5412816+03:00 0HLDO41MLJKO4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-05-12T18:53:37.5713080+03:00 0HLDO41MLJKNO:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-05-12T18:53:37.5756934+03:00 0HLDO41MLJKNQ:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.5931040+03:00 0HLDO41MLJKO4:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.6201023+03:00 0HLDO41MLJKNO:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.6201402+03:00 0HLDO41MLJKO3:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.6438551+03:00 0HLDO41MLJKNO:00000006 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-05-12T18:53:37.6509593+03:00 0HLDO41MLJKO4:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-05-12T18:53:37.6558169+03:00 0HLDO41MLJKO3:00000001 [INF] Sending file. Request path: '"/css/MaterialButtons.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\MaterialButtons.css"' (27b0a520)
+2018-05-12T18:53:37.6817255+03:00 0HLDO41MLJKO4:00000001 [INF] Request finished in 233.5461ms 200 text/css (791a596a)
+2018-05-12T18:53:37.7069621+03:00 0HLDO41MLJKO3:00000001 [INF] Request finished in 237.7871ms 200 text/css (791a596a)
+2018-05-12T18:53:37.7180368+03:00 0HLDO41MLJKO2:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.7779491+03:00 0HLDO41MLJKNO:00000006 [INF] Request finished in 292.6622ms 200 text/css (791a596a)
+2018-05-12T18:53:37.7783556+03:00 0HLDO41MLJKNQ:00000009 [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-05-12T18:53:37.7855588+03:00 0HLDO41MLJKO3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:53:37.8115008+03:00 0HLDO41MLJKO3:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.8608401+03:00 0HLDO41MLJKO3:00000002 [INF] Request finished in 92.2167ms 404  (791a596a)
+2018-05-12T18:53:37.8615542+03:00 0HLDO41MLJKNQ:00000009 [INF] Request finished in 322.9764ms 200 text/css (791a596a)
+2018-05-12T18:53:37.8893014+03:00 0HLDO41MLJKO3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-05-12T18:53:37.8934462+03:00 0HLDO41MLJKO3:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:37.9168734+03:00 0HLDO41MLJKO2:00000001 [INF] Sending file. Request path: '"/css/material-kit.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\material-kit.css"' (27b0a520)
+2018-05-12T18:53:37.9243769+03:00 0HLDO41MLJKO3:00000003 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-05-12T18:53:37.9682422+03:00 0HLDO41MLJKO2:00000001 [INF] Request finished in 504.1122ms 200 text/css (791a596a)
+2018-05-12T18:53:38.0209990+03:00 0HLDO41MLJKNO:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js   (ca22a1cb)
+2018-05-12T18:53:38.0920955+03:00 0HLDO41MLJKO2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-05-12T18:53:38.0927965+03:00 0HLDO41MLJKNQ:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-05-12T18:53:38.1189514+03:00 0HLDO41MLJKO2:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.1262188+03:00 0HLDO41MLJKO4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap-datepicker.js   (ca22a1cb)
+2018-05-12T18:53:38.2012233+03:00 0HLDO41MLJKO4:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.2245149+03:00 0HLDO41MLJKO2:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-05-12T18:53:38.2346070+03:00 0HLDO41MLJKO4:00000002 [INF] Sending file. Request path: '"/js/bootstrap-datepicker.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap-datepicker.js"' (27b0a520)
+2018-05-12T18:53:38.2530550+03:00 0HLDO41MLJKNQ:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.2629976+03:00 0HLDO41MLJKO5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-05-12T18:53:38.2744612+03:00 0HLDO41MLJKO5:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.2839422+03:00 0HLDO41MLJKNQ:0000000A [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-05-12T18:53:38.2931768+03:00 0HLDO41MLJKNQ:0000000A [INF] Request finished in 358.6432ms 200 application/javascript (791a596a)
+2018-05-12T18:53:38.3507056+03:00 0HLDO41MLJKNO:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.3724293+03:00 0HLDO41MLJKO4:00000002 [INF] Request finished in 273.5604ms 200 application/javascript (791a596a)
+2018-05-12T18:53:38.4188998+03:00 0HLDO41MLJKNO:00000007 [INF] Sending file. Request path: '"/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js"' (27b0a520)
+2018-05-12T18:53:38.4439894+03:00 0HLDO41MLJKO4:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-05-12T18:53:38.4563647+03:00 0HLDO41MLJKO4:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.4895605+03:00 0HLDO41MLJKO5:00000001 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-05-12T18:53:38.5166199+03:00 0HLDO41MLJKO4:00000003 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-05-12T18:53:38.5834468+03:00 0HLDO41MLJKO5:00000001 [INF] Request finished in 264.551ms 200 application/javascript (791a596a)
+2018-05-12T18:53:38.5935774+03:00 0HLDO41MLJKNQ:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-05-12T18:53:38.6413154+03:00 0HLDO41MLJKNQ:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.6757640+03:00 0HLDO41MLJKNO:00000007 [INF] Request finished in 519.7253ms 200 application/javascript (791a596a)
+2018-05-12T18:53:38.6777681+03:00 0HLDO41MLJKNQ:0000000B [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-05-12T18:53:38.7034691+03:00 0HLDO41MLJKO4:00000003 [INF] Request finished in 169.2327ms 200 font/woff2 (791a596a)
+2018-05-12T18:53:38.7862470+03:00 0HLDO41MLJKO4:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:53:38.7929103+03:00 0HLDO41MLJKO4:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.8063201+03:00 0HLDO41MLJKO4:00000004 [INF] Request finished in 36.8213ms 404  (791a596a)
+2018-05-12T18:53:38.8339669+03:00 0HLDO41MLJKO2:00000002 [INF] Request finished in 706.9871ms 200 application/javascript (791a596a)
+2018-05-12T18:53:38.8570092+03:00 0HLDO41MLJKO5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/images/company-avatar.png   (ca22a1cb)
+2018-05-12T18:53:38.9072121+03:00 0HLDO41MLJKO4:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-05-12T18:53:38.9565012+03:00 0HLDO41MLJKO4:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:38.9611614+03:00 0HLDO41MLJKO4:00000005 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-05-12T18:53:38.9935419+03:00 0HLDO41MLJKO5:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.0224551+03:00 0HLDO41MLJKO2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-05-12T18:53:39.0386630+03:00 0HLDO41MLJKO2:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.0580632+03:00 0HLDO41MLJKO2:00000003 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-05-12T18:53:39.0881099+03:00 0HLDO41MLJKNQ:0000000B [INF] Request finished in 429.9931ms 200 font/woff2 (791a596a)
+2018-05-12T18:53:39.0954896+03:00 0HLDO41MLJKNO:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Bold.woff2   (ca22a1cb)
+2018-05-12T18:53:39.1498831+03:00 0HLDO41MLJKO4:00000005 [INF] Request finished in 268.7256ms 200 application/javascript (791a596a)
+2018-05-12T18:53:39.1740367+03:00 0HLDO41MLJKO5:00000002 [INF] Sending file. Request path: '"/images/company-avatar.png"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\images\company-avatar.png"' (27b0a520)
+2018-05-12T18:53:39.2035802+03:00 0HLDO41MLJKO4:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/ajaxSender.js   (ca22a1cb)
+2018-05-12T18:53:39.2734321+03:00 0HLDO41MLJKNO:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.3004558+03:00 0HLDO41MLJKO4:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.3665278+03:00 0HLDO41MLJKNO:00000008 [INF] Sending file. Request path: '"/font/roboto/Roboto-Bold.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Bold.woff2"' (27b0a520)
+2018-05-12T18:53:39.3733994+03:00 0HLDO41MLJKNQ:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:53:39.4144739+03:00 0HLDO41MLJKO5:00000002 [INF] Request finished in 755.6213ms 200 image/png (791a596a)
+2018-05-12T18:53:39.4160844+03:00 0HLDO41MLJKNQ:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.4265582+03:00 0HLDO41MLJKNQ:0000000C [INF] Request finished in 72.9138ms 404  (791a596a)
+2018-05-12T18:53:39.4729102+03:00 0HLDO41MLJKO2:00000003 [INF] Request finished in 207.769ms 200 application/javascript (791a596a)
+2018-05-12T18:53:39.5178774+03:00 0HLDO41MLJKNO:00000008 [INF] Request finished in 590.3036ms 200 font/woff2 (791a596a)
+2018-05-12T18:53:39.5494344+03:00 0HLDO41MLJKO4:00000006 [INF] Sending file. Request path: '"/js/base/ajaxSender.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\base\ajaxSender.js"' (27b0a520)
+2018-05-12T18:53:39.5838584+03:00 0HLDO41MLJKO2:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardManager.js   (ca22a1cb)
+2018-05-12T18:53:39.5913485+03:00 0HLDO41MLJKO2:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:39.5994782+03:00 0HLDO41MLJKO4:00000006 [INF] Request finished in 377.8124ms 200 application/javascript (791a596a)
+2018-05-12T18:53:39.6330300+03:00 0HLDO41MLJKO2:00000004 [INF] Sending file. Request path: '"/js/company/dashboardManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\company\dashboardManager.js"' (27b0a520)
+2018-05-12T18:53:39.6415059+03:00 0HLDO41MLJKO2:00000004 [INF] Request finished in 144.247ms 200 application/javascript (791a596a)
+2018-05-12T18:53:39.6551660+03:00 0HLDO41MLJKO3:00000003 [INF] Request finished in 1668.7391ms 200 application/javascript (791a596a)
+2018-05-12T18:53:42.8976894+03:00 0HLDO41MLJKO2:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:53:42.9079025+03:00 0HLDO41MLJKO2:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:53:42.9127437+03:00 0HLDO41MLJKO2:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:53:42.9226186+03:00 0HLDO41MLJKO2:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:42.9383223+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:53:42.9442028+03:00 0HLDO41MLJKO2:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:53:42.9773680+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:43.0016296+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:43.0060711+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:53:43.0130881+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:43.0367678+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:43.0411951+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:53:43.0500197+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:53:43.0747706+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:53:43.0801062+03:00 0HLDO41MLJKO2:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:53:43.2438628+03:00 0HLDO41MLJKO2:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 332.6964ms (afa2e885)
+2018-05-12T18:53:43.3961395+03:00 0HLDO41MLJKO2:00000005 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\Areas\Company\Views\Dashboard\SuggestedCandidates.cshtml(40,13): error CS1061: 'MatchModel<SuggestedCandidate>' does not contain a definition for 'Any' and no extension method 'Any' accepting a first argument of type 'MatchModel<SuggestedCandidate>' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CreateCacheEntry(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.PartialViewResultExecutor.FindView(ActionContext actionContext, PartialViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.PartialViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-05-12T18:53:43.4238581+03:00 0HLDO41MLJKO2:00000005 [INF] Request finished in 524.9678ms 500 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:54:00.9957234+03:00 0HLDO41MLJKO2:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-12T18:54:01.0072799+03:00 0HLDO41MLJKO2:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.0338757+03:00 0HLDO41MLJKO2:00000006 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:54:01.0404967+03:00 0HLDO41MLJKO2:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:01.0523561+03:00 0HLDO41MLJKO2:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:54:01.0585941+03:00 0HLDO41MLJKO2:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:01.0672789+03:00 0HLDO41MLJKO2:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-12T18:54:01.0747519+03:00 0HLDO41MLJKO2:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-12T18:54:01.0786744+03:00 0HLDO41MLJKO2:00000006 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-12T18:54:01.1262942+03:00 0HLDO41MLJKO2:00000006 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 71.4602ms (afa2e885)
+2018-05-12T18:54:01.1565545+03:00 0HLDO41MLJKO4:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-05-12T18:54:01.2372578+03:00 0HLDO41MLJKO3:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-05-12T18:54:01.2514882+03:00 0HLDO41MLJKO4:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.2568684+03:00 0HLDO41MLJKNO:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css   (ca22a1cb)
+2018-05-12T18:54:01.2615361+03:00 0HLDO41MLJKNQ:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-05-12T18:54:01.2715993+03:00 0HLDO41MLJKO5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/MaterialButtons.css   (ca22a1cb)
+2018-05-12T18:54:01.2873504+03:00 0HLDO41MLJKNQ:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.3530016+03:00 0HLDO41MLJKNQ:0000000D [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-05-12T18:54:01.3601516+03:00 0HLDO41MLJKO3:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.3844635+03:00 0HLDO41MLJKNO:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.4125674+03:00 0HLDO41MLJKO4:00000007 [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-05-12T18:54:01.4218454+03:00 0HLDO41MLJKO5:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.4293669+03:00 0HLDO41MLJKO2:00000006 [INF] Request finished in 137.9647ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:54:01.5083593+03:00 0HLDO41MLJKNQ:0000000D [INF] Request finished in 248.6398ms 200 text/css (791a596a)
+2018-05-12T18:54:01.5160174+03:00 0HLDO41MLJKO3:00000004 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-05-12T18:54:01.5280697+03:00 0HLDO41MLJKO5:00000003 [INF] Sending file. Request path: '"/css/MaterialButtons.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\MaterialButtons.css"' (27b0a520)
+2018-05-12T18:54:01.5993929+03:00 0HLDO41MLJKNO:00000009 [INF] Sending file. Request path: '"/css/material-kit.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\material-kit.css"' (27b0a520)
+2018-05-12T18:54:01.6013742+03:00 0HLDO41MLJKO4:00000007 [INF] Request finished in 348.059ms 200 text/css (791a596a)
+2018-05-12T18:54:01.6423223+03:00 0HLDO41MLJKNO:00000009 [INF] Request finished in 472.4188ms 200 text/css (791a596a)
+2018-05-12T18:54:01.7023749+03:00 0HLDO41MLJKO2:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap-datepicker.js   (ca22a1cb)
+2018-05-12T18:54:01.7113708+03:00 0HLDO41MLJKO5:00000003 [INF] Request finished in 405.3494ms 200 text/css (791a596a)
+2018-05-12T18:54:01.7222069+03:00 0HLDO41MLJKO3:00000004 [INF] Request finished in 429.721ms 200 text/css (791a596a)
+2018-05-12T18:54:01.7519757+03:00 0HLDO41MLJKNQ:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js   (ca22a1cb)
+2018-05-12T18:54:01.7577187+03:00 0HLDO41MLJKO4:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-05-12T18:54:01.7755309+03:00 0HLDO41MLJKO2:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.8301831+03:00 0HLDO41MLJKO4:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.8803722+03:00 0HLDO41MLJKNQ:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.8893514+03:00 0HLDO41MLJKO5:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:54:01.9144587+03:00 0HLDO41MLJKO5:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:01.9551756+03:00 0HLDO41MLJKO4:00000008 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-05-12T18:54:01.9768159+03:00 0HLDO41MLJKO3:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-05-12T18:54:02.0053099+03:00 0HLDO41MLJKO2:00000007 [INF] Sending file. Request path: '"/js/bootstrap-datepicker.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap-datepicker.js"' (27b0a520)
+2018-05-12T18:54:02.0281744+03:00 0HLDO41MLJKNQ:0000000E [INF] Sending file. Request path: '"/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js"' (27b0a520)
+2018-05-12T18:54:02.1604360+03:00 0HLDO41MLJKO5:00000004 [INF] Request finished in 202.5069ms 404  (791a596a)
+2018-05-12T18:54:02.1728157+03:00 0HLDO41MLJKO3:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.1784705+03:00 0HLDO41MLJKO4:00000008 [INF] Request finished in 332.1545ms 200 application/javascript (791a596a)
+2018-05-12T18:54:02.1919310+03:00 0HLDO41MLJKO2:00000007 [INF] Request finished in 409.3071ms 200 application/javascript (791a596a)
+2018-05-12T18:54:02.2104891+03:00 0HLDO41MLJKNQ:0000000E [INF] Request finished in 424.456ms 200 application/javascript (791a596a)
+2018-05-12T18:54:02.2871245+03:00 0HLDO41MLJKO3:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-05-12T18:54:02.3112764+03:00 0HLDO41MLJKO5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-05-12T18:54:02.3448378+03:00 0HLDO41MLJKO2:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-05-12T18:54:02.3599825+03:00 0HLDO41MLJKO2:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.3737847+03:00 0HLDO41MLJKNQ:0000000F [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Bold.woff2   (ca22a1cb)
+2018-05-12T18:54:02.4128523+03:00 0HLDO41MLJKO4:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-05-12T18:54:02.4128176+03:00 0HLDO41MLJKNO:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-05-12T18:54:02.4376214+03:00 0HLDO41MLJKO5:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.4898281+03:00 0HLDO41MLJKO4:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.5226558+03:00 0HLDO41MLJKNQ:0000000F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.5368702+03:00 0HLDO41MLJKO3:00000005 [INF] Request finished in 524.5482ms 200 application/javascript (791a596a)
+2018-05-12T18:54:02.5606227+03:00 0HLDO41MLJKO4:00000009 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-05-12T18:54:02.5871922+03:00 0HLDO41MLJKO5:00000005 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-05-12T18:54:02.5946646+03:00 0HLDO41MLJKO2:00000008 [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-05-12T18:54:02.6143189+03:00 0HLDO41MLJKO5:00000005 [INF] Request finished in 367.897ms 200 application/javascript (791a596a)
+2018-05-12T18:54:02.6349968+03:00 0HLDO41MLJKNQ:0000000F [INF] Sending file. Request path: '"/font/roboto/Roboto-Bold.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Bold.woff2"' (27b0a520)
+2018-05-12T18:54:02.6512993+03:00 0HLDO41MLJKO4:00000009 [INF] Request finished in 311.9386ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:02.7034441+03:00 0HLDO41MLJKO2:00000008 [INF] Request finished in 397.2437ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:02.7428004+03:00 0HLDO41MLJKO4:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:54:02.7671849+03:00 0HLDO41MLJKNQ:0000000F [INF] Request finished in 364.3028ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:02.8036297+03:00 0HLDO41MLJKNO:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.8395001+03:00 0HLDO41MLJKO5:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-05-12T18:54:02.8677172+03:00 0HLDO41MLJKO3:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/images/company-avatar.png   (ca22a1cb)
+2018-05-12T18:54:02.8737929+03:00 0HLDO41MLJKO2:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-05-12T18:54:02.9025810+03:00 0HLDO41MLJKO4:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.9090853+03:00 0HLDO41MLJKO3:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.9212267+03:00 0HLDO41MLJKO5:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:02.9260644+03:00 0HLDO41MLJKNQ:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/ajaxSender.js   (ca22a1cb)
+2018-05-12T18:54:02.9441759+03:00 0HLDO41MLJKNQ:00000010 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:03.0100051+03:00 0HLDO41MLJKO5:00000006 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-05-12T18:54:03.0220901+03:00 0HLDO41MLJKNO:0000000A [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-05-12T18:54:03.0229966+03:00 0HLDO41MLJKO2:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:03.0611012+03:00 0HLDO41MLJKO2:00000009 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-05-12T18:54:03.0623789+03:00 0HLDO41MLJKO4:0000000A [INF] Request finished in 178.8599ms 404  (791a596a)
+2018-05-12T18:54:03.1072454+03:00 0HLDO41MLJKO4:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardManager.js   (ca22a1cb)
+2018-05-12T18:54:03.1202593+03:00 0HLDO41MLJKNQ:00000010 [INF] Sending file. Request path: '"/js/base/ajaxSender.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\base\ajaxSender.js"' (27b0a520)
+2018-05-12T18:54:03.1259244+03:00 0HLDO41MLJKO5:00000006 [INF] Request finished in 345.9086ms 200 application/javascript (791a596a)
+2018-05-12T18:54:03.1622135+03:00 0HLDO41MLJKO2:00000009 [INF] Request finished in 306.3402ms 200 application/javascript (791a596a)
+2018-05-12T18:54:03.1780797+03:00 0HLDO41MLJKO4:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:03.1852560+03:00 0HLDO41MLJKO3:00000006 [INF] Sending file. Request path: '"/images/company-avatar.png"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\images\company-avatar.png"' (27b0a520)
+2018-05-12T18:54:03.2408013+03:00 0HLDO41MLJKO5:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:54:03.2600890+03:00 0HLDO41MLJKNO:0000000A [INF] Request finished in 1522.6808ms 200 application/javascript (791a596a)
+2018-05-12T18:54:03.2700518+03:00 0HLDO41MLJKNQ:00000010 [INF] Request finished in 293.9143ms 200 application/javascript (791a596a)
+2018-05-12T18:54:03.2896518+03:00 0HLDO41MLJKO5:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:03.3028679+03:00 0HLDO41MLJKO4:0000000B [INF] Sending file. Request path: '"/js/company/dashboardManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\company\dashboardManager.js"' (27b0a520)
+2018-05-12T18:54:03.3102418+03:00 0HLDO41MLJKO4:0000000B [INF] Request finished in 227.3617ms 200 application/javascript (791a596a)
+2018-05-12T18:54:03.3629750+03:00 0HLDO41MLJKO5:00000007 [INF] Request finished in 71.944ms 404  (791a596a)
+2018-05-12T18:54:03.3752540+03:00 0HLDO41MLJKO3:00000006 [INF] Request finished in 559.6635ms 200 image/png (791a596a)
+2018-05-12T18:54:04.6022253+03:00 0HLDO41MLJKO4:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:54:04.6137597+03:00 0HLDO41MLJKO4:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:04.6271372+03:00 0HLDO41MLJKO4:0000000C [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:54:04.6348992+03:00 0HLDO41MLJKO4:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:04.6441509+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:54:04.6531170+03:00 0HLDO41MLJKO4:0000000C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:04.7251101+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:04.7267096+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:04.7335424+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:54:04.8048797+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:04.8090198+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:04.8369369+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:54:04.8676332+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:04.8922756+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:04.8965949+03:00 0HLDO41MLJKO4:0000000C [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:54:05.0049859+03:00 0HLDO41MLJKO4:0000000C [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-12T18:54:05.0224134+03:00 0HLDO41MLJKO4:0000000C [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 402.8458ms (afa2e885)
+2018-05-12T18:54:05.0272328+03:00 0HLDO41MLJKO4:0000000C [INF] Request finished in 428.7163ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:54:19.3024496+03:00 0HLDO41MLJKO4:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:54:19.3093102+03:00 0HLDO41MLJKO4:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:19.3225122+03:00 0HLDO41MLJKO4:0000000D [INF] Request finished in 15.3776ms 404  (791a596a)
+2018-05-12T18:54:19.4285016+03:00 0HLDO41MLJKO4:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:54:19.4549595+03:00 0HLDO41MLJKO5:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:54:19.4773361+03:00 0HLDO41MLJKO4:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:19.5249572+03:00 0HLDO41MLJKO5:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:19.5527207+03:00 0HLDO41MLJKO4:0000000E [INF] Request finished in 98.1141ms 404  (791a596a)
+2018-05-12T18:54:19.6093843+03:00 0HLDO41MLJKO5:00000008 [INF] Request finished in 122.2153ms 404  (791a596a)
+2018-05-12T18:54:41.4060061+03:00 0HLDO41MLJKO5:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-12T18:54:41.4119823+03:00 0HLDO41MLJKO5:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.4185886+03:00 0HLDO41MLJKO5:00000009 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:54:41.4445039+03:00 0HLDO41MLJKO5:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:41.4549251+03:00 0HLDO41MLJKO5:00000009 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-12T18:54:41.4611134+03:00 0HLDO41MLJKO5:00000009 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:41.4692018+03:00 0HLDO41MLJKO5:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-12T18:54:41.4764413+03:00 0HLDO41MLJKO5:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-12T18:54:41.4843174+03:00 0HLDO41MLJKO5:00000009 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-12T18:54:41.5214894+03:00 0HLDO41MLJKO5:00000009 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 72.8656ms (afa2e885)
+2018-05-12T18:54:41.5624086+03:00 0HLDO41MLJKNO:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css   (ca22a1cb)
+2018-05-12T18:54:41.5751665+03:00 0HLDO41MLJKO5:00000009 [INF] Request finished in 125.1946ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-12T18:54:41.6316304+03:00 0HLDO41MLJKNO:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.6390726+03:00 0HLDO41MLJKO3:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-05-12T18:54:41.7136318+03:00 0HLDO41MLJKO2:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/MaterialButtons.css   (ca22a1cb)
+2018-05-12T18:54:41.7214075+03:00 0HLDO41MLJKO3:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.7283242+03:00 0HLDO41MLJKO2:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.7332960+03:00 0HLDO41MLJKO4:0000000F [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-05-12T18:54:41.7618211+03:00 0HLDO41MLJKNQ:00000011 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-05-12T18:54:41.7927522+03:00 0HLDO41MLJKO4:0000000F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.8100005+03:00 0HLDO41MLJKNO:0000000B [INF] Sending file. Request path: '"/css/material-kit.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\material-kit.css"' (27b0a520)
+2018-05-12T18:54:41.8384184+03:00 0HLDO41MLJKNQ:00000011 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:41.8537329+03:00 0HLDO41MLJKNQ:00000011 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-05-12T18:54:41.8696128+03:00 0HLDO41MLJKO3:00000007 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-05-12T18:54:41.8696362+03:00 0HLDO41MLJKO2:0000000A [INF] Sending file. Request path: '"/css/MaterialButtons.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\MaterialButtons.css"' (27b0a520)
+2018-05-12T18:54:41.8798243+03:00 0HLDO41MLJKO2:0000000A [INF] Request finished in 355.3604ms 200 text/css (791a596a)
+2018-05-12T18:54:41.8908798+03:00 0HLDO41MLJKO3:00000007 [INF] Request finished in 369.3541ms 200 text/css (791a596a)
+2018-05-12T18:54:41.9406493+03:00 0HLDO41MLJKO4:0000000F [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-05-12T18:54:41.9516269+03:00 0HLDO41MLJKO2:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-12T18:54:41.9566381+03:00 0HLDO41MLJKNQ:00000011 [INF] Request finished in 245.7898ms 200 text/css (791a596a)
+2018-05-12T18:54:41.9886419+03:00 0HLDO41MLJKO2:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.0191534+03:00 0HLDO41MLJKNO:0000000B [INF] Request finished in 300.996ms 200 text/css (791a596a)
+2018-05-12T18:54:42.0632932+03:00 0HLDO41MLJKO2:0000000B [INF] Request finished in 76.0878ms 404  (791a596a)
+2018-05-12T18:54:42.1477485+03:00 0HLDO41MLJKNQ:00000012 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-05-12T18:54:42.1601219+03:00 0HLDO41MLJKO4:0000000F [INF] Request finished in 468.6998ms 200 text/css (791a596a)
+2018-05-12T18:54:42.1753574+03:00 0HLDO41MLJKNQ:00000012 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.1861883+03:00 0HLDO41MLJKNO:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js   (ca22a1cb)
+2018-05-12T18:54:42.2031972+03:00 0HLDO41MLJKO2:0000000C [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-05-12T18:54:42.2705096+03:00 0HLDO41MLJKNQ:00000012 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-05-12T18:54:42.2878675+03:00 0HLDO41MLJKNO:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.2961827+03:00 0HLDO41MLJKNO:0000000C [INF] Sending file. Request path: '"/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js"' (27b0a520)
+2018-05-12T18:54:42.3380128+03:00 0HLDO41MLJKO2:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.3547538+03:00 0HLDO41MLJKO2:0000000C [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-05-12T18:54:42.3684482+03:00 0HLDO41MLJKNQ:00000012 [INF] Request finished in 194.0579ms 200 application/javascript (791a596a)
+2018-05-12T18:54:42.3865539+03:00 0HLDO41MLJKO2:0000000C [INF] Request finished in 218.6727ms 200 application/javascript (791a596a)
+2018-05-12T18:54:42.3982282+03:00 0HLDO41MLJKO4:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-05-12T18:54:42.4260687+03:00 0HLDO41MLJKNO:0000000C [INF] Request finished in 215.2729ms 200 application/javascript (791a596a)
+2018-05-12T18:54:42.4582426+03:00 0HLDO41MLJKNQ:00000013 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-05-12T18:54:42.5086063+03:00 0HLDO41MLJKO3:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-05-12T18:54:42.5199097+03:00 0HLDO41MLJKNQ:00000013 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.5748917+03:00 0HLDO41MLJKO4:00000010 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.5894753+03:00 0HLDO41MLJKO3:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.5970485+03:00 0HLDO41MLJKNQ:00000013 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-05-12T18:54:42.6036182+03:00 0HLDO41MLJKO2:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Bold.woff2   (ca22a1cb)
+2018-05-12T18:54:42.6566041+03:00 0HLDO41MLJKNQ:00000013 [INF] Request finished in 184.4149ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:42.6806973+03:00 0HLDO41MLJKO4:00000010 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-05-12T18:54:42.6932597+03:00 0HLDO41MLJKNO:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-05-12T18:54:42.7120810+03:00 0HLDO41MLJKO2:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.7525179+03:00 0HLDO41MLJKNQ:00000014 [INF] Request starting HTTP/1.1 GET http://localhost:49743/images/company-avatar.png   (ca22a1cb)
+2018-05-12T18:54:42.8060347+03:00 0HLDO41MLJKO3:00000008 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-05-12T18:54:42.8076104+03:00 0HLDO41MLJKNO:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.8207861+03:00 0HLDO41MLJKO3:00000008 [INF] Request finished in 536.6578ms 200 application/javascript (791a596a)
+2018-05-12T18:54:42.8207772+03:00 0HLDO41MLJKO2:0000000D [INF] Sending file. Request path: '"/font/roboto/Roboto-Bold.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Bold.woff2"' (27b0a520)
+2018-05-12T18:54:42.8816432+03:00 0HLDO41MLJKNO:0000000D [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-05-12T18:54:42.9140962+03:00 0HLDO41MLJKNO:0000000D [INF] Request finished in 335.2095ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:42.9345236+03:00 0HLDO41MLJKNQ:00000014 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:42.9457382+03:00 0HLDO41MLJKNQ:00000014 [INF] Sending file. Request path: '"/images/company-avatar.png"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\images\company-avatar.png"' (27b0a520)
+2018-05-12T18:54:42.9468546+03:00 0HLDO41MLJKO2:0000000D [INF] Request finished in 342.8177ms 200 font/woff2 (791a596a)
+2018-05-12T18:54:42.9745609+03:00 0HLDO41MLJKO2:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-05-12T18:54:42.9903502+03:00 0HLDO41MLJKO3:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css.map   (ca22a1cb)
+2018-05-12T18:54:43.0522574+03:00 0HLDO41MLJKO5:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap-datepicker.js   (ca22a1cb)
+2018-05-12T18:54:43.0627315+03:00 0HLDO41MLJKO5:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.0758302+03:00 0HLDO41MLJKO5:0000000A [INF] Sending file. Request path: '"/js/bootstrap-datepicker.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap-datepicker.js"' (27b0a520)
+2018-05-12T18:54:43.1076448+03:00 0HLDO41MLJKNO:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-05-12T18:54:43.1298748+03:00 0HLDO41MLJKO5:0000000A [INF] Request finished in 129.0054ms 200 application/javascript (791a596a)
+2018-05-12T18:54:43.1432198+03:00 0HLDO41MLJKO2:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.1471409+03:00 0HLDO41MLJKO2:0000000E [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-05-12T18:54:43.1577608+03:00 0HLDO41MLJKO3:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.1625212+03:00 0HLDO41MLJKO3:00000009 [INF] Request finished in 310.1703ms 404  (791a596a)
+2018-05-12T18:54:43.1877474+03:00 0HLDO41MLJKNO:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.2591882+03:00 0HLDO41MLJKO5:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/ajaxSender.js   (ca22a1cb)
+2018-05-12T18:54:43.2924745+03:00 0HLDO41MLJKO3:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css.map   (ca22a1cb)
+2018-05-12T18:54:43.3070056+03:00 0HLDO41MLJKO3:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.3093952+03:00 0HLDO41MLJKNQ:00000014 [INF] Request finished in 424.5475ms 200 image/png (791a596a)
+2018-05-12T18:54:43.3546277+03:00 0HLDO41MLJKO3:0000000A [INF] Request finished in 72.6661ms 404  (791a596a)
+2018-05-12T18:54:43.3612218+03:00 0HLDO41MLJKNO:0000000E [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-05-12T18:54:43.3779616+03:00 0HLDO41MLJKO5:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.3878762+03:00 0HLDO41MLJKO5:0000000B [INF] Sending file. Request path: '"/js/base/ajaxSender.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\base\ajaxSender.js"' (27b0a520)
+2018-05-12T18:54:43.3917271+03:00 0HLDO41MLJKNQ:00000015 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardManager.js   (ca22a1cb)
+2018-05-12T18:54:43.4430343+03:00 0HLDO41MLJKO5:0000000B [INF] Request finished in 181.272ms 200 application/javascript (791a596a)
+2018-05-12T18:54:43.4587341+03:00 0HLDO41MLJKNQ:00000015 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:43.4721124+03:00 0HLDO41MLJKNO:0000000E [INF] Request finished in 519.0378ms 200 application/javascript (791a596a)
+2018-05-12T18:54:43.4849413+03:00 0HLDO41MLJKNQ:00000015 [INF] Sending file. Request path: '"/js/company/dashboardManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\company\dashboardManager.js"' (27b0a520)
+2018-05-12T18:54:43.4928009+03:00 0HLDO41MLJKO2:0000000E [INF] Request finished in 409.8454ms 200 application/javascript (791a596a)
+2018-05-12T18:54:43.5014402+03:00 0HLDO41MLJKNQ:00000015 [INF] Request finished in 145.7994ms 200 application/javascript (791a596a)
+2018-05-12T18:54:43.5280420+03:00 0HLDO41MLJKO4:00000010 [INF] Request finished in 1219.5081ms 200 application/javascript (791a596a)
+2018-05-12T18:54:45.7964680+03:00 0HLDO41MLJKNQ:00000016 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-12T18:54:45.8054396+03:00 0HLDO41MLJKNQ:00000016 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-12T18:54:45.8366947+03:00 0HLDO41MLJKNQ:00000016 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-12T18:54:45.8434658+03:00 0HLDO41MLJKNQ:00000016 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:45.8501543+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-12T18:54:45.8558619+03:00 0HLDO41MLJKNQ:00000016 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-12T18:54:45.9049841+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:45.9286901+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:45.9546992+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-12T18:54:45.9870036+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:45.9892720+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:45.9946246+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-12T18:54:46.0218241+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-12T18:54:46.0471950+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-12T18:54:46.0545799+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-12T18:54:46.1534889+03:00 0HLDO41MLJKNQ:00000016 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-12T18:54:46.1655409+03:00 0HLDO41MLJKNQ:00000016 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 355.4037ms (afa2e885)
+2018-05-12T18:54:46.1726977+03:00 0HLDO41MLJKNQ:00000016 [INF] Request finished in 378.3067ms 200 text/html; charset=utf-8 (791a596a)

@@ -154,10 +154,6 @@ class PositionManager{
             selectedSkills.push(new Number(skillValue));
         });
 
-        let request = {
-                PositionId: new Number($('#positionId').val()),
-        }
-
         ajaxRequest.sendAjax('/Company/Positions/ChangeSkills', { 'PositionId': new Number($('#positionId').val()), 'RequiredSkills': selectedSkills}, 'POST', 'application/json', null, this.onPositionSuccessfulyUpdated, this.onPositionUpdateError);
     }
 

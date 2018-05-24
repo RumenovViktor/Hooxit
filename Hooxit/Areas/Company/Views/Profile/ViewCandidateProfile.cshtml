@@ -1,0 +1,95 @@
+﻿@using Hooxit.Components
+@model Hooxit.Presentation.ProfileReadModel
+
+<div class="top">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="image-container">
+                    <img class="img-fluid" src="~/images/default-avatar.png" />
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">@Model.FullName</h4>
+                    <br />
+                    <div class="card-text">
+                        <div class="row">
+                            <div class="col-1">
+                                <a href="#"></a><i class="fa fa-briefcase" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-9">
+                                <p class="userInfodisplayValue pull-left">
+                                    @Model.Position
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <div class="row">
+                            <div class="col-1">
+                                <a href="#"></a><i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-9 positionUserInfoWrapper">
+                                <p class="userInfodisplayValue pull-left">@Model.Country</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <div class="row">
+                            <div class="col-1">
+                                <a href="#"></a><i class="fa fa-link" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-lg-9">
+                                <p class="userInfodisplayValue pull-left">
+                                    @Model.Email
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="card card-block">
+                    <h4 class="card-title">Experience</h4>
+                    <hr />
+                    <div id="experienceContainer">
+
+                    </div>
+                    @Html.Partial("../Experience/_ExperiencePartial.cshtml", Model.Experience)
+                </div>
+            </div>
+            <div class="row top">
+                <div class="card col-lg-12">
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Skills
+                        </h4>
+                        <hr class="my-2" />
+                        @if (!Model.Skills.Any())
+                        {
+                            <div class="text-center noSkillsContainer">
+                                <p>No skills yet.</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="skillsContainer skillsPresentationContainer">
+                                @foreach (var skill in Model.Skills)
+                                {
+                                    <label class="badge badge-info selectedSkill" value="@skill.ID">@skill.Name</label>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ProfileScripts{
+    <script src="~/js/profile/userInfo/userInfo.js"></script>
+    <script src="~/js/skills/skillsManager.js"></script>
+    <script src="~/js/profile/profileManager.js"></script>
+}

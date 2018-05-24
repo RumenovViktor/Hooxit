@@ -91,21 +91,63 @@
                 </div>
             </div>
             <div class="row top">
-                <div class="jumbotron col-12">
-                    <h4 class="h4-responsive">Skills</h4>
-                    <hr class="my-2">
-                    <p class="lead">
-                        <h6>New skill <a href="#" class="addSkillBtn"><i class="fa fa-plus"></i></a></h6>
-                    </p>
-                    <hr class="my-2">
-                    <p class="lead">
-                        <h6>New skill <a href="#" class="addSkillBtn"><i class="fa fa-plus"></i></a></h6>
-                    </p>
-                    <hr class="my-2">
-                    <p class="lead">
-                        <h6>New skill <a href="#" class="addSkillBtn"><i class="fa fa-plus"></i></a></h6>
-                    </p>
-                    <hr class="my-2">
+                <div class="card col-lg-12">
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Skills
+
+                            <a href="#" class="updateSkills pull-right"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="#" class="skillsCloseUpdate pull-right"><i class="fa fa-close" aria-hidden="true"></i></a>
+                            <a href="#" class="saveSkills pull-right"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                        </h4>
+                        <hr class="my-2" />
+                        @if (!Model.Skills.Any())
+                        {
+                            <div class="text-center noSkillsContainer">
+                                <p>You haven't added any skills yet.</p>
+                                <a class="btn btn-unique candidateAddSkillBtn">Add Skills</a>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="skillsContainer skillsPresentationContainer">
+                                @foreach (var skill in Model.Skills)
+                                {
+                                    <label class="badge badge-info selectedSkill" value="@skill.ID">@skill.Name</label>
+                                }
+                            </div>
+                        }
+                        <div class="skillsPanel">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="input-group md-form">
+                                        <input type="text" id="searchSkill" />
+                                        <label for="searchSkill">Search</label>
+                                    </div>
+                                    <div class="list-group skillsList">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card top">
+                                <div class="card-block">
+                                    <h4 class="card-title">Skills</h4>
+                                    <div class="skillsContainer">
+                                        @if (Model.Skills.Any())
+                                        {
+                                            foreach (var skill in Model.Skills)
+                                            {
+                                                <label class="badge badge-info selectedSkill" value="@skill.ID">@skill.Name<a class="fa fa-remove"></a></label>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <p class="noSkillsText">No skills selected...</p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,14 +163,16 @@
                 <div class="card-block">
                     <h4 class="card-title"><i class="fa fa-info-circle" aria-hidden="true"></i></h4>
                     <p class="card-text">Adding skills will make it easier to match with jobs positions.</p>
-                    <a class="btn btn-default">New Skill</a>
+                    <a class="btn btn-default candidateAddSkillBtn">New Skill</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-@section ProfileScripts{ 
+@section ProfileScripts{
     <script src="~/js/profile/userInfo/userInfo.js"></script>
     <script src="~/js/profile/userQualification/userQualification.js"></script>
+    <script src="~/js/skills/skillsManager.js"></script>
+    <script src="~/js/profile/profileManager.js"></script>
 }

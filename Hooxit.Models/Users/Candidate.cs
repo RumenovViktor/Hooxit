@@ -24,5 +24,6 @@ namespace Hooxit.Models.Users
         public virtual Country Country { get; set; }
 
         public ICollection<Experience> Experience { get; set; }
+        public virtual ICollection<CandidateSkill> CandidateSkill { get; set; }
     }
 }

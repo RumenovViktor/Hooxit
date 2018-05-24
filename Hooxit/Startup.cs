@@ -80,7 +80,10 @@ namespace Hooxit
             services.AddTransient<IPositionsManager, PositionsManager>();
             services.AddTransient<ICompanyProfileManager, CompanyProfileManager>();
             services.AddTransient<ICompanyProfileApplicationService, CompanyProfileApplicationService>();
+            services.AddTransient<ISkillsService, SkillsService>();
+            services.AddTransient<IDashboardManager, DashboardManager>();
             services.AddTransient<DatabaseSeed>();
+            services.AddTransient<IPositionSkillRelationManager, PositionSkillRelationManager>();
 
             services.Configure<IdentityOptions>(options =>
             {

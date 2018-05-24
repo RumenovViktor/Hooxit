@@ -1,0 +1,72 @@
+﻿@using Hooxit.Presentation
+@model IEnumerable<IdNameReadModel>
+
+<div class="top">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="card-block text-center">
+                    <div class="form-group">
+                        <img class="img-circle dashboardPic" src="~/images/company-avatar.png" />
+
+                    </div>
+                    <div class="form-group">
+                        <h5 class="card-title">Hooxit</h5>
+                    </div>
+                </div>
+            </div>
+            <ul id="positionList" class="list-group top positionList">
+                @{ var counter = 0; }
+
+                @foreach (var position in Model)
+                {
+                    if (string.IsNullOrWhiteSpace(position.Name))
+                    {
+                        continue;
+                    }
+
+                    if (counter == 0)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center active">
+                            <a value="@position.Id">@position.Name</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a value="@position.Id">@position.Name</a>
+                        </li>
+                    }
+
+                    counter++;
+                }
+            </ul>
+        </div>
+        <div class="col-md-9 defaultSuggestedCandidatesWrapper">
+
+            <table class="table table-lg table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Position name</th>
+                        <th>% of skill match</th>
+                        <th>Match information</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="md-preloader">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewbox="0 0 75 75">
+                    <circle cx="37.5" cy="37.5" r="33.5" stroke-width="8" />
+                </svg>
+            </div>
+        </div>
+        <div class="col-md-9 suggestedCandidatesWrapper">
+
+        </div>
+    </div>
+</div>
+
+@section CompanyDashboardScripts{
+    <script src="~/js/company/dashboardSuggestionsManager.js"></script>
+    <script src="~/js/company/dashboardManager.js"></script>
+}

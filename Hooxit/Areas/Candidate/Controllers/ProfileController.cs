@@ -7,24 +7,26 @@ using System.Threading.Tasks;
 namespace Hooxit.Controllers
 {
     [Area("Candidate")]
-    [Authorize(Policy = "CandidatePolicy")]
     public class ProfileController : BaseController
     {
         private readonly IProfileManager profileManager;
         private readonly IUserPersonalInfoHandler<ChangeEmail> changeEmailHandler;
         private readonly IUserPersonalInfoHandler<ChangeCountry> changeCountryHandler;
         private readonly IUserPersonalInfoHandler<ChangeCurrentPosition> changeCurrentPositionHandler;
+        private readonly ISkillsService skillsService;
 
         public ProfileController(
             IProfileManager profileManager,
             IUserPersonalInfoHandler<ChangeEmail> changeEmailHandler,
             IUserPersonalInfoHandler<ChangeCountry> changeCountryHandler,
-            IUserPersonalInfoHandler<ChangeCurrentPosition> changeCurrentPositionHandler)
+            IUserPersonalInfoHandler<ChangeCurrentPosition> changeCurrentPositionHandler,
+            ISkillsService skillsService)
         {
             this.profileManager = profileManager;
             this.changeEmailHandler = changeEmailHandler;
             this.changeCountryHandler = changeCountryHandler;
             this.changeCurrentPositionHandler = changeCurrentPositionHandler;
+            this.skillsService = skillsService;
         }
 
         [HttpGet]
@@ -32,7 +34,14 @@ namespace Hooxit.Controllers
         public async Task<IActionResult> Profile(string username)
         {
             var userProfile = await profileManager.GetProfile(username);
-            return View(userProfile);
+            if (User.Identity.Name.Equals(username))
+            {
+                return View(userProfile);
+            }
+            else
+            {
+                return View("../../Profile/ViewCandidateProfile", userProfile);
+            }
         }
 
         [HttpPost]
@@ -42,6 +51,7 @@ namespace Hooxit.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "CandidatePolicy")]
         public async Task<IActionResult> ChangePosition([FromBody]ChangeCurrentPosition position)
         {
             if (ModelState.IsValid)
@@ -54,6 +64,7 @@ namespace Hooxit.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "CandidatePolicy")]
         public async Task<IActionResult> ChangeCountry([FromBody]ChangeCountry country)
         {
             if (ModelState.IsValid)
@@ -66,6 +77,7 @@ namespace Hooxit.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "CandidatePolicy")]
         public async Task<IActionResult> ChangeEmail([FromBody]ChangeEmail email)
         {
             if (ModelState.IsValid)
@@ -75,6 +87,20 @@ namespace Hooxit.Controllers
             }
 
             return Json("Error");
+        }
+
+        [HttpPost]
+        [Authorize(Policy = "CandidatePolicy")]
+        public IActionResult ChangeSkills([FromBody] ChangeSkills changeSkills)
+        {
+            if (ModelState.IsValid)
+            {
+                skillsService.ChangeSkills(changeSkills);
+
+                return Json(true);
+            }
+
+            return Json(false);
         }
     }
 }

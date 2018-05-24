@@ -1,0 +1,47 @@
+﻿@using Hooxit.Presentation.Read.Matching
+@using Hooxit.Presentation.Company.Read.Matching
+
+@model MatchModel<SuggestedCandidate, int>
+
+<input id="matchId" type="hidden" value="@Model.MatchId" />
+<table class="table table-lg table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Position name</th>
+            <th>% of skill match</th>
+            <th>Match information</th>
+            <th>Open Profile</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Suggestions.Any())
+        {
+            var count = 1;
+            foreach (var candidate in Model.Suggestions)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    @if (string.IsNullOrWhiteSpace(candidate.FullName))
+                    {
+                        <td><a value="@candidate.UserName">@candidate.UserName</a></td>
+                    }
+                    else
+                    {
+                        <td><a value="@candidate.UserName">@candidate.FullName</a></td>
+                    }
+                    <td>@candidate.MatchedPercentage</td>
+                    <td><a class="btn btn-primary btn-rounded btn-sm my-0 viewRelation" value="@candidate.UserName">View</a></td>
+                    <td><a class="btn btn-primary btn-rounded btn-sm my-0 openMatch" value="@candidate.UserName">Open</a></td>
+                </tr>
+
+                count++;
+            }
+        }
+    </tbody>
+</table>
+
+@if (!Model.Suggestions.Any())
+{
+    <h4 class="top">No candidates</h4>
+}

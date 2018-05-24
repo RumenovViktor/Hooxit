@@ -1,0 +1,48 @@
+﻿@using Hooxit.Presentation.Company.Read
+
+@model RelationRead<PositionSkillsRelation>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="pull-left top">
+            <h3><strong>Username:</strong> @Model.Name</h3>
+        </div>
+        <table class="table table-lg table-hover">
+            <thead>
+                <tr>
+                    <th>Position required skill</th>
+                    <th>Candidate skill</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var relation in Model.SkillsRelation)
+                {
+                    <tr>
+                        <td><strong class="text-success">@relation.PositionSkill</strong></td>
+                        @if (relation.IsMatch)
+                        {
+                            <td><strong class="text-success">@relation.CandidateSkill</strong></td>
+                        }
+                        else
+                        {
+                            <td><strong class="text-danger">@relation.CandidateSkill</strong></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-4 top pull-left">
+        <div class="btn-group pull-left top">
+            <div class="danger dangerInfoSquare"></div>
+            <span class="relationInfoTxt">Candidate doesn't have the skill</span>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="btn-group pull-left">
+            <div class="danger successInfoSquare"></div>
+            <span class="relationInfoTxt">Candidate has the skill</span>
+        </div>
+    </div>
+</div>

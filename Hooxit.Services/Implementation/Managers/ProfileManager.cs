@@ -1,9 +1,7 @@
 ﻿using Hooxit.Presentation;
 using Hooxit.Services.Contracts;
 using System.Linq;
-using Models;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 using Hooxit.Data.Contracts;
 using System.Collections.Generic;
 using Hooxit.Models;
@@ -18,6 +16,8 @@ namespace Hooxit.Services.Implementation.Managers
         private readonly IReadRepository<Country> countryRepository;
         private readonly IUserRepository userRepository;
         private readonly ICandidateRepository candidateRepository;
+        private readonly IRepository<CandidateSkill> candidateSkillRepository;
+        private readonly IReadRepository<Skill> skillsReadRepository;
 
         public ProfileManager(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
@@ -25,12 +25,16 @@ namespace Hooxit.Services.Implementation.Managers
             this.experienceRepository = unitOfWork.BuildExperienceRepository();
             this.countryRepository = unitOfWork.BuildCountriesRepository();
             this.candidateRepository = unitOfWork.BuildCandidateRepository();
+            this.candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
+            this.skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
         }
 
         public async Task<ProfileReadModel> GetProfile(string username)
         {
             var user = await userRepository.GetByName(username);
             var userInfo = candidateRepository.GetBydId(user.Id);
+            var candidateSkillsIds = candidateSkillRepository.GetMany(new int[] { userInfo.Id }).Select(x => x.SkillId);
+            var candidateSkills = this.skillsReadRepository.GetManyById(candidateSkillsIds.ToArray());
 
             if (userInfo == null)
             {
@@ -48,12 +52,12 @@ namespace Hooxit.Services.Implementation.Managers
                 .ToList();
 
 
-            return BuildProfileReadModel(userInfo, experience, countryName, user.Email);
+            return BuildProfileReadModel(userInfo, experience, countryName, user.Email, candidateSkills);
         }
 
-        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email)
+        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills)
         {
-            return new ProfileReadModel(user, experience, countryName, email);
+            return new ProfileReadModel(user, experience, countryName, email, skills);
         }
     }
 }

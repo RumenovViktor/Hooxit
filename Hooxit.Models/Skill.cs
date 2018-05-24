@@ -16,5 +16,7 @@ namespace Hooxit.Models
         public string SkillName { get; set; }
 
         public ICollection<PositionSkill> PositionSkill { get; set; }
+
+        public ICollection<CandidateSkill> CandidateSkill { get; set; }
     }
 }

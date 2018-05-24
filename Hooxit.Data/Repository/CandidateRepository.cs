@@ -21,6 +21,11 @@ namespace Hooxit.Data.Repository
             this.context.SaveChanges();
         }
 
+        public IQueryable<Candidate> GetAll()
+        {
+            return this.context.Candidates;
+        }
+
         public Candidate GetBydId(string id)
         {
             return context.Candidates.FirstOrDefault(x => x.UserId == id);

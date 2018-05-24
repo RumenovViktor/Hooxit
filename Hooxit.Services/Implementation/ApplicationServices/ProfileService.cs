@@ -4,6 +4,6 @@ namespace Hooxit.Services.Implementation.ApplicationServices
 {
     public class ProfileService : IProfileService
     {
-                
+        
     }
 }

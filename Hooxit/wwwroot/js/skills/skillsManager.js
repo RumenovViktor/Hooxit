@@ -67,17 +67,23 @@
         $(event.target).addClass('disabled');
         $('.noSkillsText').hide();
 
-        var elementsWithSameName = $(this.containerId + ' ' + '.selectedSkill').filter((index, value) => {
-            return $(value).text() === elementValue;
-        });
+        var elementsWithSameName = $(this.containerId)
+            .not('.skillsPresentationContainer')
+            .find('.selectedSkill').filter((index, value) => {
+                return $(value).text().trim() === elementValue;
+            });
 
         if (elementsWithSameName.length) {
             return;
         }
-
-        $(this.containerId).append(
+        
+        $(this.containerId).not('.skillsPresentationContainer').append(
             $('<label class="badge badge-info selectedSkill">' + elementValue + '<a class="fa fa-remove"></a></label>')
-                    .attr('value', selectedSkillId));
+                .attr('value', selectedSkillId));
+
+        $('.skillsPresentationContainer').append(
+            $('<label class="badge badge-info selectedSkill">' + elementValue + '</label>')
+                .attr('value', selectedSkillId));
 
         let lastAddedElement = $(this.containerId).find('.selectedSkill').last();
 

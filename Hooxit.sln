@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hooxit", "Hooxit\Hooxit.csproj", "{7650CE10-A2A2-4F31-99FC-0307BE8A926E}"
 EndProject
@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hooxit.Utils", "Hooxit.Util
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationExecutables", "IntegrationExecutables", "{EACD138C-229D-4ED6-A2B4-FB6A8CABD507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsPopulator", "SkillsPopulator\SkillsPopulator.csproj", "{138DAAA7-895F-4DF3-AC05-66700C94F4CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillsPopulator", "SkillsPopulator\SkillsPopulator.csproj", "{138DAAA7-895F-4DF3-AC05-66700C94F4CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingExecutors", "MatchingExecutors\MatchingExecutors.csproj", "{844E634F-B7DA-4E3D-95A2-91CEBDF100F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{138DAAA7-895F-4DF3-AC05-66700C94F4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{138DAAA7-895F-4DF3-AC05-66700C94F4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{138DAAA7-895F-4DF3-AC05-66700C94F4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844E634F-B7DA-4E3D-95A2-91CEBDF100F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844E634F-B7DA-4E3D-95A2-91CEBDF100F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844E634F-B7DA-4E3D-95A2-91CEBDF100F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844E634F-B7DA-4E3D-95A2-91CEBDF100F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -20,6 +20,19 @@ namespace Hooxit.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Hooxit.Models.CandidateSkill", b =>
+                {
+                    b.Property<int>("SkillId");
+
+                    b.Property<int>("CandidateId");
+
+                    b.HasKey("SkillId", "CandidateId");
+
+                    b.HasIndex("CandidateId");
+
+                    b.ToTable("CandidateSkill");
+                });
+
             modelBuilder.Entity("Hooxit.Models.Country", b =>
                 {
                     b.Property<int>("Id")
@@ -316,6 +329,19 @@ namespace Hooxit.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("Hooxit.Models.CandidateSkill", b =>
+                {
+                    b.HasOne("Hooxit.Models.Users.Candidate", "Candidate")
+                        .WithMany("CandidateSkill")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Hooxit.Models.Skill", "Skill")
+                        .WithMany("CandidateSkill")
+                        .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Hooxit.Models.Experience", b =>

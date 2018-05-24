@@ -13,5 +13,6 @@ namespace Hooxit.Data.Contracts
         IReadRepository<Skill> BuildSkillsReadRepository();
         IReadRepository<PositionSkill> BuildPositionSkillRepository();
         IRepository<Position> BuildPositionsRepository();
+        IRepository<CandidateSkill> BuildCandidateSkillRepository();
     }
 }

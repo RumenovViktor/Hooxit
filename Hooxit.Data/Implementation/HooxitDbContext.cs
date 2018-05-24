@@ -1,7 +1,9 @@
 ﻿using Hooxit.Models;
 using Hooxit.Models.Users;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Models;
 
 namespace Data
@@ -19,6 +21,12 @@ namespace Data
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<PositionSkill> PositionSkill { get; set; }
+        public DbSet<CandidateSkill> CandidateSkill { get; set; }
+
+        public override EntityEntry Entry(object entity)
+        {
+            return base.Entry(entity);
+        }
 
         public override int SaveChanges()
         {
@@ -30,6 +38,7 @@ namespace Data
             base.OnModelCreating(builder);
 
             // Manually create many to many relationship
+            // Position Skill many to many
             builder.Entity<PositionSkill>()
                 .HasKey(bc => new { bc.SkillId, bc.PositionId });
 
@@ -42,6 +51,20 @@ namespace Data
                 .HasOne(bc => bc.Position)
                 .WithMany(c => c.PositionSkill)
                 .HasForeignKey(bc => bc.PositionId);
+
+            // Candidate Skill many to many
+            builder.Entity<CandidateSkill>()
+                .HasKey(bc => new { bc.SkillId, bc.CandidateId });
+
+            builder.Entity<CandidateSkill>()
+                .HasOne(bc => bc.Skill)
+                .WithMany(b => b.CandidateSkill)
+                .HasForeignKey(bc => bc.SkillId);
+
+            builder.Entity<CandidateSkill>()
+                .HasOne(bc => bc.Candidate)
+                .WithMany(c => c.CandidateSkill)
+                .HasForeignKey(bc => bc.CandidateId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)

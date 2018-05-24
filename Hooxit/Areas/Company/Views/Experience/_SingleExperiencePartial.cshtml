@@ -1,0 +1,28 @@
+﻿@model Hooxit.Presentation.ExperienceReadModel
+
+@{
+    var updateUserInfoPositionClass = Model.ShouldUpdateUserInfoPosition ? "class=updateUserInfoPosition" : string.Empty;
+}
+
+<div class="card-text">
+    <div class="row">
+        <div class="col-lg-11">
+            <p>
+                <strong @updateUserInfoPositionClass>@Model.Position</strong> at @Model.CompanyName - from <strong>@Model.FromDate.Value.ToString("dd/MM/yyyy")</strong> to
+
+                @if (Model.ToDate.HasValue)
+                {
+                    <strong>@Model.ToDate.Value.ToString("dd/MM/yyyy")</strong>
+                }
+                else
+                {
+                    <strong>present</strong>
+                }
+            </p>
+        </div>
+        <a href="#" class="toggle-update"><i class="fa fa-pencil navbar-toggler-right" aria-hidden="true"></i></a>
+    </div>
+</div>
+<p class="card-text">
+    @Model.Description<a href="#" class="toggle-update"></a>
+</p>
