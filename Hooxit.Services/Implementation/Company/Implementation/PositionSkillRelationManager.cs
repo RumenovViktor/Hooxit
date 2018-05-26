@@ -4,9 +4,9 @@ using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Models;
 using Hooxit.Presentation.Company.Read;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 
-namespace Hooxit.Services.Implementation.Company.Implementation
+namespace Hooxit.Services.Company.Implemenation
 {
     public class PositionSkillRelationManager : IPositionSkillRelationManager
     {

@@ -2,7 +2,7 @@
 using Hooxit.Presentation.Company.Read;
 using System.Collections.Generic;
 
-namespace Hooxit.Services.Implementation.Company.Interfaces
+namespace Hooxit.Services.Company.Interfaces
 {
     public interface IPositionsManager
     {

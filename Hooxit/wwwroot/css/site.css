@@ -310,3 +310,19 @@ table {
     padding-top: 1em;
     padding-left: 1em;
 }
+
+/*file upload*/
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0.6em 2.7em;
+    cursor: pointer;
+    margin-top: .3em;
+}
+
+/*file upload*/

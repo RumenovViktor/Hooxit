@@ -2,12 +2,12 @@
 using Hooxit.Models;
 using Hooxit.Presentation;
 using Hooxit.Presentation.Company.Read;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
 // TODO: Get from company info when Lazy loading is available.
-namespace Hooxit.Services.Implementation.Company.Implemenation
+namespace Hooxit.Services.Company.Implemenation
 {
     public class PositionsManager : IPositionsManager
     {

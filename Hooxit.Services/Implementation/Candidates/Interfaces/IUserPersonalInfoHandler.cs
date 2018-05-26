@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
-using System.Windows.Input;
 
-namespace Hooxit.Services.Contracts
+namespace Hooxit.Services.Candidates.Interfaces
 {
     public interface IUserPersonalInfoHandler<T>
     {

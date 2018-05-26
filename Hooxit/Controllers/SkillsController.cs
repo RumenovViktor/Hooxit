@@ -1,4 +1,4 @@
-﻿using Hooxit.Services.Contracts;
+﻿using Hooxit.Services.Common.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hooxit.Controllers

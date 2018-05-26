@@ -1,8 +1,6 @@
-﻿using Data;
-using Hooxit.Data.Repository;
+﻿using Hooxit.Data.Repository;
 using Hooxit.Presentation;
-using Hooxit.Services.Contracts;
-using Microsoft.AspNetCore.Identity;
+using Hooxit.Services.Authentication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Models;

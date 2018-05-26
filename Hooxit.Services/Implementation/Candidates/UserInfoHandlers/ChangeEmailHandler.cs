@@ -1,14 +1,10 @@
 ﻿using Hooxit.Data.Repository;
 using Hooxit.Presentation.Write;
-using Hooxit.Services.Contracts;
-using Microsoft.AspNetCore.Identity;
-using Models;
+using Hooxit.Services.Candidates.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Profile
+namespace Hooxit.Services.Candidates.UserInfoHandlers
 {
     public class ChangeEmailHandler : IUserPersonalInfoHandler<ChangeEmail>
     {

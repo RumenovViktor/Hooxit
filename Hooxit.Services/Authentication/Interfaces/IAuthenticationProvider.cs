@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Models;
-using System.Security.Claims;
+﻿using Models;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Contracts
+namespace Hooxit.Services.Authentication.Interfaces
 {
     public interface IAuthenticationProvider
     {

@@ -6975,3 +6975,244 @@ FROM [Experience] AS [e]" (0723d8ff)
 2018-05-24T22:39:59.4706939+03:00 0HLE1L2QQF36O:00000016 [INF] Request finished in 79.5249ms 404  (791a596a)
 2018-05-24T22:39:59.5216459+03:00 0HLE1L2QQF36M:0000000A [INF] The file "/css/site.css" was not modified (f1f8d725)
 2018-05-24T22:39:59.5301116+03:00 0HLE1L2QQF36M:0000000A [INF] Request finished in 176.7972ms 304 text/css (791a596a)
+2018-05-24T22:47:52.0711324+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:47:52.4534626+03:00  [WRN] Unable to bind to "http://localhost:49743" on the "IPv4 loopback" interface: '"Error -4092 EACCES permission denied"'. (38217649)
+2018-05-24T22:47:52.5145716+03:00  [INF] Executed DbCommand ("46"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-24T22:47:52.5422562+03:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-05-24T22:47:54.1055351+03:00 0HLE1LSUDM1P3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-05-24T22:47:54.1593664+03:00 0HLE1LSUDM1P3:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:47:54.3498853+03:00 0HLE1LSUDM1P3:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:47:56.8425054+03:00 0HLE1LSUDM1P3:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-05-24T22:47:57.1349467+03:00 0HLE1LSUDM1P3:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 2787.0297ms (afa2e885)
+2018-05-24T22:47:57.1548187+03:00 0HLE1LSUDM1P3:00000001 [INF] Request finished in 3063.2634ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:47:57.1597363+03:00 0HLE1LSUDM1P5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-05-24T22:47:57.1704735+03:00 0HLE1LSUDM1P5:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:47:57.1814286+03:00 0HLE1LSUDM1P3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-05-24T22:47:57.2008195+03:00 0HLE1LSUDM1P5:00000001 [INF] Request finished in 29.4897ms 404  (791a596a)
+2018-05-24T22:47:57.2049970+03:00 0HLE1LSUDM1P3:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:47:57.2364583+03:00 0HLE1LSUDM1P3:00000002 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-05-24T22:47:57.2436046+03:00 0HLE1LSUDM1P3:00000002 [INF] Request finished in 62.2622ms 304 text/css (791a596a)
+2018-05-24T22:47:57.3174346+03:00 0HLE1LSUDM1P3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-05-24T22:47:57.3211424+03:00 0HLE1LSUDM1P3:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:47:57.3270153+03:00 0HLE1LSUDM1P3:00000003 [INF] Request finished in 8.4707ms 404  (791a596a)
+2018-05-24T22:48:03.6259438+03:00 0HLE1LSUDM1P3:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 260 (ca22a1cb)
+2018-05-24T22:48:03.6320451+03:00 0HLE1LSUDM1P3:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:03.7150517+03:00 0HLE1LSUDM1P3:00000004 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:03.7264491+03:00 0HLE1LSUDM1P3:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:03.7491992+03:00 0HLE1LSUDM1P3:00000004 [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-24T22:48:03.8479510+03:00 0HLE1LSUDM1P3:00000004 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-05-24T22:48:03.9023410+03:00 0HLE1LSUDM1P3:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-05-24T22:48:03.9103897+03:00 0HLE1LSUDM1P3:00000004 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-05-24T22:48:03.9366865+03:00 0HLE1LSUDM1P3:00000004 [INF] User logged in. (fdce0db4)
+2018-05-24T22:48:03.9452987+03:00 0HLE1LSUDM1P3:00000004 [INF] Executing RedirectResult, redirecting to "/Company/Dashboard". (d98d540e)
+2018-05-24T22:48:03.9494030+03:00 0HLE1LSUDM1P3:00000004 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 288.8649ms (afa2e885)
+2018-05-24T22:48:03.9546742+03:00 0HLE1LSUDM1P3:00000004 [INF] Request finished in 330.4774ms 302  (791a596a)
+2018-05-24T22:48:03.9824098+03:00 0HLE1LSUDM1P3:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Dashboard   (ca22a1cb)
+2018-05-24T22:48:03.9874546+03:00 0HLE1LSUDM1P3:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:04.0066434+03:00 0HLE1LSUDM1P3:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:04.0123187+03:00 0HLE1LSUDM1P3:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:04.0211704+03:00 0HLE1LSUDM1P3:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-24T22:48:04.0497009+03:00 0HLE1LSUDM1P3:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:04.0674726+03:00 0HLE1LSUDM1P3:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-24T22:48:04.0924843+03:00 0HLE1LSUDM1P3:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-24T22:48:04.3921266+03:00 0HLE1LSUDM1P3:00000005 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-05-24T22:48:04.8152474+03:00 0HLE1LSUDM1P3:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.Dashboard (Hooxit)" in 819.4619ms (afa2e885)
+2018-05-24T22:48:04.8446509+03:00 0HLE1LSUDM1P3:00000005 [INF] Request finished in 838.9519ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:48:04.8763029+03:00 0HLE1LSUDM1P3:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-24T22:48:04.8790246+03:00 0HLE1LSUDM1P9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardManager.js   (ca22a1cb)
+2018-05-24T22:48:04.8924228+03:00 0HLE1LSUDM1P3:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:04.9022284+03:00 0HLE1LSUDM1P5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardSuggestionsManager.js   (ca22a1cb)
+2018-05-24T22:48:04.9336343+03:00 0HLE1LSUDM1P3:00000006 [INF] Request finished in 31.8065ms 404  (791a596a)
+2018-05-24T22:48:04.9421080+03:00 0HLE1LSUDM1P9:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:04.9480509+03:00 0HLE1LSUDM1P9:00000001 [INF] The file "/js/company/dashboardManager.js" was not modified (f1f8d725)
+2018-05-24T22:48:04.9935201+03:00 0HLE1LSUDM1P9:00000001 [INF] Request finished in 106.1309ms 304 application/javascript (791a596a)
+2018-05-24T22:48:04.9985050+03:00 0HLE1LSUDM1P5:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:05.0018350+03:00 0HLE1LSUDM1P5:00000002 [INF] The file "/js/company/dashboardSuggestionsManager.js" was not modified (f1f8d725)
+2018-05-24T22:48:05.0059085+03:00 0HLE1LSUDM1P5:00000002 [INF] Request finished in 164.8957ms 304 application/javascript (791a596a)
+2018-05-24T22:48:05.0737889+03:00 0HLE1LSUDM1P5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-24T22:48:05.1019861+03:00 0HLE1LSUDM1P5:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:05.1178090+03:00 0HLE1LSUDM1P5:00000003 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:05.1323719+03:00 0HLE1LSUDM1P5:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:05.1440558+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-24T22:48:05.1597106+03:00 0HLE1LSUDM1P5:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:05.1760504+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:05.1943206+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:05.2133330+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-24T22:48:05.2224601+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:05.2292573+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:05.2362390+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-24T22:48:05.2499975+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:05.2747865+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:05.2819356+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-24T22:48:05.4011373+03:00 0HLE1LSUDM1P5:00000003 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-24T22:48:05.4115643+03:00 0HLE1LSUDM1P5:00000003 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 301.3065ms (afa2e885)
+2018-05-24T22:48:05.4163740+03:00 0HLE1LSUDM1P5:00000003 [INF] Request finished in 346.8967ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:48:07.5715894+03:00 0HLE1LSUDM1P5:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/14   (ca22a1cb)
+2018-05-24T22:48:07.5768425+03:00 0HLE1LSUDM1P5:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:07.5827644+03:00 0HLE1LSUDM1P5:00000004 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["14"]) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:07.5882399+03:00 0HLE1LSUDM1P5:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:07.5924066+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-24T22:48:07.6172100+03:00 0HLE1LSUDM1P5:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:07.6486486+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:07.6517527+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (14)" (0723d8ff)
+2018-05-24T22:48:07.6586980+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-24T22:48:07.6668319+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:07.6732525+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (14)" (0723d8ff)
+2018-05-24T22:48:07.7265079+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-24T22:48:07.7365416+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:07.7380756+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (14)" (0723d8ff)
+2018-05-24T22:48:07.7422750+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-24T22:48:07.7473090+03:00 0HLE1LSUDM1P5:00000004 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-24T22:48:07.7534732+03:00 0HLE1LSUDM1P5:00000004 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 170.8165ms (afa2e885)
+2018-05-24T22:48:07.7785702+03:00 0HLE1LSUDM1P5:00000004 [INF] Request finished in 186.1152ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:48:08.7041242+03:00 0HLE1LSUDM1P5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/SuggestedCandidates/13   (ca22a1cb)
+2018-05-24T22:48:08.7104677+03:00 0HLE1LSUDM1P5:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:08.7174388+03:00 0HLE1LSUDM1P5:00000005 [INF] Executing action method "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" with arguments (["13"]) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:08.7233108+03:00 0HLE1LSUDM1P5:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:08.7487751+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[CountryId], [c].[CurrentPosition], [c].[FirstName], [c].[LastName], [c].[UserId]
+FROM [Candidates] AS [c]" (0723d8ff)
+2018-05-24T22:48:08.7555728+03:00 0HLE1LSUDM1P5:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:08.7636289+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:08.7712934+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:08.7761360+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (1)" (0723d8ff)
+2018-05-24T22:48:08.7849233+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:08.7904652+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:08.7992744+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (2)" (0723d8ff)
+2018-05-24T22:48:08.8274886+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-05-24T22:48:08.8534323+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-05-24T22:48:08.8588984+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (3)" (0723d8ff)
+2018-05-24T22:48:08.8625770+03:00 0HLE1LSUDM1P5:00000005 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
+2018-05-24T22:48:08.8696186+03:00 0HLE1LSUDM1P5:00000005 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 153.4755ms (afa2e885)
+2018-05-24T22:48:08.8754473+03:00 0HLE1LSUDM1P5:00000005 [INF] Request finished in 169.8037ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:48:17.7494202+03:00 0HLE1LSUDM1P5:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Company/Profile/viktor1   (ca22a1cb)
+2018-05-24T22:48:17.7547346+03:00 0HLE1LSUDM1P5:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:17.7648478+03:00 0HLE1LSUDM1P5:00000006 [INF] Executing action method "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" with arguments (["viktor1"]) - ModelState is Valid (ba7f4ac2)
+2018-05-24T22:48:17.7736129+03:00 0HLE1LSUDM1P5:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:17.7792362+03:00 0HLE1LSUDM1P5:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-05-24T22:48:17.7870441+03:00 0HLE1LSUDM1P5:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-05-24T22:48:17.7924330+03:00 0HLE1LSUDM1P5:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CompanyDescription], [x].[UserId]
+FROM [Companies] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-05-24T22:48:17.7995969+03:00 0HLE1LSUDM1P5:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-05-24T22:48:17.9341169+03:00 0HLE1LSUDM1P5:00000006 [INF] Executing ViewResult, running view at path "/Areas/Company/Views/Profile/Profile.cshtml". (9707eebe)
+2018-05-24T22:48:17.9579732+03:00 0HLE1LSUDM1P5:00000006 [INF] Executed action "Hooxit.Areas.Company.Controllers.ProfileController.Profile (Hooxit)" in 194.3893ms (afa2e885)
+2018-05-24T22:48:17.9788973+03:00 0HLE1LSUDM1P5:00000006 [INF] Request finished in 215.1375ms 200 text/html; charset=utf-8 (791a596a)
+2018-05-24T22:48:18.0080402+03:00 0HLE1LSUDM1P5:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/font-awesome   (ca22a1cb)
+2018-05-24T22:48:18.0142141+03:00 0HLE1LSUDM1P5:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-05-24T22:48:18.0248887+03:00 0HLE1LSUDM1P5:00000007 [INF] Request finished in 37.6047ms 404  (791a596a)

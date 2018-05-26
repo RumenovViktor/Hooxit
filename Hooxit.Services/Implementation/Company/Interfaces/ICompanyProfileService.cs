@@ -1,9 +1,9 @@
 ﻿using Hooxit.Presentation.Company.Write;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Company.Interfaces
+namespace Hooxit.Services.Company.Interfaces
 {
-    public interface ICompanyProfileApplicationService
+    public interface ICompanyProfileService
     {
         Task<bool> ChangeDescription(ChangeCompanyDescriptionWrite changeComapnyDescription);
     }

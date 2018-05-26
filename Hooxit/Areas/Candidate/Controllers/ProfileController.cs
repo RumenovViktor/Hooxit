@@ -1,5 +1,5 @@
 ﻿using Hooxit.Presentation.Write;
-using Hooxit.Services.Contracts;
+using Hooxit.Services.Candidates.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

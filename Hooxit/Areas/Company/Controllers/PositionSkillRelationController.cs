@@ -1,5 +1,4 @@
-﻿using Hooxit.Services;
-using Hooxit.Services.Implementation.Company.Interfaces;
+﻿using Hooxit.Services.Company.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hooxit.Areas.Company.Controllers

@@ -8,23 +8,23 @@ using Data;
 using Models;
 using Microsoft.AspNetCore.Identity;
 using System;
-using Hooxit.Services.Contracts;
 using Hooxit.Services.Implementation.Managers;
 using Hooxit.Services.Implementation.ApplicationServices;
 using Hooxit.Data.UnitOfWork;
 using Hooxit.Data.Contracts;
 using Hooxit.Data.Implementation;
 using Hooxit.Services;
-using Hooxit.Services.Implementation.ApplicationServices.Contracts;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Hooxit.Services.Implementation;
 using Hooxit.Data.Repository;
 using Hooxit.Presentation.Write;
-using Hooxit.Services.Implementation.Profile;
-using Hooxit.Services.Implementation.Company.Interfaces;
-using Hooxit.Services.Implementation.Company;
-using Hooxit.Services.Implementation.Company.Implemenation;
-using Hooxit.Services.Implementation.Company.Implementation;
+using CandidateInterfaces = Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Services.Common.Interfaces;
+using Hooxit.Services.Common.Implementation;
+using Hooxit.Services.Authentication.Interfaces;
+using Hooxit.Services.Authentication.Implementation;
+using Hooxit.Services.Candidates.UserInfoHandlers;
+using CompanyInterfaces = Hooxit.Services.Company.Interfaces;
+using Hooxit.Services.Company.Implemenation;
 
 namespace Hooxit
 {
@@ -67,23 +67,22 @@ namespace Hooxit
 
             services.AddScoped<IHooxitDbContext, HooxitDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IProfileManager, ProfileManager>();
-            services.AddTransient<IProfileService, ProfileService>();
+            services.AddTransient<CandidateInterfaces.IProfileManager, ProfileManager>();
             services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IExperienceService, ExperienceService>();
+            services.AddTransient<CandidateInterfaces.IExperienceService, ExperienceService>();
             services.AddTransient<ICommonDataManager, CommonDataReadManager>();
             services.AddTransient<IAuthenticationProvider, AuthenticationProvider>();
-            services.AddTransient<IUserPersonalInfoHandler<ChangeEmail>, ChangeEmailHandler>();
-            services.AddTransient<IUserPersonalInfoHandler<ChangeCountry>, ChangeCountryHandler>();
-            services.AddTransient<IUserPersonalInfoHandler<ChangeCurrentPosition>, ChangeCurrentPositionHandler>();
-            services.AddTransient<IPositionsApplicationService, PositionsApplicationService>();
-            services.AddTransient<IPositionsManager, PositionsManager>();
-            services.AddTransient<ICompanyProfileManager, CompanyProfileManager>();
-            services.AddTransient<ICompanyProfileApplicationService, CompanyProfileApplicationService>();
-            services.AddTransient<ISkillsService, SkillsService>();
-            services.AddTransient<IDashboardManager, DashboardManager>();
+            services.AddTransient<CandidateInterfaces.IUserPersonalInfoHandler<ChangeEmail>, ChangeEmailHandler>();
+            services.AddTransient<CandidateInterfaces.IUserPersonalInfoHandler<ChangeCountry>, ChangeCountryHandler>();
+            services.AddTransient<CandidateInterfaces.IUserPersonalInfoHandler<ChangeCurrentPosition>, ChangeCurrentPositionHandler>();
+            services.AddTransient<CompanyInterfaces.IPositionsService, PositionsService>();
+            services.AddTransient<CompanyInterfaces.IPositionsManager, PositionsManager>();
+            services.AddTransient<CompanyInterfaces.ICompanyProfileManager, CompanyProfileManager>();
+            services.AddTransient<CompanyInterfaces.ICompanyProfileService, ProfileService>();
+            services.AddTransient<CandidateInterfaces.ISkillsService, SkillsService>();
+            services.AddTransient<CompanyInterfaces.IDashboardManager, DashboardService>();
             services.AddTransient<DatabaseSeed>();
-            services.AddTransient<IPositionSkillRelationManager, PositionSkillRelationManager>();
+            services.AddTransient<CompanyInterfaces.IPositionSkillRelationManager, PositionSkillRelationManager>();
 
             services.Configure<IdentityOptions>(options =>
             {

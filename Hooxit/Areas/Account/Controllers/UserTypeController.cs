@@ -2,7 +2,7 @@
 using Hooxit.Data.Repository;
 using Hooxit.Models.Users;
 using Hooxit.Presentation.Write;
-using Hooxit.Services.Contracts;
+using Hooxit.Services.Authentication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;

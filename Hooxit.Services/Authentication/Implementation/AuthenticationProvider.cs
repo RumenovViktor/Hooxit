@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using Hooxit.Services.Contracts;
 using Models;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Hooxit.Services.Authentication.Interfaces;
 
-namespace Hooxit.Services.Implementation
+namespace Hooxit.Services.Authentication.Implementation
 {
     public class AuthenticationProvider : IAuthenticationProvider
     {

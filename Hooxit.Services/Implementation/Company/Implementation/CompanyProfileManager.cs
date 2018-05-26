@@ -1,11 +1,11 @@
 ﻿using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Presentation.Company.Read;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Company.Implemenation
+namespace Hooxit.Services.Company.Implemenation
 {
     public class CompanyProfileManager : ICompanyProfileManager
     {

@@ -1,18 +1,18 @@
 ﻿using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Presentation.Company.Write;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using System;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Company.Implementation
+namespace Hooxit.Services.Company.Implemenation
 {
-    public class CompanyProfileApplicationService : ICompanyProfileApplicationService
+    public class ProfileService : ICompanyProfileService
     {
         private readonly ICompaniesRepository companiesRepository;
         private readonly IUserRepository userRepository;
 
-        public CompanyProfileApplicationService(IUnitOfWork unitOfWork, IUserRepository userRepository)
+        public ProfileService(IUnitOfWork unitOfWork, IUserRepository userRepository)
         {
             this.userRepository = userRepository;
             companiesRepository = unitOfWork.BuildCompaniesRepository();

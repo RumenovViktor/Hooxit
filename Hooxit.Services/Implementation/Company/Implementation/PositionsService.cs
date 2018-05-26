@@ -4,32 +4,32 @@ using Hooxit.Models;
 using Hooxit.Presentation.Company.Contracts;
 using Hooxit.Presentation.Company.Write;
 using Hooxit.Presentation.Write.Company;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Company.Implemenation
+namespace Hooxit.Services.Company.Implemenation
 {
     // TODO: Refactor:
     // 1. Create the positions without second database insert/update
     // 2. Apply Lazy Loading after migration to newest .net core (Remove dependacies from different repositories)
     // 3. User Automapper for mapping 
-    public class PositionsApplicationService : IPositionsApplicationService
+    public class PositionsService : IPositionsService
     {
         private readonly IRepository<Position> positionsRepository;
         private readonly ICompaniesRepository companiesRepository;
         private readonly IUserRepository userRepository;
         private readonly ILogger logger;
 
-        public PositionsApplicationService(IUserRepository userRepository, IUnitOfWork unitOfWork, ILoggerFactory loggerFactory)
+        public PositionsService(IUserRepository userRepository, IUnitOfWork unitOfWork, ILoggerFactory loggerFactory)
         {
             this.companiesRepository = unitOfWork.BuildCompaniesRepository();
             this.positionsRepository = unitOfWork.BuildPositionsRepository();
             this.userRepository = userRepository;
-            this.logger = loggerFactory.CreateLogger<PositionsApplicationService>();
+            this.logger = loggerFactory.CreateLogger<PositionsService>();
         }
 
         public async Task<bool> CreatePosition(CreatePosition createPosition)

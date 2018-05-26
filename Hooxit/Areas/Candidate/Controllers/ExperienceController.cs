@@ -1,6 +1,6 @@
 ﻿using Hooxit.Presentation.Read;
 using Hooxit.Presentation.Write;
-using Hooxit.Services.Contracts;
+using Hooxit.Services.Candidates.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -20,6 +20,7 @@ namespace Hooxit.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("Candidate/Experience/AddExperience")]
         public async Task<IActionResult> AddExperience(ExperienceWriteModel experience)
         {
             if (ModelState.IsValid)

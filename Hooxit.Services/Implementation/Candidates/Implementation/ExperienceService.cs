@@ -1,5 +1,4 @@
-﻿using Hooxit.Services.Contracts;
-using System;
+﻿using System;
 using Hooxit.Presentation.Write;
 using System.Threading.Tasks;
 using Hooxit.Data.Contracts;
@@ -7,6 +6,7 @@ using Hooxit.Models;
 using System.Linq;
 using Hooxit.Presentation;
 using Hooxit.Data.Repository;
+using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Services.Implementation.ApplicationServices
 {

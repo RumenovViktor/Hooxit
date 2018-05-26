@@ -1,5 +1,4 @@
 ﻿using Hooxit.Presentation;
-using Hooxit.Services.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 using Hooxit.Data.Contracts;
@@ -7,6 +6,7 @@ using System.Collections.Generic;
 using Hooxit.Models;
 using Hooxit.Data.Repository;
 using Hooxit.Models.Users;
+using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Services.Implementation.Managers
 {

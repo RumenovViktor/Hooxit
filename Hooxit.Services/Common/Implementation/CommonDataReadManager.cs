@@ -1,11 +1,11 @@
-﻿using Hooxit.Services.Contracts;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Hooxit.Presentation.Read;
 using Hooxit.Models;
 using Hooxit.Data.Contracts;
 using System.Linq;
+using Hooxit.Services.Common.Interfaces;
 
-namespace Hooxit.Services.Implementation.Managers
+namespace Hooxit.Services.Common.Implementation
 {
     public class CommonDataReadManager : ICommonDataManager
     {

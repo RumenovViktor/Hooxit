@@ -3,14 +3,11 @@
 using Microsoft.AspNetCore.Mvc;
 
 using Hooxit.Presentation.Write.Company;
-using Hooxit.Services.Implementation.Company.Interfaces;
 using Hooxit.Data.Repository;
 using Hooxit.Services;
-using Hooxit.Services.Contracts;
 using Hooxit.Data.Contracts;
 using Hooxit.Presentation.Company.Write;
-using Hooxit.Presentation.Company.Contracts;
-using Newtonsoft.Json;
+using Hooxit.Services.Company.Interfaces;
 
 namespace Hooxit.Areas.Company.Controllers
 {
@@ -18,12 +15,12 @@ namespace Hooxit.Areas.Company.Controllers
     public class PositionsController : Controller
     {
         private readonly IUserRepository userRepository;
-        private readonly IPositionsApplicationService positionsApplicationService;
+        private readonly IPositionsService positionsApplicationService;
         private readonly IPositionsManager positionsManager;
         private readonly IUnitOfWork unitOfWork;
         private readonly ICompaniesRepository companiesRepository;
 
-        public PositionsController(IPositionsApplicationService positionsApplicationService, IPositionsManager positionsManager, IUserRepository userRepository, IUnitOfWork unitOfWork)
+        public PositionsController(IPositionsService positionsApplicationService, IPositionsManager positionsManager, IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
 

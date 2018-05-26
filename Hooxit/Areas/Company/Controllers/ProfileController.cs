@@ -1,6 +1,6 @@
 ﻿using Hooxit.Presentation.Company.Write;
-using Hooxit.Services.Contracts;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -11,9 +11,9 @@ namespace Hooxit.Areas.Company.Controllers
     {
         private readonly IProfileManager candidateProfileManager;
         private readonly ICompanyProfileManager companyProfileManager;
-        private readonly ICompanyProfileApplicationService companyProfileApplicationService;
+        private readonly ICompanyProfileService companyProfileApplicationService;
 
-        public ProfileController(IProfileManager candidateProfileManager, ICompanyProfileManager companyProfileManager, ICompanyProfileApplicationService companyProfileApplicationService)
+        public ProfileController(IProfileManager candidateProfileManager, ICompanyProfileManager companyProfileManager, ICompanyProfileService companyProfileApplicationService)
         {
             this.candidateProfileManager = candidateProfileManager;
             this.companyProfileManager = companyProfileManager;

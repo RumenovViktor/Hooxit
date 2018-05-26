@@ -7,13 +7,12 @@
             <div class="card">
                 <div class="card-block">
                     <div class="image-container">
-                        <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="ChangePicture">
-                            <button class="btn-info rounded-button">
-                                <i class="fa fa-pencil"></i>
-                            </button>
-                        </form>
                         <img class="img-fluid" src="~/images/company-avatar.png" />
                     </div>
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i> Custom Upload
+                    </label>
+                    <input id="file-upload" type="file" />
                 </div>
             </div>
             <ul class="list-group top">

@@ -3,9 +3,9 @@ using Hooxit.Presentation.Company.Write;
 using Hooxit.Presentation.Write.Company;
 using System.Threading.Tasks;
 
-namespace Hooxit.Services.Implementation.Company.Interfaces
+namespace Hooxit.Services.Company.Interfaces
 {
-    public interface IPositionsApplicationService
+    public interface IPositionsService
     {
         Task<bool> CreatePosition(CreatePosition createPosition);
         bool ChangeDescription(IPresentationSegment presentationSegment);

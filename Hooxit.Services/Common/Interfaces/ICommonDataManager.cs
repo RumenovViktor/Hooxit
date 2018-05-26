@@ -1,7 +1,7 @@
 ﻿using Hooxit.Presentation.Read;
 using System.Collections.Generic;
 
-namespace Hooxit.Services.Contracts
+namespace Hooxit.Services.Common.Interfaces
 {
     public interface ICommonDataManager
     {

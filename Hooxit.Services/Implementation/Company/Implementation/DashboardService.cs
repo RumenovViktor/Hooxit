@@ -2,17 +2,17 @@
 using Hooxit.Data.Repository;
 using Hooxit.Presentation.Company.Read.Matching;
 using Hooxit.Presentation.Read.Matching;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using MatchingExecutors;
 using MatchingExecutors.Base;
 
-namespace Hooxit.Services.Implementation.Company.Implementation
+namespace Hooxit.Services.Company.Implemenation
 {
-    public class DashboardManager : IDashboardManager
+    public class DashboardService : IDashboardManager
     {
         private readonly MatchingExecutor<PositionForMatch, SuggestedCandidate> companyMatchingExecutor;
 
-        public DashboardManager(IUserRepository userRepository, IUnitOfWork unitOfWork)
+        public DashboardService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             companyMatchingExecutor = new CompanyMatchingExecutor(unitOfWork, userRepository);
         }

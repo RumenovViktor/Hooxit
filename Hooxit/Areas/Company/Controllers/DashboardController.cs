@@ -2,7 +2,7 @@
 using Hooxit.Data.Repository;
 using Hooxit.Presentation.Company.Read.Matching;
 using Hooxit.Services;
-using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Company.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
