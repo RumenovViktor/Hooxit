@@ -1,7 +1,8 @@
-﻿using Data;
+﻿using System.Linq;
+
+using Data;
 using Hooxit.Data.Contracts;
 using Hooxit.Models.Users;
-using System.Linq;
 
 namespace Hooxit.Data.Repository
 {

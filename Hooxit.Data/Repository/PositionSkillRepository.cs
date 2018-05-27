@@ -25,7 +25,7 @@ namespace Hooxit.Data.Repository
             return this.dbContext.PositionSkill.FirstOrDefault(x => x.PositionId == id);
         }
 
-        public IList<PositionSkill> GetManyById(int[] ids)
+        public IList<PositionSkill> GetManyByIds(int[] ids)
         {
             return this.dbContext.PositionSkill.Where(x => ids.Contains(x.PositionId)).ToList();
         }

@@ -14,13 +14,13 @@ namespace Hooxit.Services.Implementation.ApplicationServices
     public class ExperienceService : IExperienceService
     {
         private readonly IUserRepository userRepository;
-        private readonly IRepository<Experience> experienceRepository;
+        private readonly IReadRepository<Experience> experienceRepository;
         private readonly ICandidateRepository candidateRepository;
 
         public ExperienceService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.userRepository = userRepository;
-            this.experienceRepository = unitOfWork.BuildExperienceRepository();
+            this.experienceRepository = unitOfWork.BuildExperienceReadRepository();
             this.candidateRepository = unitOfWork.BuildCandidateRepository();
         }
 
@@ -32,7 +32,7 @@ namespace Hooxit.Services.Implementation.ApplicationServices
 
             //TODO: Rename
             var currentPositionCandidates = experienceRepository
-                .All()
+                .GetAll()
                 .Where(x => !x.ToDate.HasValue && x.CandidateID == userInfo.Id);
 
             if (!currentPositionCandidates.Any())

@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using Data;
 using Hooxit.Data.Contracts;
 using Hooxit.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Hooxit.Data.Repository
 {
-    public class PositionsRepository : IRepository<Position>
+    public class PositionsRepository 
+        : IRepository<Position>,
+          IUpdateRepository<Position>,
+          IReadRepository<Position>
     {
         private readonly IHooxitDbContext dbContext;
 
@@ -21,34 +24,29 @@ namespace Hooxit.Data.Repository
             this.dbContext.Positions.Add(entity);
         }
 
-        public IList<Position> All()
+        public IList<Position> GetAll()
         {
             return this.dbContext.Positions.ToList();
         }
 
-        public void Delete(Position entity)
-        {
-
-        }
-
-        public Position Get(int id)
+        public Position GetById(int id)
         {
             return this.dbContext.Positions.Where(x => x.PositionID == id).FirstOrDefault();
         }
 
-        public IList<Position> GetMany(int[] id)
+        public IList<Position> GetManyByIds(int[] ids)
         {
-            return this.dbContext.Positions.Where(x => id.Contains(x.PositionID)).ToList();
-        }
-
-        public void Save()
-        {
-            dbContext.SaveChanges();
+            return this.dbContext.Positions.Where(x => ids.Contains(x.PositionID)).ToList();
         }
 
         public void Update(Position entity)
         {
             dbContext.Positions.Update(entity);
+        }
+
+        public void Save()
+        {
+            dbContext.SaveChanges();
         }
     }
 }

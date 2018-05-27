@@ -6,7 +6,10 @@ using System.Collections.Generic;
 
 namespace Hooxit.Data.Repository
 {
-    public class ExperienceRepository : IRepository<Experience>
+    public class ExperienceRepository 
+        : IRepository<Experience>, 
+          IUpdateRepository<Experience>,
+          IReadRepository<Experience>
     {
         private readonly IHooxitDbContext dbContext;
 
@@ -15,7 +18,7 @@ namespace Hooxit.Data.Repository
             this.dbContext = dbContext;
         }
 
-        public IList<Experience> All()
+        public IList<Experience> GetAll()
         {
             return dbContext.Experience.ToList();
         }
@@ -25,16 +28,12 @@ namespace Hooxit.Data.Repository
             dbContext.Experience.Add(entity);
         }
 
-        public void Delete(Experience entity)
-        {
-        }
-
-        public Experience Get(int id)
+        public Experience GetById(int id)
         {
             return dbContext.Experience.Where(x => x.ExperienceID == id).SingleOrDefault();
         }
 
-        public IList<Experience> GetMany(int[] id)
+        public IList<Experience> GetManyByIds(int[] id)
         {
             return dbContext.Experience.Where(x => id.Contains(x.ExperienceID)).ToList();
         }

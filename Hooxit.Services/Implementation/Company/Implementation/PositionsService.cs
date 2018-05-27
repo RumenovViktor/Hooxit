@@ -21,17 +21,20 @@ namespace Hooxit.Services.Company.Implemenation
     // 3. User Automapper for mapping 
     public class PositionsService : IPositionsService
     {
-        private readonly IRepository<Position> positionsRepository;
+        private readonly IReadRepository<Position> positionsReadRepository;
+        private readonly IUpdateRepository<Position> positionsUpdateRepository;
         private readonly ICompaniesRepository companiesRepository;
         private readonly IUserRepository userRepository;
         private readonly ILogger logger;
 
         public PositionsService(IUserRepository userRepository, IUnitOfWork unitOfWork, ILoggerFactory loggerFactory)
         {
-            this.companiesRepository = unitOfWork.BuildCompaniesRepository();
-            this.positionsRepository = unitOfWork.BuildPositionsRepository();
             this.userRepository = userRepository;
-            this.logger = loggerFactory.CreateLogger<PositionsService>();
+
+            companiesRepository = unitOfWork.BuildCompaniesRepository();
+            positionsReadRepository = unitOfWork.BuildPositionsReadRepository();
+            positionsUpdateRepository = unitOfWork.BuildPositionsUpdateRepository();
+            logger = loggerFactory.CreateLogger<PositionsService>();
         }
 
         public async Task<bool> CreatePosition(CreatePosition createPosition)
@@ -48,7 +51,7 @@ namespace Hooxit.Services.Company.Implemenation
 
                 this.companiesRepository.Save();
 
-                var addedPosition = this.positionsRepository.Get(position.PositionID);
+                var addedPosition = this.positionsReadRepository.GetById(position.PositionID);
 
                 addedPosition.PositionSkill = createPosition.RequiredSkills.Select(x => new PositionSkill()
                 {
@@ -71,10 +74,10 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(presentationSegment.Id);
+                var position = this.positionsReadRepository.GetById(presentationSegment.Id);
                 position.Description = presentationSegment.Content;
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;
@@ -90,10 +93,10 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(presentationSegment.Id);
+                var position = this.positionsReadRepository.GetById(presentationSegment.Id);
                 position.LookingFor = presentationSegment.Content;
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;
@@ -109,10 +112,10 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(presentationSegment.Id);
+                var position = this.positionsReadRepository.GetById(presentationSegment.Id);
                 position.WhatWeOffer = presentationSegment.Content;
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;
@@ -128,10 +131,10 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(presentationSegment.Id);
+                var position = this.positionsReadRepository.GetById(presentationSegment.Id);
                 position.Responsibilities = presentationSegment.Content;
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;
@@ -147,7 +150,7 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(changePositionRequiredSkills.PositionId);
+                var position = this.positionsReadRepository.GetById(changePositionRequiredSkills.PositionId);
 
                 position.PositionSkill = changePositionRequiredSkills.RequiredSkills.Select(x => new PositionSkill()
                 {
@@ -155,7 +158,7 @@ namespace Hooxit.Services.Company.Implemenation
                     SkillId = x
                 }).ToList();
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;
@@ -171,10 +174,10 @@ namespace Hooxit.Services.Company.Implemenation
         {
             try
             {
-                var position = this.positionsRepository.Get(changePositionName.PositionId);
+                var position = this.positionsReadRepository.GetById(changePositionName.PositionId);
                 position.PositionName = changePositionName.PositionName;
 
-                this.positionsRepository.Update(position);
+                this.positionsUpdateRepository.Update(position);
                 this.companiesRepository.Save();
 
                 return true;

@@ -7,7 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hooxit.Data.Repository
 {
-    public class CandidateSkillRepository : IRepository<CandidateSkill>
+    public class CandidateSkillRepository 
+        : IRepository<CandidateSkill>, 
+          IReadRepository<CandidateSkill>, 
+          IDeleteRepository<CandidateSkill>
     {
         private readonly IHooxitDbContext dbContext;
 
@@ -21,7 +24,7 @@ namespace Hooxit.Data.Repository
             this.dbContext.CandidateSkill.Add(entity);
         }
 
-        public IList<CandidateSkill> All()
+        public IList<CandidateSkill> GetAll()
         {
             return this.dbContext.CandidateSkill.ToList();
         }
@@ -32,12 +35,12 @@ namespace Hooxit.Data.Repository
             this.dbContext.CandidateSkill.Remove(entity);
         }
 
-        public CandidateSkill Get(int id)
+        public CandidateSkill GetById(int id)
         {
-            return null;
+            return this.dbContext.CandidateSkill.Where(x => id == x.CandidateId).FirstOrDefault();
         }
 
-        public IList<CandidateSkill> GetMany(int[] id)
+        public IList<CandidateSkill> GetManyByIds(int[] id)
         {
             return this.dbContext.CandidateSkill.Where(x => id.Contains(x.CandidateId)).ToList();
         }
@@ -45,11 +48,6 @@ namespace Hooxit.Data.Repository
         public void Save()
         {
             dbContext.SaveChanges();
-        }
-
-        public void Update(CandidateSkill entity)
-        {
-
         }
     }
 }

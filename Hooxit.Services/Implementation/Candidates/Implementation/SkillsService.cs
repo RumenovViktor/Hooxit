@@ -14,35 +14,36 @@ namespace Hooxit.Services.Implementation.ApplicationServices
         private readonly IUserRepository userRepository;
         private readonly ICandidateRepository candidateRepository;
         private readonly IRepository<CandidateSkill> candidateSkillRepository;
+        private readonly IReadRepository<CandidateSkill> candidateSkillReadRepository;
+        private readonly IDeleteRepository<CandidateSkill> candidateSkillDeleteRepository;
 
         public SkillsService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.userRepository = userRepository;
-            this.candidateRepository = unitOfWork.BuildCandidateRepository();
-            this.candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
+
+            candidateRepository = unitOfWork.BuildCandidateRepository();
+            candidateSkillReadRepository = unitOfWork.BuildCandidateSkillReadRepository();
+            candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
+            candidateSkillDeleteRepository = unitOfWork.BuildCandidateSkillDeleteRepository();
         }
 
         public bool ChangeSkills(ChangeSkills skills)
         {
             var user = userRepository.GetByName(UserInfo.UserName);
             var userInfo = candidateRepository.GetBydId(user.Result.Id);
-            var candidateSkills = this.candidateSkillRepository.GetMany(new int[] { userInfo.Id });
+            var candidateSkills = this.candidateSkillReadRepository.GetManyByIds(new int[] { userInfo.Id });
 
             try
             {
-                candidateSkills.ToList().ForEach(x => { candidateSkillRepository.Delete(x); });
+                candidateSkills.ToList().ForEach(x => { candidateSkillDeleteRepository.Delete(x); });
                 candidateSkillRepository.Save();
 
-                var skillsASd = skills.Skills.Select(x => new CandidateSkill
-                {
-                    CandidateId = userInfo.Id,
-                    SkillId = x
-                }).ToList();
+                var skillsASd = skills.Skills.Select(x => new CandidateSkill { CandidateId = userInfo.Id, SkillId = x }).ToList();
 
                 skillsASd.ForEach(x => candidateSkillRepository.Add(x));
                 candidateSkillRepository.Save();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 return false;
             }

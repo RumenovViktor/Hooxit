@@ -1,8 +1,9 @@
-﻿using Hooxit.Presentation;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Hooxit.Data.Contracts;
 using System.Collections.Generic;
+
+using Hooxit.Presentation;
+using Hooxit.Data.Contracts;
 using Hooxit.Models;
 using Hooxit.Data.Repository;
 using Hooxit.Models.Users;
@@ -12,29 +13,30 @@ namespace Hooxit.Services.Implementation.Managers
 {
     public class ProfileManager : IProfileManager
     {
-        private readonly IRepository<Experience> experienceRepository;
+        private readonly IReadRepository<Experience> experienceReadRepository;
         private readonly IReadRepository<Country> countryRepository;
         private readonly IUserRepository userRepository;
         private readonly ICandidateRepository candidateRepository;
-        private readonly IRepository<CandidateSkill> candidateSkillRepository;
+        private readonly IReadRepository<CandidateSkill> candidateSkillRepository;
         private readonly IReadRepository<Skill> skillsReadRepository;
 
         public ProfileManager(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.userRepository = userRepository;
-            this.experienceRepository = unitOfWork.BuildExperienceRepository();
-            this.countryRepository = unitOfWork.BuildCountriesRepository();
-            this.candidateRepository = unitOfWork.BuildCandidateRepository();
-            this.candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
-            this.skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
+
+            experienceReadRepository = unitOfWork.BuildExperienceReadRepository();
+            countryRepository = unitOfWork.BuildCountriesRepository();
+            candidateRepository = unitOfWork.BuildCandidateRepository();
+            candidateSkillRepository = unitOfWork.BuildCandidateSkillReadRepository();
+            skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
         }
 
         public async Task<ProfileReadModel> GetProfile(string username)
         {
             var user = await userRepository.GetByName(username);
             var userInfo = candidateRepository.GetBydId(user.Id);
-            var candidateSkillsIds = candidateSkillRepository.GetMany(new int[] { userInfo.Id }).Select(x => x.SkillId);
-            var candidateSkills = this.skillsReadRepository.GetManyById(candidateSkillsIds.ToArray());
+            var candidateSkillsIds = candidateSkillRepository.GetManyByIds(new int[] { userInfo.Id }).Select(x => x.SkillId);
+            var candidateSkills = this.skillsReadRepository.GetManyByIds(candidateSkillsIds.ToArray());
 
             if (userInfo == null)
             {
@@ -44,8 +46,8 @@ namespace Hooxit.Services.Implementation.Managers
             var country = userInfo.CountryId.HasValue ? countryRepository.GetById(userInfo.CountryId.Value) : null;
             var countryName = country != null ? country.Name : string.Empty;
 
-            var experience = experienceRepository
-                .All()
+            var experience = experienceReadRepository
+                .GetAll()
                 .Where(x => x.CandidateID == userInfo.Id)
                 .OrderByDescending(x => x.CreatedDate)
                 .Select(x => new ExperienceReadModel(x))

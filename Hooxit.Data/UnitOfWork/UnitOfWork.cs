@@ -19,6 +19,11 @@ namespace Hooxit.Data.UnitOfWork
             return new ExperienceRepository(dbContext);
         }
 
+        public IReadRepository<Experience> BuildExperienceReadRepository()
+        {
+            return new ExperienceRepository(dbContext);
+        }
+
         public IReadRepository<Country> BuildCountriesRepository()
         {
             return new CountriesRepository(dbContext);
@@ -54,7 +59,27 @@ namespace Hooxit.Data.UnitOfWork
             return new PositionsRepository(dbContext);
         }
 
+        public IReadRepository<Position> BuildPositionsReadRepository()
+        {
+            return new PositionsRepository(dbContext);
+        }
+
+        public IUpdateRepository<Position> BuildPositionsUpdateRepository()
+        {
+            return new PositionsRepository(dbContext);
+        }
+
         public IRepository<CandidateSkill> BuildCandidateSkillRepository()
+        {
+            return new CandidateSkillRepository(dbContext);
+        }
+
+        public IReadRepository<CandidateSkill> BuildCandidateSkillReadRepository()
+        {
+            return new CandidateSkillRepository(dbContext);
+        }
+
+        public IDeleteRepository<CandidateSkill> BuildCandidateSkillDeleteRepository()
         {
             return new CandidateSkillRepository(dbContext);
         }

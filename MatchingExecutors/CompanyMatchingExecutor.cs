@@ -13,14 +13,14 @@
     public class CompanyMatchingExecutor : MatchingExecutor<PositionForMatch, SuggestedCandidate>
     {
         private readonly IReadRepository<PositionSkill> positionSkillRepository;
-        private readonly IRepository<CandidateSkill> candidateSkillRepository;
+        private readonly IReadRepository<CandidateSkill> candidateSkillRepository;
         private readonly ICandidateRepository candidateRepository;
         private readonly IUserRepository userRepository;
 
         public CompanyMatchingExecutor(IUnitOfWork unitOfWork, IUserRepository userRepository) : base()
         {
             positionSkillRepository = unitOfWork.BuildPositionSkillRepository();
-            candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
+            candidateSkillRepository = unitOfWork.BuildCandidateSkillReadRepository();
             candidateRepository = unitOfWork.BuildCandidateRepository();
 
             this.userRepository = userRepository;
@@ -58,12 +58,12 @@
 
         private IEnumerable<PositionSkill> GetPositionRequiredSkills(int positionId)
         {
-            return positionSkillRepository.GetManyById(new int[] { positionId });
+            return positionSkillRepository.GetManyByIds(new int[] { positionId });
         }
 
         private IEnumerable<CandidateSkill> GetCandidateSkills(int candidateId)
         {
-            return candidateSkillRepository.GetMany(new int[] { candidateId });
+            return candidateSkillRepository.GetManyByIds(new int[] { candidateId });
         }
 
         private int CalculateSkillRate(IEnumerable<PositionSkill> requiredSkills, IEnumerable<CandidateSkill> candidateSkills)

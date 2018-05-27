@@ -12,7 +12,7 @@ namespace Hooxit.Services.Company.Implemenation
     public class PositionSkillRelationManager : IPositionSkillRelationManager
     {
         private readonly IReadRepository<PositionSkill> positionSkillRepository;
-        private readonly IRepository<CandidateSkill> candidateSkillRepository;
+        private readonly IReadRepository<CandidateSkill> candidateSkillRepository;
         private readonly IReadRepository<Skill> skillsRepository;
         private readonly ICandidateRepository candidateRepository;
         private readonly IUserRepository userRepository;
@@ -20,7 +20,7 @@ namespace Hooxit.Services.Company.Implemenation
         public PositionSkillRelationManager(IUnitOfWork unitOfWork, IUserRepository userRepository)
         {
             positionSkillRepository = unitOfWork.BuildPositionSkillRepository();
-            candidateSkillRepository = unitOfWork.BuildCandidateSkillRepository();
+            candidateSkillRepository = unitOfWork.BuildCandidateSkillReadRepository();
             candidateRepository = unitOfWork.BuildCandidateRepository();
             skillsRepository = unitOfWork.BuildSkillsReadRepository();
 
@@ -31,9 +31,9 @@ namespace Hooxit.Services.Company.Implemenation
         {
             var user = userRepository.GetByName(candidateUserName);
             var candidate = candidateRepository.GetBydId(user.Result.Id);
-            var candidateSkills = candidateSkillRepository.GetMany(new int[] { candidate.Id });
-            var positionSkills = positionSkillRepository.GetManyById(new int[] { positionId });
-            var skillsWithNames = skillsRepository.GetManyById(positionSkills.Select(x => x.SkillId).ToArray());
+            var candidateSkills = candidateSkillRepository.GetManyByIds(new int[] { candidate.Id });
+            var positionSkills = positionSkillRepository.GetManyByIds(new int[] { positionId });
+            var skillsWithNames = skillsRepository.GetManyByIds(positionSkills.Select(x => x.SkillId).ToArray());
             var skillsRelation = new List<PositionSkillsRelation>();
 
             positionSkills.ToList().ForEach(x =>
@@ -42,29 +42,15 @@ namespace Hooxit.Services.Company.Implemenation
 
                 if (candidateSkills.Any(c => x.SkillId == c.SkillId))
                 { 
-                    skillsRelation.Add(new PositionSkillsRelation
-                    {
-                        CandidateSkill = name,
-                        PositionSkill = name,
-                        IsMatch = true,
-                    });
+                    skillsRelation.Add(new PositionSkillsRelation { CandidateSkill = name, PositionSkill = name, IsMatch = true, });
                 }
                 else
                 {
-                    skillsRelation.Add(new PositionSkillsRelation
-                    {
-                        CandidateSkill = name,
-                        PositionSkill = name,
-                        IsMatch = false,
-                    });
+                    skillsRelation.Add(new PositionSkillsRelation { CandidateSkill = name, PositionSkill = name, IsMatch = false, });
                 }
             });
 
-            return new RelationRead<PositionSkillsRelation>
-            {
-                Name = candidateUserName,
-                SkillsRelation = skillsRelation
-            };
+            return new RelationRead<PositionSkillsRelation> { Name = candidateUserName, SkillsRelation = skillsRelation };
         }
     }
 }
