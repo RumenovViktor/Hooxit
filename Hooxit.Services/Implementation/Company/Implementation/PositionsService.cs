@@ -1,15 +1,17 @@
-﻿using Hooxit.Data.Contracts;
-using Hooxit.Data.Repository;
-using Hooxit.Models;
-using Hooxit.Presentation.Company.Contracts;
-using Hooxit.Presentation.Company.Write;
-using Hooxit.Presentation.Write.Company;
-using Hooxit.Services.Company.Interfaces;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+
+using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
+
+using Hooxit.Data.Contracts;
+using Hooxit.Data.Repository;
+using Hooxit.Models;
+using Hooxit.Presentation.Interfaces.Company;
+using Hooxit.Services.Company.Interfaces;
+using Hooxit.Presentation.Implemenation.Write.Company;
+using Hooxit.Presentation.Implemenation.Company.Write;
 
 namespace Hooxit.Services.Company.Implemenation
 {

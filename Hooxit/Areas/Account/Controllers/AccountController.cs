@@ -1,5 +1,5 @@
 ﻿using Hooxit.Data.Repository;
-using Hooxit.Presentation;
+using Hooxit.Presentation.UserManagement;
 using Hooxit.Services.Authentication.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

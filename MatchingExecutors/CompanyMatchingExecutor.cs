@@ -3,10 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+
     using Hooxit.Data.Contracts;
     using Hooxit.Data.Repository;
     using Hooxit.Models;
-    using Hooxit.Presentation.Company.Read.Matching;
+    using Hooxit.Presentation.Implemenation.Company.Read.Matching;
     using MatchingExecutors.Base;
 
     public class CompanyMatchingExecutor : MatchingExecutor<PositionForMatch, SuggestedCandidate>

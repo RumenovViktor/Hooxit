@@ -1,9 +1,10 @@
-﻿using Hooxit.Data.Contracts;
-using Hooxit.Data.Repository;
-using Hooxit.Presentation.Company.Read;
-using Hooxit.Services.Company.Interfaces;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+
+using Hooxit.Data.Contracts;
+using Hooxit.Data.Repository;
+using Hooxit.Presentation.Implemenation.Company.Read;
+using Hooxit.Services.Company.Interfaces;
 
 namespace Hooxit.Services.Company.Implemenation
 {

@@ -1,12 +1,13 @@
 ﻿using System;
-using Hooxit.Presentation.Write;
+using System.Linq;
 using System.Threading.Tasks;
+
 using Hooxit.Data.Contracts;
 using Hooxit.Models;
-using System.Linq;
 using Hooxit.Presentation;
 using Hooxit.Data.Repository;
 using Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Presentation.Implemenation.Candidate.Write;
 
 namespace Hooxit.Services.Implementation.ApplicationServices
 {

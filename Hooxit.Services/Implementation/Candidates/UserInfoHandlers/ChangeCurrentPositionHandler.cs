@@ -1,9 +1,10 @@
-﻿using Hooxit.Data.Contracts;
-using Hooxit.Data.Repository;
-using Hooxit.Presentation.Write;
-using Hooxit.Services.Candidates.Interfaces;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+
+using Hooxit.Data.Contracts;
+using Hooxit.Data.Repository;
+using Hooxit.Presentation.Implemenation.Candidate.Write;
+using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Services.Candidates.UserInfoHandlers
 {

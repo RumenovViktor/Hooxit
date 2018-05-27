@@ -1,6 +1,7 @@
-﻿using Hooxit.Presentation;
-using Hooxit.Presentation.Company.Read;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using Hooxit.Presentation.Implemenation;
+using Hooxit.Presentation.Implemenation.Company.Read;
 
 namespace Hooxit.Services.Company.Interfaces
 {

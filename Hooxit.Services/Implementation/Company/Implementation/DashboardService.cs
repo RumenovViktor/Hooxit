@@ -1,7 +1,7 @@
 ﻿using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
-using Hooxit.Presentation.Company.Read.Matching;
-using Hooxit.Presentation.Read.Matching;
+using Hooxit.Presentation.Implemenation.Company.Read.Matching;
+using Hooxit.Presentation.Matching;
 using Hooxit.Services.Company.Interfaces;
 using MatchingExecutors;
 using MatchingExecutors.Base;

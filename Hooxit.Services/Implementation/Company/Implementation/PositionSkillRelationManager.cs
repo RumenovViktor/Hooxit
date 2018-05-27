@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Models;
-using Hooxit.Presentation.Company.Read;
+using Hooxit.Presentation.Implemenation;
 using Hooxit.Services.Company.Interfaces;
 
 namespace Hooxit.Services.Company.Implemenation

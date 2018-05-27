@@ -1,10 +1,12 @@
-﻿using Hooxit.Data.Contracts;
-using Hooxit.Data.Repository;
-using Hooxit.Presentation;
-using Hooxit.Services.Candidates.Interfaces;
+﻿using System.Collections.Generic;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+
+using Hooxit.Data.Contracts;
+using Hooxit.Data.Repository;
+using Hooxit.Presentation.Implemenation;
+using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Controllers
 {

@@ -1,5 +1,6 @@
-﻿using Hooxit.Presentation.Company.Read;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+
+using Hooxit.Presentation.Implemenation.Company.Read;
 
 namespace Hooxit.Services.Company.Interfaces
 {

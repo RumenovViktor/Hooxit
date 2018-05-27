@@ -1,7 +1,7 @@
 ﻿using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Models;
-using Hooxit.Presentation.Write;
+using Hooxit.Presentation.Implemenation.Candidate.Write;
 using Hooxit.Services.Candidates.Interfaces;
 using System;
 using System.Threading.Tasks;

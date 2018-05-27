@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+
 using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
 using Hooxit.Models;
-using Hooxit.Presentation.Write;
+using Hooxit.Presentation.Implemenation.Candidate.Write;
 using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Services.Implementation.ApplicationServices

@@ -1,8 +1,10 @@
-﻿using Hooxit.Presentation.Write;
-using Hooxit.Services.Candidates.Interfaces;
+﻿using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+
+using Hooxit.Presentation.Implemenation.Candidate.Write;
+using Hooxit.Services.Candidates.Interfaces;
 
 namespace Hooxit.Controllers
 {

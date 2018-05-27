@@ -1,10 +1,11 @@
-﻿using Hooxit.Data.Contracts;
-using Hooxit.Models;
-using Hooxit.Presentation;
-using Hooxit.Presentation.Company.Read;
-using Hooxit.Services.Company.Interfaces;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
+
+using Hooxit.Data.Contracts;
+using Hooxit.Models;
+using Hooxit.Presentation.Implemenation;
+using Hooxit.Services.Company.Interfaces;
+using Hooxit.Presentation.Implemenation.Company.Read;
 
 // TODO: Get from company info when Lazy loading is available.
 namespace Hooxit.Services.Company.Implemenation

@@ -1,7 +1,8 @@
-﻿using Hooxit.Presentation.Company.Contracts;
-using Hooxit.Presentation.Company.Write;
-using Hooxit.Presentation.Write.Company;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+
+using Hooxit.Presentation.Implemenation.Company.Write;
+using Hooxit.Presentation.Implemenation.Write.Company;
+using Hooxit.Presentation.Interfaces.Company;
 
 namespace Hooxit.Services.Company.Interfaces
 {

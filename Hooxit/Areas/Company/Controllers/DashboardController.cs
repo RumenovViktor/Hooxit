@@ -1,10 +1,12 @@
-﻿using Hooxit.Data.Contracts;
+﻿using System.Collections.Generic;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
-using Hooxit.Presentation.Company.Read.Matching;
 using Hooxit.Services;
 using Hooxit.Services.Company.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using Hooxit.Presentation.Implemenation.Company.Read.Matching;
 
 namespace Hooxit.Areas.Company.Controllers
 {

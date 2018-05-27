@@ -1,5 +1,7 @@
-﻿using Hooxit.Presentation.Read;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
+using Hooxit.Presentation.Common;
+using Hooxit.Presentation.Implementation;
 
 namespace Hooxit.Services.Common.Interfaces
 {

@@ -1,8 +1,10 @@
-﻿using Hooxit.Presentation.Company.Write;
+﻿using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Mvc;
+
+using Hooxit.Presentation.Implemenation.Company.Write;
 using Hooxit.Services.Candidates.Interfaces;
 using Hooxit.Services.Company.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Hooxit.Areas.Company.Controllers
 {

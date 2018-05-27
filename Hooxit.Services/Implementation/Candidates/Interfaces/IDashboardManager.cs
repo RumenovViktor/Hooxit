@@ -1,5 +1,5 @@
-﻿using Hooxit.Presentation.Company.Read.Matching;
-using Hooxit.Presentation.Read.Matching;
+﻿using Hooxit.Presentation.Implemenation.Company.Read.Matching;
+using Hooxit.Presentation.Matching;
 
 namespace Hooxit.Services.Candidates.Interfaces
 {

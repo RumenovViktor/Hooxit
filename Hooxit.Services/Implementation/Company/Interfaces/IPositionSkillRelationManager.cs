@@ -1,5 +1,4 @@
-﻿using Hooxit.Presentation.Company.Read;
-using System.Collections.Generic;
+﻿using Hooxit.Presentation.Implemenation;
 
 namespace Hooxit.Services.Company.Interfaces
 {

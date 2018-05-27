@@ -2,12 +2,13 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-using Hooxit.Presentation.Write.Company;
 using Hooxit.Data.Repository;
 using Hooxit.Services;
 using Hooxit.Data.Contracts;
 using Hooxit.Presentation.Company.Write;
 using Hooxit.Services.Company.Interfaces;
+using Hooxit.Presentation.Implemenation.Write.Company;
+using Hooxit.Presentation.Implemenation.Company.Write;
 
 namespace Hooxit.Areas.Company.Controllers
 {

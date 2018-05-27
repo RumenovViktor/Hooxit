@@ -9,4 +9,8 @@
     <ProjectReference Include="..\Hooxit.Utils\Hooxit.Utils.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Candidate\" />
+  </ItemGroup>
+
 </Project>

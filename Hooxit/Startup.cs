@@ -16,7 +16,6 @@ using Hooxit.Data.Implementation;
 using Hooxit.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Hooxit.Data.Repository;
-using Hooxit.Presentation.Write;
 using CandidateInterfaces = Hooxit.Services.Candidates.Interfaces;
 using Hooxit.Services.Common.Interfaces;
 using Hooxit.Services.Common.Implementation;
@@ -25,6 +24,7 @@ using Hooxit.Services.Authentication.Implementation;
 using Hooxit.Services.Candidates.UserInfoHandlers;
 using CompanyInterfaces = Hooxit.Services.Company.Interfaces;
 using Hooxit.Services.Company.Implemenation;
+using Hooxit.Presentation.Implemenation.Candidate.Write;
 
 namespace Hooxit
 {
