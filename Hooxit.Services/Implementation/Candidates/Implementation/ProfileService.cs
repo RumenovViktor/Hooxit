@@ -2,12 +2,12 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-using Hooxit.Presentation;
 using Hooxit.Data.Contracts;
 using Hooxit.Models;
 using Hooxit.Data.Repository;
 using Hooxit.Models.Users;
 using Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Presentation.Implemenation.Candidate.Read;
 
 namespace Hooxit.Services.Implementation.Managers
 {

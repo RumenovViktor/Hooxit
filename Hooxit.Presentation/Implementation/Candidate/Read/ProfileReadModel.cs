@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 
 using Hooxit.Models;
-using Hooxit.Models.Users;
 using Hooxit.Presentation.Implementation;
 using Hooxit.Utils.Constants;
 
-namespace Hooxit.Presentation
+namespace Hooxit.Presentation.Implemenation.Candidate.Read
 {
+    using Models.Users;
+
     public class ProfileReadModel
     {
         public ProfileReadModel()

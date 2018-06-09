@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 
 using Hooxit.Data.Contracts;
 using Hooxit.Models;
-using Hooxit.Presentation;
 using Hooxit.Data.Repository;
 using Hooxit.Services.Candidates.Interfaces;
 using Hooxit.Presentation.Implemenation.Candidate.Write;
+using Hooxit.Presentation.Implemenation.Candidate.Read;
 
 namespace Hooxit.Services.Implementation.ApplicationServices
 {

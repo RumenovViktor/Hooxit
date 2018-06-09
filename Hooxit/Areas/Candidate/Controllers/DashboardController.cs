@@ -15,33 +15,34 @@ namespace Hooxit.Controllers
     public class DashboardController : BaseController
     {
         private readonly IUserRepository userRepository;
-        private readonly ICandidateRepository candidateRepository;
-        private readonly IDashboardManager dashboardManagerRepository;
+        private readonly IDashboardManager dashboardManager;
 
-        public DashboardController(IUserRepository userRepository)
+        public DashboardController(IUserRepository userRepository, IDashboardManager dashboardManager)
         {
             this.userRepository = userRepository;
+            this.dashboardManager = dashboardManager;
         }
 
         [HttpGet]
-        [Route("Dashboard")]
+        [Route("Candidate/Dashboard")]
         public IActionResult Dashboard()
         {
             return View(new List<IdNameReadModel>());
         }
 
         [HttpGet]
-        [Route("Dashboard")]
+        [Route("Candidate/SuggestedPositions")]
         public IActionResult SuggestedPositions(int? companyId)
         {
             if (companyId.HasValue)
             {
-                // Filter by selected company
+                var suggestionsForCompany = dashboardManager.GetSuggestions(companyId.Value);
+                return View(suggestionsForCompany);
             }
 
-            var suggestions = dashboardManagerRepository.GetSuggestions();
+            var suggestions = dashboardManager.GetSuggestions();
 
-            return View(new List<IdNameReadModel>());
+            return View(suggestions);
         }
     }
 }

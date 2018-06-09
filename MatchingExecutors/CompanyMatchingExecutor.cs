@@ -29,7 +29,7 @@
         public override IEnumerable<SuggestedCandidate> Match(PositionForMatch matchRequest)
         {
             var suggestedCandidates = new List<SuggestedCandidate>();
-            var candidates = this.candidateRepository.GetAll().ToList();
+            var candidates = candidateRepository.GetAll().ToList();
 
             foreach (var candidate in candidates)
             {
@@ -47,7 +47,8 @@
                 suggestedCandidates.Add(new SuggestedCandidate
                 {
                     FullName = candidate.FirstName + " " + candidate.LastName,
-                    MatchedPercentage = String.Format("{0:0.00}", skillMatchInPercentage),
+                    MatchedPercentage = skillMatchInPercentage,
+                    FormatedMatchedPercentage = string.Format("{0:0.00}", skillMatchInPercentage),
                     UserName = user.Result.Username,
                     Id = candidate.Id
                 });
@@ -64,28 +65,6 @@
         private IEnumerable<CandidateSkill> GetCandidateSkills(int candidateId)
         {
             return candidateSkillRepository.GetManyByIds(new int[] { candidateId });
-        }
-
-        private int CalculateSkillRate(IEnumerable<PositionSkill> requiredSkills, IEnumerable<CandidateSkill> candidateSkills)
-        {
-            var skillsMatchCount = 0;
-
-            if (!requiredSkills.Any())
-            {
-                return (int)TotalPercentage;
-            }
-
-            foreach (var skill in requiredSkills)
-            {
-                var userSkill = candidateSkills.Where(x => x.SkillId == skill.SkillId).FirstOrDefault();
-
-                if (userSkill != null)
-                {
-                    skillsMatchCount++;
-                }
-            }
-
-            return skillsMatchCount;
         }
     }
 }

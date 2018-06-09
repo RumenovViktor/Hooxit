@@ -1,0 +1,40 @@
+﻿@using Hooxit.Presentation.Implementation.Candidate.Matching
+@using Hooxit.Presentation.Matching
+
+@model MatchModel<SuggestedPosition, string>
+
+<input id="matchId" type="hidden" value="@Model.MatchId" />
+<table class="table table-lg table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Position name</th>
+            <th>% of skill match</th>
+            <th>Match information</th>
+            <th>Open Profile</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Suggestions.Any())
+        {
+            var count = 1;
+            foreach (var position in Model.Suggestions)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td><a value="@position.Name">@position.Name</a></td>
+                    <td>@position.FormatedMatchedPercentage</td>
+                    <td><a class="btn btn-primary btn-rounded btn-sm my-0 viewRelation" value="@position.Id">View</a></td>
+                    <td><a class="btn btn-primary btn-rounded btn-sm my-0 openMatch" value="@position.Id">Open</a></td>
+                </tr>
+
+                count++;
+            }
+        }
+    </tbody>
+</table>
+
+@if (!Model.Suggestions.Any())
+{
+    <h4 class="top">No positions</h4>
+}

@@ -1,5 +1,5 @@
-﻿@using Hooxit.Presentation.Read.Matching
-@using Hooxit.Presentation.Company.Read.Matching
+﻿@using Hooxit.Presentation.Implemenation.Company.Read.Matching
+@using Hooxit.Presentation.Matching
 
 @model MatchModel<SuggestedCandidate, int>
 
@@ -30,7 +30,7 @@
                     {
                         <td><a value="@candidate.UserName">@candidate.FullName</a></td>
                     }
-                    <td>@candidate.MatchedPercentage</td>
+                    <td>@candidate.FormatedMatchedPercentage</td>
                     <td><a class="btn btn-primary btn-rounded btn-sm my-0 viewRelation" value="@candidate.UserName">View</a></td>
                     <td><a class="btn btn-primary btn-rounded btn-sm my-0 openMatch" value="@candidate.UserName">Open</a></td>
                 </tr>

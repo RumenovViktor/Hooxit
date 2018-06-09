@@ -1,4 +1,4 @@
-﻿@model Hooxit.Presentation.Write.UserType
+﻿@model Hooxit.Presentation.UserManagement.UserType
 
 @{
     Layout = "_OnlyNameLayout";
@@ -10,11 +10,11 @@
             <div class="card-body">
                 <section class="section">
                     <div class="radioContainer">
-                        <input type="radio" id="company" value="@Hooxit.Presentation.Write.UserTypes.Company" asp-for="ChosenUserType">
+                        <input type="radio" id="company" value="@Hooxit.Presentation.UserManagement.UserTypes.Company" asp-for="ChosenUserType">
                         <label for="company" class="card-text"><span class="radio material-text">I am a company</span></label>
                     </div>
                     <div class="radioContainer">
-                        <input type="radio" id="candidate" value="@Hooxit.Presentation.Write.UserTypes.Candidate" asp-for="ChosenUserType">
+                        <input type="radio" id="candidate" value="@Hooxit.Presentation.UserManagement.UserTypes.Candidate" asp-for="ChosenUserType">
                         <label for="candidate" class="card-text"><span class="radio material-text">I am a candidate</span></label>
                     </div>
                 </section>

@@ -25,6 +25,7 @@ using Hooxit.Services.Candidates.UserInfoHandlers;
 using CompanyInterfaces = Hooxit.Services.Company.Interfaces;
 using Hooxit.Services.Company.Implemenation;
 using Hooxit.Presentation.Implemenation.Candidate.Write;
+using Hooxit.Services.Implementation.Candidates.Implementation;
 
 namespace Hooxit
 {
@@ -81,6 +82,7 @@ namespace Hooxit
             services.AddTransient<CompanyInterfaces.ICompanyProfileService, ProfileService>();
             services.AddTransient<CandidateInterfaces.ISkillsService, SkillsService>();
             services.AddTransient<CompanyInterfaces.IDashboardManager, DashboardService>();
+            services.AddTransient<CandidateInterfaces.IDashboardManager, DashboardManager>();
             services.AddTransient<DatabaseSeed>();
             services.AddTransient<CompanyInterfaces.IPositionSkillRelationManager, PositionSkillRelationManager>();
 

@@ -6,7 +6,9 @@
 
         public string FullName { get; set; }
 
-        public string MatchedPercentage { get; set; }
+        public decimal MatchedPercentage { get; set; }
+
+        public string FormatedMatchedPercentage { get; set; }
 
         public string UserName { get; set; }
     }

@@ -1,5 +1,5 @@
-﻿@using Hooxit.Components
-@model Hooxit.Presentation.ProfileReadModel
+﻿@using Hooxit.Presentation.Implemenation.Candidate.Read
+@model ProfileReadModel
 
 <div class="top">
     <div class="row">
@@ -46,7 +46,7 @@
                                 <p class="userInfodisplayValue">@Model.Country</p>
                                 <div class="userInfoEditFieldWrapper toggle-update-edit">
                                     <input class="userInfoForUpdate" type="text" value="@Model.Country" />
-                                    @Component.InvokeAsync(nameof(Countries)).Result
+                                    @Component.InvokeAsync(nameof(Hooxit.Components.Countries)).Result
                                 </div>
                                 <span class="requestType">country</span>
                             </div>
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="card card-block">
                     <h4 class="card-title">Experience <a href="#" class="addExperience"><i class="fa fa-plus navbar-toggler-right" aria-hidden="true"></i></a></h4>
-                    @Html.Partial("../Experience/_AddExperiencePartial", new Hooxit.Presentation.Write.ExperienceWriteModel())
+                    @Html.Partial("../Experience/_AddExperiencePartial", new Hooxit.Presentation.Implemenation.Candidate.Write.ExperienceWriteModel())
                     <hr />
                     <div id="experienceContainer">
 

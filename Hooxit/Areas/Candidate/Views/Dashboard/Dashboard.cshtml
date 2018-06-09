@@ -1,4 +1,4 @@
-﻿@using Hooxit.Presentation
+﻿@using Hooxit.Presentation.Implemenation
 @model IEnumerable<IdNameReadModel>
 
 <div class="top">
@@ -67,3 +67,8 @@
         </div>
     </div>
 </div>
+
+@section CandidateDashboardScripts{
+    <script src="~/js/company/dashboardSuggestionsManager.js"></script>
+    <script src="~/js/candidate/dashboardManager.js"></script>
+}

@@ -1,6 +1,7 @@
-﻿using Hooxit.Presentation;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+
 using Hooxit.Presentation.Implemenation.Candidate.Write;
+using Hooxit.Presentation.Implemenation.Candidate.Read;
 
 namespace Hooxit.Services.Candidates.Interfaces
 {

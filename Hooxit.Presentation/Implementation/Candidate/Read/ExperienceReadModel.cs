@@ -3,7 +3,7 @@
 using Hooxit.Models;
 using Hooxit.Presentation.Implemenation.Candidate.Write;
 
-namespace Hooxit.Presentation
+namespace Hooxit.Presentation.Implemenation.Candidate.Read
 {
     public class ExperienceReadModel
     {
