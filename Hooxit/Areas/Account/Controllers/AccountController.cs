@@ -61,8 +61,10 @@ namespace Hooxit.Account.Controllers
 
                 return RedirectToAction("Index", "Dashboard", new { area = areaName });
             }
+
+            ModelState.AddModelError("UserDoesntExist", "Wrong username/password.");
             
-            return View(userLogin);
+            return View("Index", userLogin);
         }
 
         [HttpGet]

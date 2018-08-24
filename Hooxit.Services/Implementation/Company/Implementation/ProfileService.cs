@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
+using Hooxit.Models;
+using Hooxit.Presentation.Implemenation;
 using Hooxit.Presentation.Implemenation.Company.Write;
 using Hooxit.Services.Company.Interfaces;
 
@@ -12,11 +16,19 @@ namespace Hooxit.Services.Company.Implemenation
     {
         private readonly ICompaniesRepository companiesRepository;
         private readonly IUserRepository userRepository;
+        private readonly IRepository<CandidateInterest> candidateInterestRepository;
+        private readonly IReadRepository<CandidateInterest> candidateInterestReadRepository;
+        private readonly IDeleteRepository<CandidateInterest> candidateInterestDeleteRepository;
+        private readonly ICandidateRepository candidatesRepository;
 
         public ProfileService(IUnitOfWork unitOfWork, IUserRepository userRepository)
         {
             this.userRepository = userRepository;
             companiesRepository = unitOfWork.BuildCompaniesRepository();
+            candidateInterestRepository = unitOfWork.BuildCandidateInterestRepository();
+            candidatesRepository = unitOfWork.BuildCandidateRepository();
+            candidateInterestReadRepository = unitOfWork.BuildCandidateInterestReadRepository();
+            candidateInterestDeleteRepository = unitOfWork.BuildCandidateInterestDeleteRepository();
         }
 
         public async Task<bool> ChangeDescription(ChangeCompanyDescriptionWrite changeComapnyDescription)
@@ -36,6 +48,71 @@ namespace Hooxit.Services.Company.Implemenation
 
                 throw;
             }
+        }
+
+        public async Task<bool> GetInterest(string userName)
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var company = companiesRepository.GetBydId(user.Id);
+
+            var candidateIdentity = await userRepository.GetByName(userName);
+            var candidateId = candidatesRepository.GetById(candidateIdentity.Id).Id;
+
+            var companyInterests = candidateInterestReadRepository.GetManyByIds(new[] { company.Id });
+
+            if (companyInterests.Any(x => x.CandidateId == candidateId))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public async Task<bool> ShowInterest(string userName)
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var company = companiesRepository.GetBydId(user.Id);
+            var candidateIdentity = await userRepository.GetByName(userName);
+            var candidateId = candidatesRepository.GetById(candidateIdentity.Id).Id;
+
+            candidateInterestRepository.Add(new CandidateInterest
+            {
+                CandidateId = candidateId,
+                CompanyId = company.Id
+            });
+
+            return true;
+        }
+
+        public async Task RemoveInterest(string userName)
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var company = companiesRepository.GetBydId(user.Id);
+
+            var candidateInterests = candidateInterestReadRepository.GetManyByIds(new[] { company.Id }).ToList();
+            candidateInterests.ForEach(x =>
+            {
+                var candidate = candidatesRepository.GetById(x.CandidateId);
+                var candidateUser = userRepository.Get(candidate.UserId).Result;
+
+                if (candidateUser.UserName.Equals(userName))
+                {
+                    candidateInterestDeleteRepository.Delete(x);
+                }
+            });
+
+            candidateInterestRepository.Save();
+        }
+
+        public async Task<IEnumerable<IdNameReadModel>> AllInterested()
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var company = companiesRepository.GetBydId(user.Id);
+
+            var candidateIds = candidateInterestReadRepository.GetManyByIds(new[] { company.Id }).Select(x => x.CandidateId);
+            var candidates = candidatesRepository.GetManyByIds(candidateIds.ToArray());
+
+            return candidates.Select(x => new IdNameReadModel { Name = userRepository.Get(x.UserId).Result.UserName });
         }
     }
 }

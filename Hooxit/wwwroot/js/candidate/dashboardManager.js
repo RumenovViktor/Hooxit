@@ -1,15 +1,14 @@
 ﻿class CandidateDashboardSettings {
     static get customSettings() {
         return Object.freeze({
-            suggestionsContainer: '#suggestedPositionsWrapper',
-            relationBaseUrl: '/Candidate/GetRelation',
+            relationBaseUrl: '/Candidate/GetCandidateRelation',
             openMatchUrl: '/ViewPosition/'
         });
     }
 
     static get elementsIds() {
         return Object.freeze({
-            containerId: '.suggestedCandidatesWrapper'
+            containerId: '.suggestedPositionsWrapper'
         });
     }
 }
@@ -21,15 +20,18 @@ class DashboardManager {
 
         this._settings = CandidateDashboardSettings.customSettings;
         this._elementsIds = CandidateDashboardSettings.elementsIds;
+
+        this._dashboardSuggestionsManager = new DashboardSuggestionsManager(this._elementsIds.containerId, this._settings);
     }
 
-    onGetSuggestedPositionsResponse() {
+    onGetSuggestedPositionsResponse(response) {
         $('.defaultSuggestedPositionsWrapper').hide();
         $('.suggestedPositionsWrapper').html(response);
+
+        this._dashboardSuggestionsManager.registerEventListeners();
     }
 
     registerEventListeners() {
-
     }
 
     init() {

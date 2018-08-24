@@ -1,0 +1,6 @@
+﻿@model string
+
+<form asp-area="Company" asp-controller="Profile" asp-action="ShowInterest" data-ajax="true" data-ajax-method="POST" data-ajax-complete="viewCandidateManager.onShowInterestSuccess">
+    <input type="hidden" name="userName" value="@Model" />
+    <button type="submit" class="btn btn-outline-success">Interested</button>
+</form>

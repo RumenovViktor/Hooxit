@@ -5,6 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 using Hooxit.Presentation.Implemenation.Candidate.Write;
 using Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Services;
+using Hooxit.Data.Repository;
+using Hooxit.Services.Company.Interfaces;
+using Hooxit.Data.Contracts;
+using Hooxit.Models;
+using Hooxit.Presentation.Implemenation.Company.Read;
+using Hooxit.Presentation.Implementation.Candidate.Write;
 
 namespace Hooxit.Controllers
 {
@@ -16,19 +23,22 @@ namespace Hooxit.Controllers
         private readonly IUserPersonalInfoHandler<ChangeCountry> changeCountryHandler;
         private readonly IUserPersonalInfoHandler<ChangeCurrentPosition> changeCurrentPositionHandler;
         private readonly ISkillsService skillsService;
+        private readonly IPositionsManager positionsManager;
 
         public ProfileController(
             IProfileManager profileManager,
             IUserPersonalInfoHandler<ChangeEmail> changeEmailHandler,
             IUserPersonalInfoHandler<ChangeCountry> changeCountryHandler,
             IUserPersonalInfoHandler<ChangeCurrentPosition> changeCurrentPositionHandler,
-            ISkillsService skillsService)
+            ISkillsService skillsService,
+            IPositionsManager positionsManager)
         {
             this.profileManager = profileManager;
             this.changeEmailHandler = changeEmailHandler;
             this.changeCountryHandler = changeCountryHandler;
             this.changeCurrentPositionHandler = changeCurrentPositionHandler;
             this.skillsService = skillsService;
+            this.positionsManager = positionsManager;
         }
 
         [HttpGet]
@@ -63,6 +73,15 @@ namespace Hooxit.Controllers
             }
 
             return Json("Error");
+        }
+
+        [HttpGet]
+        [Route("ViewPosition/{positionId}")]
+        [Authorize(Policy = "CandidatePolicy")]
+        public IActionResult ViewPosition(int positionId)
+        {
+            var position = this.positionsManager.GetPositionById(positionId);
+            return View(position);
         }
 
         [HttpPost]
@@ -100,6 +119,19 @@ namespace Hooxit.Controllers
                 skillsService.ChangeSkills(changeSkills);
 
                 return Json(true);
+            }
+
+            return Json(false);
+        }
+
+        [HttpPost]
+        [Authorize(Policy = "CandidatePolicy")]
+        public async Task<IActionResult> Apply([FromBody]ApplyForPosition position)
+        {
+            if (ModelState.IsValid)
+            {
+                var isSuccessful = await profileManager.Apply(position.PositionId);
+                return Json(isSuccessful);
             }
 
             return Json(false);

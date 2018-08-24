@@ -1,0 +1,27 @@
+﻿@model  IEnumerable<Hooxit.Presentation.Implementation.Read.Company.AppliedCandidate>
+
+<table class="table table-lg table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>% of match</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var counter = 1; }
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <th scope="row">@counter</th>
+                <td><a href="@Url.Action("ViewCandidate", "Profile", new { area = "Company", username = item.IdName.Name})">@item.IdName.Name</a></td>
+                <td><a class="active">@item.MatchPercentage</a></td>
+            </tr>
+
+            counter++;
+        }
+    </tbody>
+</table>
+
+

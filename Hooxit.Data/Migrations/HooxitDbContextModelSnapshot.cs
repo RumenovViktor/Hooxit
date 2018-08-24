@@ -20,6 +20,24 @@ namespace Hooxit.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Hooxit.Models.CandidateInterest", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CandidateId");
+
+                    b.Property<int>("CompanyId");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CandidateId");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("CandidateInterests");
+                });
+
             modelBuilder.Entity("Hooxit.Models.CandidateSkill", b =>
                 {
                     b.Property<int>("SkillId");
@@ -105,6 +123,19 @@ namespace Hooxit.Data.Migrations
                     b.ToTable("Positions");
                 });
 
+            modelBuilder.Entity("Hooxit.Models.PositionCandidate", b =>
+                {
+                    b.Property<int>("PositionId");
+
+                    b.Property<int>("CandidateId");
+
+                    b.HasKey("PositionId", "CandidateId");
+
+                    b.HasIndex("CandidateId");
+
+                    b.ToTable("PositionsCandidates");
+                });
+
             modelBuilder.Entity("Hooxit.Models.PositionSkill", b =>
                 {
                     b.Property<int>("SkillId");
@@ -116,6 +147,26 @@ namespace Hooxit.Data.Migrations
                     b.HasIndex("PositionId");
 
                     b.ToTable("PositionSkill");
+                });
+
+            modelBuilder.Entity("Hooxit.Models.Product", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("CompanyID");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Url");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CompanyID");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Hooxit.Models.Skill", b =>
@@ -331,6 +382,19 @@ namespace Hooxit.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("Hooxit.Models.CandidateInterest", b =>
+                {
+                    b.HasOne("Hooxit.Models.Users.Candidate", "Candidate")
+                        .WithMany()
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Hooxit.Models.Users.Company", "Company")
+                        .WithMany("CandidateInterests")
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Hooxit.Models.CandidateSkill", b =>
                 {
                     b.HasOne("Hooxit.Models.Users.Candidate", "Candidate")
@@ -360,6 +424,19 @@ namespace Hooxit.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Hooxit.Models.PositionCandidate", b =>
+                {
+                    b.HasOne("Hooxit.Models.Position", "Position")
+                        .WithMany("PositionCandidate")
+                        .HasForeignKey("CandidateId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Hooxit.Models.Users.Candidate", "Candidate")
+                        .WithMany("PositionCandidate")
+                        .HasForeignKey("PositionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Hooxit.Models.PositionSkill", b =>
                 {
                     b.HasOne("Hooxit.Models.Position", "Position")
@@ -370,6 +447,14 @@ namespace Hooxit.Data.Migrations
                     b.HasOne("Hooxit.Models.Skill", "Skill")
                         .WithMany("PositionSkill")
                         .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Hooxit.Models.Product", b =>
+                {
+                    b.HasOne("Hooxit.Models.Users.Company", "Company")
+                        .WithMany("Products")
+                        .HasForeignKey("CompanyID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

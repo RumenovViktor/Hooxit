@@ -34,7 +34,7 @@ namespace SkillsPopulator
         internal static IList<string> GetAllSkills()
         {
             var skills = string.Empty;
-            var fileStream = new FileStream("allSkills.txt", FileMode.Open);
+            var fileStream = new FileStream(@"C:\Users\Viktor\Desktop\hooxit new\Hooxit\SkillsPopulator\allSkills.txt", FileMode.Open);
 
             using (var reader = new StreamReader(fileStream))
             {

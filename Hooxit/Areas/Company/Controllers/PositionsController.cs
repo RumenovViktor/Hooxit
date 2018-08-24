@@ -9,6 +9,7 @@ using Hooxit.Presentation.Company.Write;
 using Hooxit.Services.Company.Interfaces;
 using Hooxit.Presentation.Implemenation.Write.Company;
 using Hooxit.Presentation.Implemenation.Company.Write;
+using System;
 
 namespace Hooxit.Areas.Company.Controllers
 {
@@ -150,6 +151,19 @@ namespace Hooxit.Areas.Company.Controllers
             }
 
             return Json(false);
+        }
+
+        [HttpGet]
+        [Route("Company/Positions/AppliedCandidates/{positionId}")]
+        public IActionResult AppliedCandidates(int? positionId)
+        {
+            if (!positionId.HasValue)
+            {
+                throw new ArgumentException("No position with this id");
+            }
+
+            var response = this.positionsManager.GetAppliedCandidates(positionId.Value);
+            return View(response);
         }
     }
 }

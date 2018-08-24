@@ -30,7 +30,7 @@ namespace MatchingExecutors
         public override IEnumerable<SuggestedPosition> Match(CandidateForMatch matchRequest)
         {
             var user = userRepository.GetByName(matchRequest.Username);
-            var candidate = candidateRepository.GetBydId(user.Result.Id);
+            var candidate = candidateRepository.GetById(user.Result.Id);
             var candidateSkills = candidateSkillReadRepository.GetManyByIds(new[] { candidate.Id });
             var positions = positionsRepository.GetAll().ToList();
             var suggestedPositions = new List<SuggestedPosition>();

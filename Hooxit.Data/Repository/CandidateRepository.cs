@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 using Data;
 using Hooxit.Data.Contracts;
@@ -27,7 +28,17 @@ namespace Hooxit.Data.Repository
             return this.context.Candidates;
         }
 
-        public Candidate GetBydId(string id)
+        public Candidate GetById(int id)
+        {
+            return context.Candidates.FirstOrDefault(x => x.Id == id);
+        }
+
+        public IEnumerable<Candidate> GetManyByIds(int[] id)
+        {
+            return context.Candidates.Where(x => id.Contains(x.Id)).ToList();
+        }
+
+        public Candidate GetById(string id)
         {
             return context.Candidates.FirstOrDefault(x => x.UserId == id);
         }

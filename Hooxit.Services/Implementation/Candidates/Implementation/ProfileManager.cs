@@ -19,6 +19,7 @@ namespace Hooxit.Services.Implementation.Managers
         private readonly ICandidateRepository candidateRepository;
         private readonly IReadRepository<CandidateSkill> candidateSkillRepository;
         private readonly IReadRepository<Skill> skillsReadRepository;
+        private readonly IRepository<PositionCandidate> positionsCandidatesRepository;
 
         public ProfileManager(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
@@ -29,12 +30,13 @@ namespace Hooxit.Services.Implementation.Managers
             candidateRepository = unitOfWork.BuildCandidateRepository();
             candidateSkillRepository = unitOfWork.BuildCandidateSkillReadRepository();
             skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
+            positionsCandidatesRepository = unitOfWork.BuildPositionCandidateRepository();
         }
 
         public async Task<ProfileReadModel> GetProfile(string username)
         {
             var user = await userRepository.GetByName(username);
-            var userInfo = candidateRepository.GetBydId(user.Id);
+            var userInfo = candidateRepository.GetById(user.Id);
             var candidateSkillsIds = candidateSkillRepository.GetManyByIds(new int[] { userInfo.Id }).Select(x => x.SkillId);
             var candidateSkills = this.skillsReadRepository.GetManyByIds(candidateSkillsIds.ToArray());
 
@@ -54,12 +56,26 @@ namespace Hooxit.Services.Implementation.Managers
                 .ToList();
 
 
-            return BuildProfileReadModel(userInfo, experience, countryName, user.Email, candidateSkills);
+            return BuildProfileReadModel(userInfo, experience, countryName, user.Email, candidateSkills, user.UserName);
         }
 
-        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills)
+        public async Task<bool> Apply(int positionId)
         {
-            return new ProfileReadModel(user, experience, countryName, email, skills);
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var userInfo = candidateRepository.GetById(user.Id);
+
+            positionsCandidatesRepository.Add(new PositionCandidate
+            {
+                CandidateId = userInfo.Id,
+                PositionId = positionId
+            });
+
+            return true;
+        }
+
+        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills, string userName)
+        {
+            return new ProfileReadModel(user, experience, countryName, email, skills, userName);
         }
     }
 }

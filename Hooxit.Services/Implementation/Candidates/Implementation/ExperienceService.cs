@@ -27,7 +27,7 @@ namespace Hooxit.Services.Implementation.ApplicationServices
         public async Task<ExperienceReadModel> AddExperience(ExperienceWriteModel command)
         {
             var user = await userRepository.GetByName(UserInfo.UserName);
-            var userInfo = candidateRepository.GetBydId(user.Id);
+            var userInfo = candidateRepository.GetById(user.Id);
             var experience = BuildExperienceModel(command);
 
             //TODO: Rename

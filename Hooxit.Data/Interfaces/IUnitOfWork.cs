@@ -1,5 +1,4 @@
-﻿using Hooxit.Data.Repository;
-using Hooxit.Models;
+﻿using Hooxit.Models;
 
 namespace Hooxit.Data.Contracts
 {
@@ -19,5 +18,13 @@ namespace Hooxit.Data.Contracts
         IReadRepository<Experience> BuildExperienceReadRepository();
         IDeleteRepository<CandidateSkill> BuildCandidateSkillDeleteRepository();
         IUpdateRepository<Position> BuildPositionsUpdateRepository();
+        IReadRepository<Product> BuildProductsRepository();
+        IRepository<Product> BuildProductsCreateRepository();        
+        IUpdateRepository<Product> BuildProductsUpdateRepository();
+        IRepository<PositionCandidate> BuildPositionCandidateRepository();
+        IReadRepository<PositionCandidate> BuildPositionCandidateReadRepository();
+        IRepository<CandidateInterest> BuildCandidateInterestRepository();
+        IReadRepository<CandidateInterest> BuildCandidateInterestReadRepository();
+        IDeleteRepository<CandidateInterest> BuildCandidateInterestDeleteRepository();
     }
 }

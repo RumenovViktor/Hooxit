@@ -14,7 +14,6 @@ namespace Hooxit.Models
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public virtual int Id { get; set; }
         public virtual string Iso { get; set; }
         public virtual string Name { get; set; }

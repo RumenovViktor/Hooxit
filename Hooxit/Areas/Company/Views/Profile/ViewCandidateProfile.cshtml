@@ -1,5 +1,5 @@
-﻿@using Hooxit.Presentation.Implemenation.Candidate.Read
-@model ProfileReadModel
+﻿@using Hooxit.Presentation.Implementation.Company.Read
+@model ViewCandidateProfileReadModel
 
 <div class="top">
     <div class="row">
@@ -9,7 +9,7 @@
                     <img class="img-fluid" src="~/images/default-avatar.png" />
                 </div>
                 <div class="card-block">
-                    <h4 class="card-title">@Model.FullName</h4>
+                    <h4 class="card-title">@Model.CandidateProfile.FullName</h4>
                     <br />
                     <div class="card-text">
                         <div class="row">
@@ -18,7 +18,7 @@
                             </div>
                             <div class="col-lg-9">
                                 <p class="userInfodisplayValue pull-left">
-                                    @Model.Position
+                                    @Model.CandidateProfile.Position
                                 </p>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                                 <a href="#"></a><i class="fa fa-globe" aria-hidden="true"></i>
                             </div>
                             <div class="col-lg-9 positionUserInfoWrapper">
-                                <p class="userInfodisplayValue pull-left">@Model.Country</p>
+                                <p class="userInfodisplayValue pull-left">@Model.CandidateProfile.Country</p>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-lg-9">
                                 <p class="userInfodisplayValue pull-left">
-                                    @Model.Email
+                                    @Model.CandidateProfile.Email
                                 </p>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                     <div id="experienceContainer">
 
                     </div>
-                    @Html.Partial("../Experience/_ExperiencePartial.cshtml", Model.Experience)
+                    @Html.Partial("../Experience/_ExperiencePartial.cshtml", Model.CandidateProfile.Experience)
                 </div>
             </div>
             <div class="row top">
@@ -66,7 +66,7 @@
                             Skills
                         </h4>
                         <hr class="my-2" />
-                        @if (!Model.Skills.Any())
+                        @if (!Model.CandidateProfile.Skills.Any())
                         {
                             <div class="text-center noSkillsContainer">
                                 <p>No skills yet.</p>
@@ -75,7 +75,7 @@
                         else
                         {
                             <div class="skillsContainer skillsPresentationContainer">
-                                @foreach (var skill in Model.Skills)
+                                @foreach (var skill in Model.CandidateProfile.Skills)
                                 {
                                     <label class="badge badge-info selectedSkill" value="@skill.ID">@skill.Name</label>
                                 }
@@ -85,6 +85,9 @@
                 </div>
             </div>
         </div>
+        @Html.HiddenFor(x => x.Interested, new { id="interested" })
+        <div class="col-lg-3 showInterest">@Html.Partial("_ShowInterest.cshtml", Model.CandidateProfile.UserName) </div>
+        <div class="col-lg-3 unshowInterest"> @Html.Partial("_UnshowInterest.cshtml", Model.CandidateProfile.UserName) </div>
     </div>
 </div>
 
@@ -92,4 +95,5 @@
     <script src="~/js/profile/userInfo/userInfo.js"></script>
     <script src="~/js/skills/skillsManager.js"></script>
     <script src="~/js/profile/profileManager.js"></script>
+    <script src="~/js/company/viewCandidateManager.js"></script>
 }

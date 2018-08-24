@@ -1,0 +1,223 @@
+2018-06-16T22:52:12.8041564+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:13.4039450+03:00  [WRN] Unable to bind to "http://localhost:49743" on the "IPv4 loopback" interface: '"Error -4092 EACCES permission denied"'. (38217649)
+2018-06-16T22:52:13.5635575+03:00  [INF] Executed DbCommand ("107"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-06-16T22:52:13.6083859+03:00  [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-06-16T22:52:14.2280571+03:00 0HLEJOAJUKP0K:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-16T22:52:14.5457966+03:00 0HLEJOAJUKP0K:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:19.1845680+03:00 0HLEJOAJUKP0K:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-16T22:52:19.8048837+03:00 0HLEJOAJUKP0I:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-16T22:52:19.8140387+03:00 0HLEJOAJUKP0J:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-16T22:52:19.8330921+03:00 0HLEJOAJUKP0K:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 5171.3351ms (afa2e885)
+2018-06-16T22:52:19.8650538+03:00 0HLEJOAJUKP0I:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-06-16T22:52:19.8983088+03:00 0HLEJOAJUKP0J:00000001 [INF] Request finished in 102.2133ms 404  (791a596a)
+2018-06-16T22:52:19.9119492+03:00 0HLEJOAJUKP0I:00000001 [INF] Request finished in 148.735ms 304 text/css (791a596a)
+2018-06-16T22:52:19.9197828+03:00 0HLEJOAJUKP0K:00000001 [INF] Request finished in 5666.673ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-16T22:52:20.0476561+03:00 0HLEJOAJUKP0I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-16T22:52:20.0828041+03:00 0HLEJOAJUKP0I:00000002 [INF] Request finished in 14.223ms 404  (791a596a)
+2018-06-16T22:52:32.0903564+03:00 0HLEJOAJUKP0I:00000003 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 221 (ca22a1cb)
+2018-06-16T22:52:32.2002981+03:00 0HLEJOAJUKP0I:00000003 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.UserManagement.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:36.1537435+03:00 0HLEJOAJUKP0I:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:36.2695441+03:00 0HLEJOAJUKP0I:00000003 [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-16T22:52:36.4283788+03:00 0HLEJOAJUKP0I:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-06-16T22:52:36.5263470+03:00 0HLEJOAJUKP0I:00000003 [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-06-16T22:52:36.5478395+03:00 0HLEJOAJUKP0I:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-06-16T22:52:39.6242091+03:00 0HLEJOAJUKP0I:00000003 [INF] User logged in. (fdce0db4)
+2018-06-16T22:52:39.6571104+03:00 0HLEJOAJUKP0I:00000003 [INF] Executing RedirectResult, redirecting to "/Candidate/Dashboard". (d98d540e)
+2018-06-16T22:52:39.6887318+03:00 0HLEJOAJUKP0I:00000003 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 7529.493ms (afa2e885)
+2018-06-16T22:52:39.6971186+03:00 0HLEJOAJUKP0I:00000003 [INF] Request finished in 7618.6221ms 302  (791a596a)
+2018-06-16T22:52:39.7231561+03:00 0HLEJOAJUKP0I:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Candidate/Dashboard   (ca22a1cb)
+2018-06-16T22:52:39.7318606+03:00 0HLEJOAJUKP0I:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:39.7588253+03:00 0HLEJOAJUKP0I:00000004 [INF] Authorization was successful for user: "candidate3". (d7eb274a)
+2018-06-16T22:52:39.8047359+03:00 0HLEJOAJUKP0I:00000004 [INF] Executing action method "Hooxit.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:41.5427538+03:00 0HLEJOAJUKP0I:00000004 [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-06-16T22:52:42.1732800+03:00 0HLEJOAJUKP0I:00000004 [INF] Executed action "Hooxit.Controllers.DashboardController.Dashboard (Hooxit)" in 2432.5109ms (afa2e885)
+2018-06-16T22:52:42.1842488+03:00 0HLEJOAJUKP0I:00000004 [INF] Request finished in 2455.9458ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-16T22:52:42.2205411+03:00 0HLEJOAJUKP0I:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/material-kit.css   (ca22a1cb)
+2018-06-16T22:52:42.2528284+03:00 0HLEJOAJUKP0I:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.2731326+03:00 0HLEJOAJUKP0I:00000005 [INF] Sending file. Request path: '"/css/material-kit.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\material-kit.css"' (27b0a520)
+2018-06-16T22:52:42.2849891+03:00 0HLEJOAJUKP0I:00000005 [INF] Request finished in 75.0103ms 200 text/css (791a596a)
+2018-06-16T22:52:42.3155056+03:00 0HLEJOAJUKP0I:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js   (ca22a1cb)
+2018-06-16T22:52:42.3233258+03:00 0HLEJOAJUKP0I:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.3471497+03:00 0HLEJOAJUKP0I:00000006 [INF] Sending file. Request path: '"/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js"' (27b0a520)
+2018-06-16T22:52:42.3798401+03:00 0HLEJOAJUKP0J:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/base/ajaxSender.js   (ca22a1cb)
+2018-06-16T22:52:42.4503518+03:00 0HLEJOAJUKP0K:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap-datepicker.js   (ca22a1cb)
+2018-06-16T22:52:42.5054020+03:00 0HLEJOAJUKP0L:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardSuggestionsManager.js   (ca22a1cb)
+2018-06-16T22:52:42.5189308+03:00 0HLEJOAJUKP0M:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/candidate/dashboardManager.js   (ca22a1cb)
+2018-06-16T22:52:42.5453228+03:00 0HLEJOAJUKP0J:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.6003771+03:00 0HLEJOAJUKP0M:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.6139919+03:00 0HLEJOAJUKP0M:00000001 [INF] Sending file. Request path: '"/js/candidate/dashboardManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\candidate\dashboardManager.js"' (27b0a520)
+2018-06-16T22:52:42.6397215+03:00 0HLEJOAJUKP0J:00000002 [INF] Sending file. Request path: '"/js/base/ajaxSender.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\base\ajaxSender.js"' (27b0a520)
+2018-06-16T22:52:42.6689114+03:00 0HLEJOAJUKP0K:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.7312406+03:00 0HLEJOAJUKP0J:00000002 [INF] Request finished in 297.8498ms 200 application/javascript (791a596a)
+2018-06-16T22:52:42.7681234+03:00 0HLEJOAJUKP0L:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.8300249+03:00 0HLEJOAJUKP0M:00000001 [INF] Request finished in 185.3008ms 200 application/javascript (791a596a)
+2018-06-16T22:52:42.8685704+03:00 0HLEJOAJUKP0L:00000001 [INF] Sending file. Request path: '"/js/company/dashboardSuggestionsManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\company\dashboardSuggestionsManager.js"' (27b0a520)
+2018-06-16T22:52:42.8973893+03:00 0HLEJOAJUKP0N:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/images/default-avatar.png   (ca22a1cb)
+2018-06-16T22:52:42.9762047+03:00 0HLEJOAJUKP0N:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:42.9979842+03:00 0HLEJOAJUKP0I:00000006 [INF] Request finished in 565.1799ms 200 application/javascript (791a596a)
+2018-06-16T22:52:43.0311117+03:00 0HLEJOAJUKP0N:00000001 [INF] Sending file. Request path: '"/images/default-avatar.png"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\images\default-avatar.png"' (27b0a520)
+2018-06-16T22:52:43.1003349+03:00 0HLEJOAJUKP0K:00000002 [INF] Sending file. Request path: '"/js/bootstrap-datepicker.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap-datepicker.js"' (27b0a520)
+2018-06-16T22:52:43.1041201+03:00 0HLEJOAJUKP0N:00000001 [INF] Request finished in 261.4828ms 200 image/png (791a596a)
+2018-06-16T22:52:43.1614385+03:00 0HLEJOAJUKP0M:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Bold.woff2   (ca22a1cb)
+2018-06-16T22:52:43.1648801+03:00 0HLEJOAJUKP0L:00000001 [INF] Request finished in 686.3936ms 200 application/javascript (791a596a)
+2018-06-16T22:52:43.1727859+03:00 0HLEJOAJUKP0M:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:43.1859642+03:00 0HLEJOAJUKP0K:00000002 [INF] Request finished in 758.1492ms 200 application/javascript (791a596a)
+2018-06-16T22:52:43.2431896+03:00 0HLEJOAJUKP0M:00000002 [INF] Sending file. Request path: '"/font/roboto/Roboto-Bold.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Bold.woff2"' (27b0a520)
+2018-06-16T22:52:43.2487382+03:00 0HLEJOAJUKP0K:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Candidate/SuggestedPositions/   (ca22a1cb)
+2018-06-16T22:52:43.2628772+03:00 0HLEJOAJUKP0M:00000002 [INF] Request finished in 415.4478ms 200 font/woff2 (791a596a)
+2018-06-16T22:52:43.3006894+03:00 0HLEJOAJUKP0K:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:43.3126065+03:00 0HLEJOAJUKP0K:00000003 [INF] Authorization was successful for user: "candidate3". (d7eb274a)
+2018-06-16T22:52:43.3312252+03:00 0HLEJOAJUKP0K:00000003 [INF] Executing action method "Hooxit.Controllers.DashboardController.SuggestedPositions (Hooxit)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:43.3392218+03:00 0HLEJOAJUKP0K:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:43.3453626+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-16T22:52:43.3629894+03:00 0HLEJOAJUKP0K:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:43.3959240+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CountryId], [x].[CurrentPosition], [x].[FirstName], [x].[LastName], [x].[UserId]
+FROM [Candidates] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-06-16T22:52:43.4476510+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (4)" (0723d8ff)
+2018-06-16T22:52:43.4802774+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-06-16T22:52:43.5111241+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (1)" (0723d8ff)
+2018-06-16T22:52:43.5278369+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (2)" (0723d8ff)
+2018-06-16T22:52:43.5347104+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (3)" (0723d8ff)
+2018-06-16T22:52:43.5399314+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (4)" (0723d8ff)
+2018-06-16T22:52:43.5506571+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (5)" (0723d8ff)
+2018-06-16T22:52:43.5705656+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (6)" (0723d8ff)
+2018-06-16T22:52:43.5774713+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (7)" (0723d8ff)
+2018-06-16T22:52:43.5856131+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (8)" (0723d8ff)
+2018-06-16T22:52:43.6003742+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (9)" (0723d8ff)
+2018-06-16T22:52:43.6108005+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (10)" (0723d8ff)
+2018-06-16T22:52:43.6302723+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (11)" (0723d8ff)
+2018-06-16T22:52:43.6359681+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (12)" (0723d8ff)
+2018-06-16T22:52:43.6424092+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-06-16T22:52:43.6680418+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (14)" (0723d8ff)
+2018-06-16T22:52:43.6738775+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (15)" (0723d8ff)
+2018-06-16T22:52:43.8607541+03:00 0HLEJOAJUKP0K:00000003 [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Dashboard/SuggestedPositions.cshtml". (9707eebe)
+2018-06-16T22:52:43.8777797+03:00 0HLEJOAJUKP0K:00000003 [INF] Executed action "Hooxit.Controllers.DashboardController.SuggestedPositions (Hooxit)" in 565.6046ms (afa2e885)
+2018-06-16T22:52:43.8971333+03:00 0HLEJOAJUKP0K:00000003 [INF] Request finished in 647.6672ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-16T22:52:46.9977542+03:00 0HLEJOAJUKP0K:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Profile/candidate3   (ca22a1cb)
+2018-06-16T22:52:47.0150214+03:00 0HLEJOAJUKP0K:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:47.0320273+03:00 0HLEJOAJUKP0K:00000004 [INF] Executing action method "Hooxit.Controllers.ProfileController.Profile (Hooxit)" with arguments (["candidate3"]) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:47.0502103+03:00 0HLEJOAJUKP0K:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:47.0559357+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-16T22:52:47.0639396+03:00 0HLEJOAJUKP0K:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:47.0716568+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CountryId], [x].[CurrentPosition], [x].[FirstName], [x].[LastName], [x].[UserId]
+FROM [Candidates] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-06-16T22:52:47.0833398+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (4)" (0723d8ff)
+2018-06-16T22:52:47.1049057+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ID], [x].[SkillName]
+FROM [Skills] AS [x]
+WHERE [x].[ID] IN (38368, 38369, 38370, 38371, 38372, 38373, 38374, 38375, 38376)" (0723d8ff)
+2018-06-16T22:52:47.1417031+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[ExperienceID], [e].[CandidateID], [e].[CompanyName], [e].[CreatedDate], [e].[Description], [e].[FromDate], [e].[Position], [e].[ToDate]
+FROM [Experience] AS [e]" (0723d8ff)
+2018-06-16T22:52:47.3394817+03:00 0HLEJOAJUKP0K:00000004 [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Profile/Profile.cshtml". (9707eebe)
+2018-06-16T22:52:47.3962031+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Iso], [c].[Iso3], [c].[Name], [c].[Numcode], [c].[Phonecode]
+FROM [Countries] AS [c]" (0723d8ff)
+2018-06-16T22:52:47.9830272+03:00 0HLEJOAJUKP0K:00000004 [INF] Executed action "Hooxit.Controllers.ProfileController.Profile (Hooxit)" in 956.8833ms (afa2e885)
+2018-06-16T22:52:48.0465022+03:00 0HLEJOAJUKP0K:00000004 [INF] Request finished in 990.8998ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-16T22:52:48.0525468+03:00 0HLEJOAJUKP0M:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/profile/userInfo/userInfo.js   (ca22a1cb)
+2018-06-16T22:52:48.0740315+03:00 0HLEJOAJUKP0M:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:48.1085872+03:00 0HLEJOAJUKP0N:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/skills/skillsManager.js   (ca22a1cb)
+2018-06-16T22:52:48.1334679+03:00 0HLEJOAJUKP0M:00000003 [INF] Sending file. Request path: '"/js/profile/userInfo/userInfo.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\profile\userInfo\userInfo.js"' (27b0a520)
+2018-06-16T22:52:48.1425014+03:00 0HLEJOAJUKP0N:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:48.2545171+03:00 0HLEJOAJUKP0N:00000002 [INF] Sending file. Request path: '"/js/skills/skillsManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\skills\skillsManager.js"' (27b0a520)
+2018-06-16T22:52:48.2787286+03:00 0HLEJOAJUKP0K:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/profile/userQualification/userQualification.js   (ca22a1cb)
+2018-06-16T22:52:48.2938246+03:00 0HLEJOAJUKP0K:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:48.3097203+03:00 0HLEJOAJUKP0N:00000002 [INF] Request finished in 262.2566ms 200 application/javascript (791a596a)
+2018-06-16T22:52:48.3407052+03:00 0HLEJOAJUKP0K:00000005 [INF] Sending file. Request path: '"/js/profile/userQualification/userQualification.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\profile\userQualification\userQualification.js"' (27b0a520)
+2018-06-16T22:52:48.3407581+03:00 0HLEJOAJUKP0L:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/profile/profileManager.js   (ca22a1cb)
+2018-06-16T22:52:48.3710472+03:00 0HLEJOAJUKP0M:00000003 [INF] Request finished in 99.9459ms 200 application/javascript (791a596a)
+2018-06-16T22:52:48.3717103+03:00 0HLEJOAJUKP0L:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:48.3767315+03:00 0HLEJOAJUKP0L:00000002 [INF] Sending file. Request path: '"/js/profile/profileManager.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\profile\profileManager.js"' (27b0a520)
+2018-06-16T22:52:48.4023894+03:00 0HLEJOAJUKP0K:00000005 [INF] Request finished in 100.8056ms 200 application/javascript (791a596a)
+2018-06-16T22:52:48.4380382+03:00 0HLEJOAJUKP0L:00000002 [INF] Request finished in 368.8607ms 200 application/javascript (791a596a)
+2018-06-16T22:52:55.0275361+03:00 0HLEJOAJUKP0L:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Skills/GetSkills/java   (ca22a1cb)
+2018-06-16T22:52:55.0315664+03:00 0HLEJOAJUKP0L:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-16T22:52:55.0668795+03:00 0HLEJOAJUKP0L:00000003 [INF] Executing action method "Hooxit.Controllers.SkillsController.GetSkills (Hooxit)" with arguments (["java"]) - ModelState is Valid (ba7f4ac2)
+2018-06-16T22:52:55.0812877+03:00 0HLEJOAJUKP0L:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-16T22:52:55.1300619+03:00 0HLEJOAJUKP0L:00000003 [INF] Executed DbCommand ("38"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ID], [x].[SkillName]
+FROM [Skills] AS [x]
+WHERE ([x].[SkillName] LIKE @__name_0 + N'%' AND (LEFT([x].[SkillName], LEN(@__name_0)) = @__name_0)) OR (@__name_0 = N'')" (0723d8ff)
+2018-06-16T22:52:55.1443655+03:00 0HLEJOAJUKP0L:00000003 [INF] Executing JsonResult, writing value "System.Collections.Generic.List`1[Hooxit.Presentation.Implementation.SkillReadModel]". (7bb75e80)
+2018-06-16T22:52:55.2183420+03:00 0HLEJOAJUKP0L:00000003 [INF] Executed action "Hooxit.Controllers.SkillsController.GetSkills (Hooxit)" in 180.6505ms (afa2e885)
+2018-06-16T22:52:55.2654003+03:00 0HLEJOAJUKP0L:00000003 [INF] Request finished in 195.8122ms 200 application/json; charset=utf-8 (791a596a)

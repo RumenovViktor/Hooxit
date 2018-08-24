@@ -2,7 +2,7 @@
     static get customSettings() {
         return Object.freeze({
             suggestionsContainer: '#suggestedCandidatesWrapper',
-            relationBaseUrl: '/Company/GetRelation',
+            relationBaseUrl: '/Company/GetCompanyRelation',
             openMatchUrl: '/ViewCandidate/'
         });
     }

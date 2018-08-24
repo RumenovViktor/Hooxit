@@ -22,7 +22,7 @@ namespace Hooxit.Services.Candidates.UserInfoHandlers
         public async Task<ChangeCurrentPosition> Handle(ChangeCurrentPosition command) // Show notification if the last position is not the updated one
         {
             var user = await userRepository.GetByName(UserInfo.UserName);
-            var userInfo = candidateRepository.GetBydId(user.Id);
+            var userInfo = candidateRepository.GetById(user.Id);
 
             userInfo.CurrentPosition = command.Position;
 

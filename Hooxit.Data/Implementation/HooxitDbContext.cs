@@ -1,6 +1,5 @@
 ﻿using Hooxit.Models;
 using Hooxit.Models.Users;
-using JetBrains.Annotations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -22,6 +21,9 @@ namespace Data
         public DbSet<Position> Positions { get; set; }
         public DbSet<PositionSkill> PositionSkill { get; set; }
         public DbSet<CandidateSkill> CandidateSkill { get; set; }
+        public DbSet<PositionCandidate> PositionsCandidates { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<CandidateInterest> CandidateInterests { get; set; }
 
         public override EntityEntry Entry(object entity)
         {
@@ -65,6 +67,20 @@ namespace Data
                 .HasOne(bc => bc.Candidate)
                 .WithMany(c => c.CandidateSkill)
                 .HasForeignKey(bc => bc.CandidateId);
+
+            //PositionCandidate many to many
+            builder.Entity<PositionCandidate>()
+                .HasKey(bc => new { bc.PositionId, bc.CandidateId });
+
+            builder.Entity<PositionCandidate>()
+                .HasOne(bc => bc.Position)
+                .WithMany(b => b.PositionCandidate)
+                .HasForeignKey(bc => bc.CandidateId);
+
+            builder.Entity<PositionCandidate>()
+                .HasOne(bc => bc.Candidate)
+                .WithMany(c => c.PositionCandidate)
+                .HasForeignKey(bc => bc.PositionId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)

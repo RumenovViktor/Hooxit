@@ -6,5 +6,6 @@ namespace Hooxit.Services.Candidates.Interfaces
     public interface IProfileManager
     {
         Task<ProfileReadModel> GetProfile(string username);
+        Task<bool> Apply(int positionId);
     }
 }

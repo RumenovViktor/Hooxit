@@ -65,7 +65,7 @@ class CreatePositionManager {
         $(this.createPositionSettings.selectedSkillClass).toArray().forEach((item, index) => {
             let selectedSkillId = new Number($(item).attr('value'));
 
-            selectedSkills.push(selectedSkillId)
+            selectedSkills.push(selectedSkillId);
 
             let skillHiddenInput = $('<input />').attr('type', 'hidden')
                 .attr('name', "RequiredSkills[" + index + "]")

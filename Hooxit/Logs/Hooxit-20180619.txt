@@ -1,0 +1,559 @@
+2018-06-19T22:44:56.0654313+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:44:56.7645717+03:00  [INF] Executed DbCommand ("160"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-06-19T22:44:56.9124917+03:00  [INF] Executed DbCommand ("96"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-06-19T22:44:57.1655675+03:00 0HLEM3KH99PTS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:44:57.3246639+03:00 0HLEM3KH99PTS:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:44:57.3537234+03:00 0HLEM3KH99PTS:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[Password], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-06-19T22:44:57.4917232+03:00 0HLEM3KH99PTS:00000001 [INF] Executed DbCommand ("27"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-06-19T22:44:57.5512575+03:00 0HLEM3KH99PTS:00000001 [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-06-19T22:44:57.5568937+03:00 0HLEM3KH99PTS:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:44:57.8220102+03:00 0HLEM3KH99PTS:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:01.1452945+03:00 0HLEM3KH99PTS:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:01.6111988+03:00 0HLEM3KH99PTV:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-19T22:45:01.6148077+03:00 0HLEM3KH99PTS:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 3719.7304ms (afa2e885)
+2018-06-19T22:45:01.6570050+03:00 0HLEM3KH99PTV:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:01.6930917+03:00 0HLEM3KH99PTS:00000001 [INF] Request finished in 4530.2669ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:01.7148304+03:00 0HLEM3KH99PTT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:01.7501735+03:00 0HLEM3KH99PTT:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:01.7590443+03:00 0HLEM3KH99PTV:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-06-19T22:45:01.7745515+03:00 0HLEM3KH99PTT:00000001 [INF] Request finished in 165.5951ms 404  (791a596a)
+2018-06-19T22:45:01.8276740+03:00 0HLEM3KH99PTV:00000001 [INF] Request finished in 219.5703ms 304 text/css (791a596a)
+2018-06-19T22:45:01.9325931+03:00 0HLEM3KH99PTV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:01.9436158+03:00 0HLEM3KH99PTV:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:01.9591619+03:00 0HLEM3KH99PTV:00000002 [INF] Request finished in 37.151ms 404  (791a596a)
+2018-06-19T22:45:01.9846752+03:00 0HLEM3KH99PTV:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/favicon.ico   (ca22a1cb)
+2018-06-19T22:45:02.0113371+03:00 0HLEM3KH99PTV:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:02.0420624+03:00 0HLEM3KH99PTV:00000003 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\favicon.ico"' (27b0a520)
+2018-06-19T22:45:02.0809625+03:00 0HLEM3KH99PTV:00000003 [INF] Request finished in 71.071ms 200 image/x-icon (791a596a)
+2018-06-19T22:45:08.5621700+03:00 0HLEM3KH99PTV:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 263 (ca22a1cb)
+2018-06-19T22:45:08.5890140+03:00 0HLEM3KH99PTV:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:08.6721879+03:00 0HLEM3KH99PTV:00000004 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.UserManagement.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:11.1205959+03:00 0HLEM3KH99PTV:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:45:11.1352778+03:00 0HLEM3KH99PTV:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-19T22:45:11.1922467+03:00 0HLEM3KH99PTV:00000004 [WRN] Invalid password for user "e654f2ca-5570-4f0d-87ae-61c85ab31233". (c2dce6c7)
+2018-06-19T22:45:11.1967456+03:00 0HLEM3KH99PTV:00000004 [WRN] User "e654f2ca-5570-4f0d-87ae-61c85ab31233" failed to provide the correct password. (ec8d2479)
+2018-06-19T22:45:11.2253608+03:00 0HLEM3KH99PTV:00000004 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Account/Views/Account/Login.cshtml", "/Areas/Account/Views/Shared/Login.cshtml", "/Views/Shared/Login.cshtml"] (9bb2756c)
+2018-06-19T22:45:11.6062498+03:00 0HLEM3KH99PTV:00000004 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 2992.2882ms (afa2e885)
+2018-06-19T22:45:12.0156483+03:00 0HLEM3KH99PTV:00000004 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Login.cshtml
+/Areas/Account/Views/Shared/Login.cshtml
+/Views/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-06-19T22:45:12.1125871+03:00 0HLEM3KH99PTV:00000004 [INF] Request finished in 3552.0731ms 500 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:17.6916317+03:00 0HLEM3KH99PTV:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:17.7238838+03:00 0HLEM3KH99PTV:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:17.7291526+03:00 0HLEM3KH99PTV:00000005 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:17.7382993+03:00 0HLEM3KH99PTV:00000005 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:17.7895474+03:00 0HLEM3KH99PTV:00000005 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 16.6868ms (afa2e885)
+2018-06-19T22:45:17.8229771+03:00 0HLEM3KH99PTV:00000005 [INF] Request finished in 114.4616ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:17.8339733+03:00 0HLEM3KH99PTV:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-06-19T22:45:17.9250080+03:00 0HLEM3KH99PTV:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:17.9492039+03:00 0HLEM3KH99PU4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-06-19T22:45:17.9582845+03:00 0HLEM3KH99PTV:00000006 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-06-19T22:45:17.9658150+03:00 0HLEM3KH99PTT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-06-19T22:45:17.9802003+03:00 0HLEM3KH99PU4:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:17.9844433+03:00 0HLEM3KH99PU4:00000001 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-06-19T22:45:17.9914631+03:00 0HLEM3KH99PTT:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.0244139+03:00 0HLEM3KH99PTT:00000002 [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-06-19T22:45:18.0536337+03:00 0HLEM3KH99PTV:00000006 [INF] Request finished in 134.0748ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.0849399+03:00 0HLEM3KH99PU2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-19T22:45:18.1069131+03:00 0HLEM3KH99PTS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-06-19T22:45:18.1625558+03:00 0HLEM3KH99PTS:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.1874551+03:00 0HLEM3KH99PU2:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.2160206+03:00 0HLEM3KH99PTS:00000002 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-06-19T22:45:18.2328922+03:00 0HLEM3KH99PU5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-06-19T22:45:18.2426520+03:00 0HLEM3KH99PU5:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.2525439+03:00 0HLEM3KH99PU5:00000001 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-06-19T22:45:18.2794446+03:00 0HLEM3KH99PU3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-06-19T22:45:18.3054023+03:00 0HLEM3KH99PU4:00000001 [INF] Request finished in 499.3426ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.3192484+03:00 0HLEM3KH99PU2:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-06-19T22:45:18.3399620+03:00 0HLEM3KH99PU4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-06-19T22:45:18.3434873+03:00 0HLEM3KH99PU3:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.3764375+03:00 0HLEM3KH99PTT:00000002 [INF] Request finished in 468.5049ms 200 text/css (791a596a)
+2018-06-19T22:45:18.3996551+03:00 0HLEM3KH99PU3:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-06-19T22:45:18.4346658+03:00 0HLEM3KH99PU3:00000001 [INF] Request finished in 364.0661ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.4647967+03:00 0HLEM3KH99PU2:00000001 [INF] Request finished in 294.3155ms 200 text/css (791a596a)
+2018-06-19T22:45:18.4994856+03:00 0HLEM3KH99PU2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-06-19T22:45:18.5855554+03:00 0HLEM3KH99PTT:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:18.5962605+03:00 0HLEM3KH99PU2:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.6012067+03:00 0HLEM3KH99PU4:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.6250240+03:00 0HLEM3KH99PU3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:18.6502236+03:00 0HLEM3KH99PTT:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.7028607+03:00 0HLEM3KH99PU3:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:18.7273677+03:00 0HLEM3KH99PU4:00000002 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-06-19T22:45:18.7406678+03:00 0HLEM3KH99PU3:00000002 [INF] Request finished in 228.8944ms 404  (791a596a)
+2018-06-19T22:45:18.7758874+03:00 0HLEM3KH99PTS:00000002 [INF] Request finished in 977.7748ms 200 text/css (791a596a)
+2018-06-19T22:45:18.7800507+03:00 0HLEM3KH99PU2:00000002 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-06-19T22:45:18.8171164+03:00 0HLEM3KH99PU5:00000001 [INF] Request finished in 535.5974ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.8739993+03:00 0HLEM3KH99PTT:00000003 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:18.8807981+03:00 0HLEM3KH99PTT:00000003 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:18.9132706+03:00 0HLEM3KH99PU2:00000002 [INF] Request finished in 339.2906ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.9325235+03:00 0HLEM3KH99PTT:00000003 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 234.2813ms (afa2e885)
+2018-06-19T22:45:18.9685941+03:00 0HLEM3KH99PU4:00000002 [INF] Request finished in 492.7784ms 200 application/javascript (791a596a)
+2018-06-19T22:45:18.9763052+03:00 0HLEM3KH99PTS:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-19T22:45:19.0096085+03:00 0HLEM3KH99PU4:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-06-19T22:45:19.0240911+03:00 0HLEM3KH99PU5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-06-19T22:45:19.0558460+03:00 0HLEM3KH99PU5:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.0802060+03:00 0HLEM3KH99PTT:00000003 [INF] Request finished in 511.7852ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:19.1169757+03:00 0HLEM3KH99PTS:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.1616502+03:00 0HLEM3KH99PU4:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.1636966+03:00 0HLEM3KH99PTT:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-06-19T22:45:19.1749985+03:00 0HLEM3KH99PTS:00000003 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-06-19T22:45:19.2021873+03:00 0HLEM3KH99PU4:00000003 [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-06-19T22:45:19.2086506+03:00 0HLEM3KH99PU3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-06-19T22:45:19.2384411+03:00 0HLEM3KH99PU6:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-06-19T22:45:19.2435258+03:00 0HLEM3KH99PU3:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.3017350+03:00 0HLEM3KH99PU6:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.3043797+03:00 0HLEM3KH99PU5:00000002 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-06-19T22:45:19.3285504+03:00 0HLEM3KH99PTT:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.3633551+03:00 0HLEM3KH99PU6:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-06-19T22:45:19.4017647+03:00 0HLEM3KH99PTT:00000004 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-06-19T22:45:19.4278273+03:00 0HLEM3KH99PU5:00000002 [INF] Request finished in 490.7753ms 200 text/css (791a596a)
+2018-06-19T22:45:19.4582027+03:00 0HLEM3KH99PU3:00000003 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-06-19T22:45:19.5202342+03:00 0HLEM3KH99PU4:00000003 [INF] Request finished in 404.5317ms 200 text/css (791a596a)
+2018-06-19T22:45:19.5352204+03:00 0HLEM3KH99PTS:00000003 [INF] Request finished in 434.4519ms 200 text/css (791a596a)
+2018-06-19T22:45:19.5570083+03:00 0HLEM3KH99PU5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-06-19T22:45:19.5759927+03:00 0HLEM3KH99PU3:00000003 [INF] Request finished in 276.9999ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.6177617+03:00 0HLEM3KH99PU4:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-06-19T22:45:19.6319311+03:00 0HLEM3KH99PTT:00000004 [INF] Request finished in 346.028ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.6408636+03:00 0HLEM3KH99PU5:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.6618276+03:00 0HLEM3KH99PU6:00000001 [INF] Request finished in 189.2921ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.6785869+03:00 0HLEM3KH99PU4:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.6946973+03:00 0HLEM3KH99PTS:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-06-19T22:45:19.6993684+03:00 0HLEM3KH99PU5:00000003 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-06-19T22:45:19.7104521+03:00 0HLEM3KH99PTS:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.7185842+03:00 0HLEM3KH99PU4:00000004 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-06-19T22:45:19.7693304+03:00 0HLEM3KH99PTS:00000004 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-06-19T22:45:19.7918597+03:00 0HLEM3KH99PTT:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-06-19T22:45:19.7990116+03:00 0HLEM3KH99PTS:00000004 [INF] Request finished in 203.16ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.8060564+03:00 0HLEM3KH99PU3:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-06-19T22:45:19.8308037+03:00 0HLEM3KH99PU5:00000003 [INF] Request finished in 234.8572ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.8470359+03:00 0HLEM3KH99PU3:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.8669042+03:00 0HLEM3KH99PU4:00000004 [INF] Request finished in 234.2143ms 200 application/javascript (791a596a)
+2018-06-19T22:45:19.8858683+03:00 0HLEM3KH99PU6:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:19.9177111+03:00 0HLEM3KH99PU3:00000004 [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-06-19T22:45:19.9778915+03:00 0HLEM3KH99PTT:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:19.9999287+03:00 0HLEM3KH99PU3:00000004 [INF] Request finished in 267.4836ms 200 font/woff2 (791a596a)
+2018-06-19T22:45:19.9999768+03:00 0HLEM3KH99PU6:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:20.0588503+03:00 0HLEM3KH99PU6:00000002 [INF] Request finished in 369.7366ms 404  (791a596a)
+2018-06-19T22:45:20.0633739+03:00 0HLEM3KH99PTT:00000005 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-06-19T22:45:20.0714758+03:00 0HLEM3KH99PTT:00000005 [INF] Request finished in 381.5202ms 200 font/woff2 (791a596a)
+2018-06-19T22:45:20.1622771+03:00 0HLEM3KH99PTT:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/favicon.ico   (ca22a1cb)
+2018-06-19T22:45:20.1679157+03:00 0HLEM3KH99PTT:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:20.1761755+03:00 0HLEM3KH99PTT:00000006 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\favicon.ico"' (27b0a520)
+2018-06-19T22:45:20.1819781+03:00 0HLEM3KH99PTT:00000006 [INF] Request finished in 22.5234ms 200 image/x-icon (791a596a)
+2018-06-19T22:45:28.6077976+03:00 0HLEM3KH99PTT:00000007 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 264 (ca22a1cb)
+2018-06-19T22:45:28.6332705+03:00 0HLEM3KH99PTT:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:28.6403454+03:00 0HLEM3KH99PTT:00000007 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.UserManagement.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:31.6272439+03:00 0HLEM3KH99PTT:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:45:31.6372552+03:00 0HLEM3KH99PTT:00000007 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-19T22:45:31.6783023+03:00 0HLEM3KH99PTT:00000007 [WRN] Invalid password for user "e654f2ca-5570-4f0d-87ae-61c85ab31233". (c2dce6c7)
+2018-06-19T22:45:31.6832931+03:00 0HLEM3KH99PTT:00000007 [WRN] User "e654f2ca-5570-4f0d-87ae-61c85ab31233" failed to provide the correct password. (ec8d2479)
+2018-06-19T22:45:35.9194278+03:00 0HLEM3KH99PTT:00000007 [ERR] The view '"Login"' was not found. Searched locations: ["/Areas/Account/Views/Account/Login.cshtml", "/Areas/Account/Views/Shared/Login.cshtml", "/Views/Shared/Login.cshtml"] (9bb2756c)
+2018-06-19T22:45:36.2692808+03:00 0HLEM3KH99PTT:00000007 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 7631.4272ms (afa2e885)
+2018-06-19T22:45:36.6234389+03:00 0HLEM3KH99PTT:00000007 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.InvalidOperationException: The view 'Login' was not found. The following locations were searched:
+/Areas/Account/Views/Account/Login.cshtml
+/Areas/Account/Views/Shared/Login.cshtml
+/Views/Shared/Login.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-06-19T22:45:36.6773778+03:00 0HLEM3KH99PTT:00000007 [INF] Request finished in 8067.5457ms 500 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:43.8086440+03:00 0HLEM3KH99PTT:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:43.8349000+03:00 0HLEM3KH99PTT:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:43.8406469+03:00 0HLEM3KH99PTT:00000008 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:43.8472955+03:00 0HLEM3KH99PTT:00000008 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:43.8594452+03:00 0HLEM3KH99PTT:00000008 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 15.5806ms (afa2e885)
+2018-06-19T22:45:43.8899477+03:00 0HLEM3KH99PTT:00000008 [INF] Request finished in 56.957ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:46.7751482+03:00 0HLEM3KH99PTT:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:46.8067574+03:00 0HLEM3KH99PTT:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:46.8144861+03:00 0HLEM3KH99PTT:00000009 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:46.8201341+03:00 0HLEM3KH99PTT:00000009 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:46.8276124+03:00 0HLEM3KH99PTT:00000009 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 14.122ms (afa2e885)
+2018-06-19T22:45:46.8679799+03:00 0HLEM3KH99PU5:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-06-19T22:45:46.8992673+03:00 0HLEM3KH99PU6:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-06-19T22:45:46.9105342+03:00 0HLEM3KH99PU5:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:46.9833279+03:00 0HLEM3KH99PTT:00000009 [INF] Request finished in 60.7235ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:46.9886329+03:00 0HLEM3KH99PU5:00000004 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-06-19T22:45:47.0211458+03:00 0HLEM3KH99PU4:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-06-19T22:45:47.0253205+03:00 0HLEM3KH99PU3:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-19T22:45:47.0664049+03:00 0HLEM3KH99PU3:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.0914812+03:00 0HLEM3KH99PU4:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.0934619+03:00 0HLEM3KH99PU6:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.0985233+03:00 0HLEM3KH99PU4:00000005 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-06-19T22:45:47.1059921+03:00 0HLEM3KH99PU6:00000003 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-06-19T22:45:47.1370739+03:00 0HLEM3KH99PU4:00000005 [INF] Request finished in 263.1605ms 200 application/javascript (791a596a)
+2018-06-19T22:45:47.2112820+03:00 0HLEM3KH99PU3:00000005 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-06-19T22:45:47.2377065+03:00 0HLEM3KH99PU5:00000004 [INF] Request finished in 350.2511ms 200 application/javascript (791a596a)
+2018-06-19T22:45:47.2728988+03:00 0HLEM3KH99PTS:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-06-19T22:45:47.3281946+03:00 0HLEM3KH99PU5:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:47.3420446+03:00 0HLEM3KH99PU5:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.3625471+03:00 0HLEM3KH99PTT:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-06-19T22:45:47.3670485+03:00 0HLEM3KH99PTS:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.3803008+03:00 0HLEM3KH99PTS:00000005 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-06-19T22:45:47.3849351+03:00 0HLEM3KH99PU3:00000005 [INF] Request finished in 245.9065ms 200 text/css (791a596a)
+2018-06-19T22:45:47.3969527+03:00 0HLEM3KH99PU7:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-06-19T22:45:47.4017929+03:00 0HLEM3KH99PU7:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.4584195+03:00 0HLEM3KH99PU7:00000001 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-06-19T22:45:47.4962802+03:00 0HLEM3KH99PU3:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-06-19T22:45:47.5192396+03:00 0HLEM3KH99PU5:00000005 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:47.5486607+03:00 0HLEM3KH99PTT:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.5505394+03:00 0HLEM3KH99PU3:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.6189146+03:00 0HLEM3KH99PU3:00000006 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-06-19T22:45:47.6216582+03:00 0HLEM3KH99PU5:00000005 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:47.6314249+03:00 0HLEM3KH99PU8:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-06-19T22:45:47.6628170+03:00 0HLEM3KH99PU5:00000005 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 287.3082ms (afa2e885)
+2018-06-19T22:45:47.6915880+03:00 0HLEM3KH99PU8:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:47.8403610+03:00 0HLEM3KH99PU7:00000001 [INF] Request finished in 102.0697ms 200 application/javascript (791a596a)
+2018-06-19T22:45:47.8906300+03:00 0HLEM3KH99PU6:00000003 [INF] Request finished in 1020.6249ms 200 text/css (791a596a)
+2018-06-19T22:45:47.9188641+03:00 0HLEM3KH99PU5:00000005 [ERR] Error closing the session. (0daab2ad)
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at Microsoft.AspNetCore.Session.DistributedSession.<CommitAsync>d__32.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+2018-06-19T22:45:47.9568739+03:00 0HLEM3KH99PU8:00000001 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-06-19T22:45:47.9592338+03:00 0HLEM3KH99PU5:00000005 [INF] Request finished in 621.7788ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:47.9689759+03:00 0HLEM3KH99PU9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:47.9940793+03:00 0HLEM3KH99PTT:0000000A [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-06-19T22:45:48.0023662+03:00 0HLEM3KH99PU9:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.0504845+03:00 0HLEM3KH99PU9:00000001 [INF] Request finished in 42.9723ms 404  (791a596a)
+2018-06-19T22:45:48.0637371+03:00 0HLEM3KH99PU6:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:48.0922554+03:00 0HLEM3KH99PU3:00000006 [INF] Request finished in 542.6338ms 200 application/javascript (791a596a)
+2018-06-19T22:45:48.1570143+03:00 0HLEM3KH99PUA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-06-19T22:45:48.1652993+03:00 0HLEM3KH99PUA:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.2158314+03:00 0HLEM3KH99PUA:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:48.2412346+03:00 0HLEM3KH99PTT:0000000A [INF] Request finished in 947.5463ms 200 text/css (791a596a)
+2018-06-19T22:45:48.2652011+03:00 0HLEM3KH99PU6:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.2917532+03:00 0HLEM3KH99PU8:00000001 [INF] Request finished in 502.9289ms 200 application/javascript (791a596a)
+2018-06-19T22:45:48.3136746+03:00 0HLEM3KH99PU6:00000004 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:48.3489851+03:00 0HLEM3KH99PU6:00000004 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:48.3792649+03:00 0HLEM3KH99PUA:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-06-19T22:45:48.4311755+03:00 0HLEM3KH99PUA:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 215.5876ms (afa2e885)
+2018-06-19T22:45:48.4470532+03:00 0HLEM3KH99PUA:00000001 [INF] Request finished in 375.0651ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:48.4692687+03:00 0HLEM3KH99PTS:00000005 [INF] Request finished in 1182.6666ms 200 application/javascript (791a596a)
+2018-06-19T22:45:48.4930668+03:00 0HLEM3KH99PTT:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/bootstrap.css   (ca22a1cb)
+2018-06-19T22:45:48.4980709+03:00 0HLEM3KH99PU6:00000004 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 65.004ms (afa2e885)
+2018-06-19T22:45:48.5392766+03:00 0HLEM3KH99PU9:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-06-19T22:45:48.5771228+03:00 0HLEM3KH99PUA:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js   (ca22a1cb)
+2018-06-19T22:45:48.6526562+03:00 0HLEM3KH99PU9:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.6804377+03:00 0HLEM3KH99PU9:00000002 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\site.css"' (27b0a520)
+2018-06-19T22:45:48.7069413+03:00 0HLEM3KH99PUA:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.7390186+03:00 0HLEM3KH99PU9:00000002 [INF] Request finished in 275.1386ms 200 text/css (791a596a)
+2018-06-19T22:45:48.7526256+03:00 0HLEM3KH99PTT:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.7591437+03:00 0HLEM3KH99PTT:0000000B [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-06-19T22:45:48.7857466+03:00 0HLEM3KH99PU6:00000004 [ERR] Error closing the session. (0daab2ad)
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at Microsoft.AspNetCore.Session.DistributedSession.<CommitAsync>d__32.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.<Invoke>d__9.MoveNext()
+2018-06-19T22:45:48.8156558+03:00 0HLEM3KH99PU6:00000004 [INF] Request finished in 873.8977ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:45:48.8429798+03:00 0HLEM3KH99PU8:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/mdb.css   (ca22a1cb)
+2018-06-19T22:45:48.8742666+03:00 0HLEM3KH99PU3:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-06-19T22:45:48.8742666+03:00 0HLEM3KH99PUA:00000002 [INF] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js"' (27b0a520)
+2018-06-19T22:45:48.9070968+03:00 0HLEM3KH99PUA:00000002 [INF] Request finished in 425.3812ms 200 application/javascript (791a596a)
+2018-06-19T22:45:48.9176030+03:00 0HLEM3KH99PUA:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/bootstrap.js   (ca22a1cb)
+2018-06-19T22:45:48.9195943+03:00 0HLEM3KH99PU3:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:48.9957772+03:00 0HLEM3KH99PU9:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/tether.js   (ca22a1cb)
+2018-06-19T22:45:49.0185429+03:00 0HLEM3KH99PUA:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.0521869+03:00 0HLEM3KH99PUA:00000003 [INF] Sending file. Request path: '"/js/bootstrap.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\bootstrap.js"' (27b0a520)
+2018-06-19T22:45:49.0686323+03:00 0HLEM3KH99PUB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/lib/jquery-validation/dist/jquery.validate.js   (ca22a1cb)
+2018-06-19T22:45:49.0968095+03:00 0HLEM3KH99PU8:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.1224450+03:00 0HLEM3KH99PUB:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.1317528+03:00 0HLEM3KH99PU3:00000007 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-06-19T22:45:49.1643029+03:00 0HLEM3KH99PUB:00000001 [INF] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\lib\jquery-validation\dist\jquery.validate.js"' (27b0a520)
+2018-06-19T22:45:49.1845834+03:00 0HLEM3KH99PUB:00000001 [INF] Request finished in 111.6732ms 200 application/javascript (791a596a)
+2018-06-19T22:45:49.2115977+03:00 0HLEM3KH99PU9:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.2308459+03:00 0HLEM3KH99PUB:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:49.2563996+03:00 0HLEM3KH99PU8:00000002 [INF] Sending file. Request path: '"/css/mdb.css"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\css\mdb.css"' (27b0a520)
+2018-06-19T22:45:49.2597706+03:00 0HLEM3KH99PUB:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.3192889+03:00 0HLEM3KH99PUB:00000002 [INF] Request finished in 42.6005ms 404  (791a596a)
+2018-06-19T22:45:49.3432415+03:00 0HLEM3KH99PTT:0000000B [INF] Request finished in 780.5431ms 200 text/css (791a596a)
+2018-06-19T22:45:49.3882977+03:00 0HLEM3KH99PUA:00000003 [INF] Request finished in 225.6809ms 200 application/javascript (791a596a)
+2018-06-19T22:45:49.4463802+03:00 0HLEM3KH99PU9:00000003 [INF] Sending file. Request path: '"/js/tether.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\tether.js"' (27b0a520)
+2018-06-19T22:45:49.5076504+03:00 0HLEM3KH99PU9:00000003 [INF] Request finished in 704.203ms 200 application/javascript (791a596a)
+2018-06-19T22:45:49.5354776+03:00 0HLEM3KH99PU8:00000002 [INF] Request finished in 596.5606ms 200 text/css (791a596a)
+2018-06-19T22:45:49.5492481+03:00 0HLEM3KH99PU8:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-06-19T22:45:49.6045601+03:00 0HLEM3KH99PUA:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/mdb.js   (ca22a1cb)
+2018-06-19T22:45:49.6352681+03:00 0HLEM3KH99PUB:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:49743/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-06-19T22:45:49.6891413+03:00 0HLEM3KH99PUB:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.7155243+03:00 0HLEM3KH99PU3:00000007 [INF] Request finished in 628.6555ms 200 application/javascript (791a596a)
+2018-06-19T22:45:49.7409671+03:00 0HLEM3KH99PUB:00000003 [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-06-19T22:45:49.7543227+03:00 0HLEM3KH99PU8:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.7609556+03:00 0HLEM3KH99PU8:00000003 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-06-19T22:45:49.7776251+03:00 0HLEM3KH99PUB:00000003 [INF] Request finished in 348.8832ms 200 font/woff2 (791a596a)
+2018-06-19T22:45:49.7862642+03:00 0HLEM3KH99PUA:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.8003023+03:00 0HLEM3KH99PUA:00000004 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\js\mdb.js"' (27b0a520)
+2018-06-19T22:45:49.8176707+03:00 0HLEM3KH99PU8:00000003 [INF] Request finished in 224.1209ms 200 font/woff2 (791a596a)
+2018-06-19T22:45:49.8558368+03:00 0HLEM3KH99PUA:00000004 [INF] Request finished in 256.3749ms 200 application/javascript (791a596a)
+2018-06-19T22:45:49.8825958+03:00 0HLEM3KH99PUA:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-06-19T22:45:49.8918865+03:00 0HLEM3KH99PUA:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.8972036+03:00 0HLEM3KH99PUA:00000005 [INF] Request finished in 13.9269ms 404  (791a596a)
+2018-06-19T22:45:49.9399471+03:00 0HLEM3KH99PUA:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:49743/favicon.ico   (ca22a1cb)
+2018-06-19T22:45:49.9450421+03:00 0HLEM3KH99PUA:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:49.9692277+03:00 0HLEM3KH99PUA:00000006 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\Viktor\Desktop\hooxit new\Hooxit\Hooxit\wwwroot\favicon.ico"' (27b0a520)
+2018-06-19T22:45:49.9751898+03:00 0HLEM3KH99PUA:00000006 [INF] Request finished in 37.6155ms 200 image/x-icon (791a596a)
+2018-06-19T22:45:55.8467739+03:00 0HLEM3KH99PUA:00000007 [INF] Request starting HTTP/1.1 POST http://localhost:49743/ application/x-www-form-urlencoded 264 (ca22a1cb)
+2018-06-19T22:45:55.8522968+03:00 0HLEM3KH99PUA:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:45:55.8604917+03:00 0HLEM3KH99PUA:00000007 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" with arguments (["Hooxit.Presentation.UserManagement.Login"]) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:45:58.0463432+03:00 0HLEM3KH99PUA:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:45:58.0743736+03:00 0HLEM3KH99PUA:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-19T22:45:58.1256184+03:00 0HLEM3KH99PUA:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-06-19T22:45:58.1356964+03:00 0HLEM3KH99PUA:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-06-19T22:45:58.1452476+03:00 0HLEM3KH99PUA:00000007 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-06-19T22:46:00.6821289+03:00 0HLEM3KH99PUA:00000007 [INF] User logged in. (fdce0db4)
+2018-06-19T22:46:00.6928635+03:00 0HLEM3KH99PUA:00000007 [INF] Executing RedirectResult, redirecting to "/Candidate/Dashboard". (d98d540e)
+2018-06-19T22:46:00.7005693+03:00 0HLEM3KH99PUA:00000007 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Login (Hooxit)" in 4840.4605ms (afa2e885)
+2018-06-19T22:46:00.7075299+03:00 0HLEM3KH99PUA:00000007 [INF] Request finished in 4858.6606ms 302  (791a596a)
+2018-06-19T22:46:00.7347990+03:00 0HLEM3KH99PUA:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:49743/Candidate/Dashboard   (ca22a1cb)
+2018-06-19T22:46:00.7415888+03:00 0HLEM3KH99PUA:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:46:00.7580078+03:00 0HLEM3KH99PUA:00000008 [INF] Authorization was successful for user: "candidate3". (d7eb274a)
+2018-06-19T22:46:00.7984875+03:00 0HLEM3KH99PUA:00000008 [INF] Executing action method "Hooxit.Controllers.DashboardController.Dashboard (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:46:03.0504543+03:00 0HLEM3KH99PUA:00000008 [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Dashboard/Dashboard.cshtml". (9707eebe)
+2018-06-19T22:46:03.5108629+03:00 0HLEM3KH99PUA:00000008 [INF] Executed action "Hooxit.Controllers.DashboardController.Dashboard (Hooxit)" in 2759.8136ms (afa2e885)
+2018-06-19T22:46:03.5251399+03:00 0HLEM3KH99PUA:00000008 [INF] Request finished in 2782.4333ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:46:03.5602650+03:00 0HLEM3KH99PU8:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/candidate/dashboardManager.js   (ca22a1cb)
+2018-06-19T22:46:03.5663279+03:00 0HLEM3KH99PU8:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:46:03.5787772+03:00 0HLEM3KH99PU8:00000004 [INF] The file "/js/candidate/dashboardManager.js" was not modified (f1f8d725)
+2018-06-19T22:46:03.5864422+03:00 0HLEM3KH99PU8:00000004 [INF] Request finished in 50.6904ms 304 application/javascript (791a596a)
+2018-06-19T22:46:03.5999527+03:00 0HLEM3KH99PUA:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/company/dashboardSuggestionsManager.js   (ca22a1cb)
+2018-06-19T22:46:03.6359723+03:00 0HLEM3KH99PUA:00000009 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:46:03.6497767+03:00 0HLEM3KH99PUA:00000009 [INF] The file "/js/company/dashboardSuggestionsManager.js" was not modified (f1f8d725)
+2018-06-19T22:46:03.6637842+03:00 0HLEM3KH99PUA:00000009 [INF] Request finished in 119.1806ms 304 application/javascript (791a596a)
+2018-06-19T22:46:03.6898586+03:00 0HLEM3KH99PUA:0000000A [INF] Request starting HTTP/1.1 GET http://localhost:49743/Candidate/SuggestedPositions/   (ca22a1cb)
+2018-06-19T22:46:03.6950931+03:00 0HLEM3KH99PUA:0000000A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:46:03.7024273+03:00 0HLEM3KH99PUA:0000000A [INF] Authorization was successful for user: "candidate3". (d7eb274a)
+2018-06-19T22:46:03.7095523+03:00 0HLEM3KH99PUA:0000000A [INF] Executing action method "Hooxit.Controllers.DashboardController.SuggestedPositions (Hooxit)" with arguments ([""]) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:46:03.7250807+03:00 0HLEM3KH99PUA:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:46:03.7750424+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("21"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-19T22:46:03.7868575+03:00 0HLEM3KH99PUA:0000000A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:46:03.8139366+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("3"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CountryId], [x].[CurrentPosition], [x].[FirstName], [x].[LastName], [x].[UserId]
+FROM [Candidates] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-06-19T22:46:03.8566819+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (4)" (0723d8ff)
+2018-06-19T22:46:03.8881399+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[PositionID], [p].[CompanyID], [p].[Description], [p].[LookingFor], [p].[MinimumYearsOfExperience], [p].[PositionName], [p].[Responsibilities], [p].[WhatWeOffer]
+FROM [Positions] AS [p]" (0723d8ff)
+2018-06-19T22:46:03.9115101+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (1)" (0723d8ff)
+2018-06-19T22:46:03.9210413+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (2)" (0723d8ff)
+2018-06-19T22:46:03.9272392+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (3)" (0723d8ff)
+2018-06-19T22:46:03.9550576+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (4)" (0723d8ff)
+2018-06-19T22:46:03.9639989+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (5)" (0723d8ff)
+2018-06-19T22:46:03.9802803+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (6)" (0723d8ff)
+2018-06-19T22:46:03.9929757+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (7)" (0723d8ff)
+2018-06-19T22:46:04.0031056+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (8)" (0723d8ff)
+2018-06-19T22:46:04.0171817+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (9)" (0723d8ff)
+2018-06-19T22:46:04.0246375+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (10)" (0723d8ff)
+2018-06-19T22:46:04.0323996+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (11)" (0723d8ff)
+2018-06-19T22:46:04.0401485+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (12)" (0723d8ff)
+2018-06-19T22:46:04.0501961+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (13)" (0723d8ff)
+2018-06-19T22:46:04.0599163+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (14)" (0723d8ff)
+2018-06-19T22:46:04.0661688+03:00 0HLEM3KH99PUA:0000000A [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[PositionId]
+FROM [PositionSkill] AS [x]
+WHERE [x].[PositionId] IN (15)" (0723d8ff)
+2018-06-19T22:46:04.2024170+03:00 0HLEM3KH99PUA:0000000A [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Dashboard/SuggestedPositions.cshtml". (9707eebe)
+2018-06-19T22:46:04.2312862+03:00 0HLEM3KH99PUA:0000000A [INF] Executed action "Hooxit.Controllers.DashboardController.SuggestedPositions (Hooxit)" in 527.5969ms (afa2e885)
+2018-06-19T22:46:04.2366084+03:00 0HLEM3KH99PUA:0000000A [INF] Request finished in 558.3056ms 200 text/html; charset=utf-8 (791a596a)
+2018-06-19T22:46:09.6046358+03:00 0HLEM3KH99PUA:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:49743/Profile/candidate3   (ca22a1cb)
+2018-06-19T22:46:09.6108673+03:00 0HLEM3KH99PUA:0000000B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-06-19T22:46:09.6271269+03:00 0HLEM3KH99PUA:0000000B [INF] Executing action method "Hooxit.Controllers.ProfileController.Profile (Hooxit)" with arguments (["candidate3"]) - ModelState is Valid (ba7f4ac2)
+2018-06-19T22:46:09.6387838+03:00 0HLEM3KH99PUA:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:46:09.6503593+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[Password], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-06-19T22:46:09.6625863+03:00 0HLEM3KH99PUA:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-06-19T22:46:09.6714417+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[CountryId], [x].[CurrentPosition], [x].[FirstName], [x].[LastName], [x].[UserId]
+FROM [Candidates] AS [x]
+WHERE [x].[UserId] = @__id_0" (0723d8ff)
+2018-06-19T22:46:09.6832241+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[SkillId], [x].[CandidateId]
+FROM [CandidateSkill] AS [x]
+WHERE [x].[CandidateId] IN (4)" (0723d8ff)
+2018-06-19T22:46:09.7068967+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ID], [x].[SkillName]
+FROM [Skills] AS [x]
+WHERE [x].[ID] IN (38368, 38369, 38370, 38371, 38372, 38373, 38374, 38375, 38376)" (0723d8ff)
+2018-06-19T22:46:09.7355854+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [e].[ExperienceID], [e].[CandidateID], [e].[CompanyName], [e].[CreatedDate], [e].[Description], [e].[FromDate], [e].[Position], [e].[ToDate]
+FROM [Experience] AS [e]" (0723d8ff)
+2018-06-19T22:46:09.8980714+03:00 0HLEM3KH99PUA:0000000B [INF] Executing ViewResult, running view at path "/Areas/Candidate/Views/Profile/Profile.cshtml". (9707eebe)
+2018-06-19T22:46:09.9447714+03:00 0HLEM3KH99PUA:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Iso], [c].[Iso3], [c].[Name], [c].[Numcode], [c].[Phonecode]
+FROM [Countries] AS [c]" (0723d8ff)
+2018-06-19T22:46:10.4603347+03:00 0HLEM3KH99PUA:0000000B [INF] Executed action "Hooxit.Controllers.ProfileController.Profile (Hooxit)" in 836.9564ms (afa2e885)
+2018-06-19T22:46:10.4830106+03:00 0HLEM3KH99PUA:0000000B [INF] Request finished in 861.2943ms 200 text/html; charset=utf-8 (791a596a)

@@ -33,7 +33,7 @@ namespace Hooxit.Areas.Company.Controllers
             var user = userRepository.GetByName(UserInfo.UserName);
             var company = companiesRepository.GetBydId(user.Result.Id);
 
-            var dashboardModel = positionsManager.GetAll(company.Id);
+            var dashboardModel = positionsManager.GetPositionsBasicData(company.Id);
 
             return View(dashboardModel);
         }

@@ -8,7 +8,9 @@ namespace Hooxit.Models.Users
     {
         public Company()
         {
-            this.Positions = new HashSet<Position>();
+            Positions = new HashSet<Position>();
+            Products = new HashSet<Product>();
+            CandidateInterests = new HashSet<CandidateInterest>();
         }
 
         [Key]
@@ -21,5 +23,9 @@ namespace Hooxit.Models.Users
         public virtual string CompanyDescription { get; set; }
 
         public virtual ICollection<Position> Positions { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
+
+        public virtual ICollection<CandidateInterest> CandidateInterests { get; set; }
     }
 }

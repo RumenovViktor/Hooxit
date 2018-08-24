@@ -16,7 +16,7 @@ namespace Hooxit.Presentation.Implemenation.Candidate.Read
 
         }
 
-        public ProfileReadModel(Candidate source, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills)
+        public ProfileReadModel(Candidate source, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills, string userName)
         {
             Email = email;
             //FullName = source.FirstName + CommonConstants.Space + source.LastName;
@@ -24,12 +24,14 @@ namespace Hooxit.Presentation.Implemenation.Candidate.Read
             Experience = experience;
             Country = string.IsNullOrWhiteSpace(countryName) ? ProfileConstants.NoCountry : countryName;
             Skills = skills.Select(x => new SkillReadModel(x)).ToList();
+            UserName = userName;
         }
 
         public string FullName { get; set; }
         public string Position { get; set; }
         public string Country { get; set; }
         public string Email { get; set; }
+        public string UserName { get; set; }
         public IList<SkillReadModel> Skills { get; set; }
 
         public ICollection<ExperienceReadModel> Experience { get; set; }

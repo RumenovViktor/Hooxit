@@ -7,6 +7,7 @@
     using Hooxit.Data.Contracts;
     using Hooxit.Data.Repository;
     using Hooxit.Models;
+    using Hooxit.Models.Users;
     using Hooxit.Presentation.Implemenation.Company.Read.Matching;
     using MatchingExecutors.Base;
 
@@ -33,28 +34,34 @@
 
             foreach (var candidate in candidates)
             {
-                var user = this.userRepository.Get(candidate.UserId);
-                var positionRequiredSkills = GetPositionRequiredSkills(matchRequest.PositionId);
-                var candidateSkills = GetCandidateSkills(candidate.Id);
-                var skillRate = CalculateSkillRate(positionRequiredSkills, candidateSkills);
-
-                var skillMatchInPercentage = positionRequiredSkills.Any() 
-                    ?
-                    ((decimal)skillRate / positionRequiredSkills.ToList().Count) * TotalPercentage 
-                    : 
-                    TotalPercentage;
-
-                suggestedCandidates.Add(new SuggestedCandidate
-                {
-                    FullName = candidate.FirstName + " " + candidate.LastName,
-                    MatchedPercentage = skillMatchInPercentage,
-                    FormatedMatchedPercentage = string.Format("{0:0.00}", skillMatchInPercentage),
-                    UserName = user.Result.Username,
-                    Id = candidate.Id
-                });
+                var matched = MatchSingle(candidate, matchRequest.PositionId);
+                suggestedCandidates.Add(matched);
             }
 
             return suggestedCandidates.OrderByDescending(x => x.MatchedPercentage);
+        }
+
+        public SuggestedCandidate MatchSingle(Candidate candidate, int positionId)
+        {
+            var user = this.userRepository.Get(candidate.UserId);
+            var positionRequiredSkills = GetPositionRequiredSkills(positionId);
+            var candidateSkills = GetCandidateSkills(candidate.Id);
+            var skillRate = CalculateSkillRate(positionRequiredSkills, candidateSkills);
+
+            var skillMatchInPercentage = positionRequiredSkills.Any()
+                ?
+                ((decimal)skillRate / positionRequiredSkills.ToList().Count) * TotalPercentage
+                :
+                TotalPercentage;
+
+            return new SuggestedCandidate
+            {
+                FullName = candidate.FirstName + " " + candidate.LastName,
+                MatchedPercentage = skillMatchInPercentage,
+                FormatedMatchedPercentage = string.Format("{0:0.00}", skillMatchInPercentage),
+                UserName = user.Result.Username,
+                Id = candidate.Id
+            };
         }
 
         private IEnumerable<PositionSkill> GetPositionRequiredSkills(int positionId)

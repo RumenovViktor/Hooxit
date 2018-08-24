@@ -1,0 +1,6 @@
+﻿@model string
+
+<form asp-area="Company" asp-controller="Profile" asp-action="NotInterested" method="POST" data-ajax="true" data-ajax-method="POST" data-ajax-complete="viewCandidateManager.onRemoveInterestSuccess">
+    <input type="hidden" name="userName" value="@Model" />
+    <button type="submit" class="btn btn-outline-danger">Not Interested</button>
+</form>

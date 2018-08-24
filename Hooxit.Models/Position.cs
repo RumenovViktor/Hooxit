@@ -8,6 +8,7 @@ namespace Hooxit.Models
         public Position()
         {
             this.PositionSkill = new HashSet<PositionSkill>();
+            PositionCandidate = new HashSet<PositionCandidate>();
         }
 
         public virtual int PositionID { get; set; }
@@ -29,5 +30,7 @@ namespace Hooxit.Models
         public virtual int CompanyID { get; set; }
 
         public virtual Company Company { get; set; }
+
+        public virtual ICollection<PositionCandidate> PositionCandidate { get; set; }
     }
 }

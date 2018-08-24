@@ -25,5 +25,6 @@ namespace Hooxit.Models.Users
 
         public ICollection<Experience> Experience { get; set; }
         public virtual ICollection<CandidateSkill> CandidateSkill { get; set; }
+        public virtual ICollection<PositionCandidate> PositionCandidate { get; set; }
     }
 }

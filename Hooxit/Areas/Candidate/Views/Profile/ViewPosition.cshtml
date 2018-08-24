@@ -1,0 +1,116 @@
+﻿@using Hooxit.Presentation.Implemenation.Company.Read
+@model PositionReadModel
+@* TODO: Refactor: Think of a better structure !!! *@
+<div class="row top">
+    @Html.HiddenFor(x => x.PositionId, new { id = "positionId" })
+
+    <div id="positionContainer" class="col-lg-10">
+        <div class="card auto">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3 class="h3-responsive card-title positionName">@Model.PositionName</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <button id="applyBtn" type="submit" class="btn btn-md btn-outline-default waves-effect pull-right">Apply</button>
+                    </div>
+                </div>
+                @if (Model.MinimumYearsOfExperience > 1)
+                {
+                    <p>@Model.MinimumYearsOfExperience years of minimum experience</p>
+                    <hr />
+                }
+                else if (Model.MinimumYearsOfExperience == 1)
+                {
+                    <p>@Model.MinimumYearsOfExperience year of minimum experience</p>
+                    <hr />
+                }
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    Description
+                                </h4>
+                            </div>
+                            <div class="top text-left sectionPresentation">
+
+                            </div>
+                            <div id="descriptionEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.Description, new { @class = "hiddenEditorContent", id = "hiddenDescription" })
+                        </div>
+                    </div>
+
+                    <div class="row top">
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    We are looking for
+                                </h4>
+                            </div>
+                            <div class="top text-left sectionPresentation">
+                            </div>
+                            <div id="lookingForEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.LookingFor, new { @class = "hiddenEditorContent", id = "hiddenLookingFor" })
+                        </div>
+                    </div>
+
+                    <div class="row top">
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    Responsibilities
+                                </h4>
+                            </div>
+                            <div class="top text-left sectionPresentation">
+                            </div>
+                            <div id="responsibilitiesEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.Responsibilities, new { @class = "hiddenEditorContent", id = "hiddenResponsibilities" })
+                        </div>
+                    </div>
+                    @if (Model.RequiredSkills.Any())
+                    {
+                        <div class="row top">
+                            <div class="col-lg-12 topx2">
+                                <div class="positionSectionHeader">
+                                    <h4 class="shades-text font-weight-normal">
+                                        Required Skills
+                                    </h4>
+                                </div>
+                                <div class="top text-left sectionPresentation skillsPresentation">
+                                    <ul>
+                                        @foreach (var skill in Model.RequiredSkills)
+                                        {
+                                            <li value="@skill.Id">@skill.Name</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="row top">
+                        <div class="col-lg-12 topx2 sectionWrapper">
+                            <div class="positionSectionHeader">
+                                <h4 class="shades-text font-weight-normal">
+                                    What we offer
+                                </h4>
+                            </div>
+                            <div class="top text-left sectionPresentation">
+                            </div>
+                            <div id="whatWeOfferEditor" class="editor"></div>
+                            @Html.HiddenFor(x => x.WhatWeOffer, new { @class = "hiddenEditorContent", id = "hiddenWhatWeOffer" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PositionView {
+    <script src="~/js/skills/skillsManager.js"></script>
+    <script src="~/js/base/TextEditor.js"></script>
+    <script src="~/js/company/positionManager.js"></script>
+    <script src="~/js/candidate/positionApplication.js"></script>
+}

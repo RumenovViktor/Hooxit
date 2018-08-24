@@ -13,7 +13,7 @@ namespace Hooxit.Areas.Company.Controllers
             this.positionSkillRelationManager = positionSkillRelationManager;
         }
 
-        [Route("Company/GetRelation")]
+        [Route("Company/GetCompanyRelation")]
         [HttpGet]
         public IActionResult PositionSkillRelation(string id, int matchId)
         {

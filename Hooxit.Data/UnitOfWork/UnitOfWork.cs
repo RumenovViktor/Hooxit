@@ -83,5 +83,45 @@ namespace Hooxit.Data.UnitOfWork
         {
             return new CandidateSkillRepository(dbContext);
         }
+
+        public IReadRepository<Product> BuildProductsRepository()
+        {
+            return new ProductRepository(dbContext);
+        }
+
+        public IRepository<Product> BuildProductsCreateRepository()
+        {
+            return new ProductRepository(dbContext);
+        }
+
+        public IUpdateRepository<Product> BuildProductsUpdateRepository()
+        {
+            return new ProductRepository(dbContext);
+        }
+
+        public IRepository<PositionCandidate> BuildPositionCandidateRepository()
+        {
+            return new PositionCandidateRepository(dbContext);
+        }
+
+        public IReadRepository<PositionCandidate> BuildPositionCandidateReadRepository()
+        {
+            return new PositionCandidateRepository(dbContext);
+        }
+
+        public IRepository<CandidateInterest> BuildCandidateInterestRepository()
+        {
+            return new CandidateInterestsRepository(dbContext);
+        }
+
+        public IReadRepository<CandidateInterest> BuildCandidateInterestReadRepository()
+        {
+            return new CandidateInterestsRepository(dbContext);
+        }
+
+        public IDeleteRepository<CandidateInterest> BuildCandidateInterestDeleteRepository()
+        {
+            return new CandidateInterestsRepository(dbContext);
+        }
     }
 }

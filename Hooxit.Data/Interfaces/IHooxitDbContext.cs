@@ -17,6 +17,9 @@ namespace Data
         DbSet<Position> Positions { get; set; }
         DbSet<PositionSkill> PositionSkill { get; set; }
         DbSet<CandidateSkill> CandidateSkill { get; set; }
+        DbSet<Product> Products { get; set; }
+        DbSet<PositionCandidate> PositionsCandidates { get; set; }
+        DbSet<CandidateInterest> CandidateInterests { get; set; }
         EntityEntry Entry(object entity);
 
         int SaveChanges();

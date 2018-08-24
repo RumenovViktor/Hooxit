@@ -30,7 +30,7 @@ namespace Hooxit.Services.Implementation.ApplicationServices
         public bool ChangeSkills(ChangeSkills skills)
         {
             var user = userRepository.GetByName(UserInfo.UserName);
-            var userInfo = candidateRepository.GetBydId(user.Result.Id);
+            var userInfo = candidateRepository.GetById(user.Result.Id);
             var candidateSkills = this.candidateSkillReadRepository.GetManyByIds(new int[] { userInfo.Id });
 
             try

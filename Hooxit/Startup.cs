@@ -26,6 +26,8 @@ using CompanyInterfaces = Hooxit.Services.Company.Interfaces;
 using Hooxit.Services.Company.Implemenation;
 using Hooxit.Presentation.Implemenation.Candidate.Write;
 using Hooxit.Services.Implementation.Candidates.Implementation;
+using Hooxit.Services.Implementation.Company.Interfaces;
+using Hooxit.Services.Implementation.Company.Implementation;
 
 namespace Hooxit
 {
@@ -85,6 +87,8 @@ namespace Hooxit
             services.AddTransient<CandidateInterfaces.IDashboardManager, DashboardManager>();
             services.AddTransient<DatabaseSeed>();
             services.AddTransient<CompanyInterfaces.IPositionSkillRelationManager, PositionSkillRelationManager>();
+            services.AddTransient<IProductsManager, ProductsManager>();
+            services.AddTransient<IProductsService, ProductsService>();
 
             services.Configure<IdentityOptions>(options =>
             {

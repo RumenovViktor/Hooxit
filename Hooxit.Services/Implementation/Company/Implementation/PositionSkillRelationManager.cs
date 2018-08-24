@@ -30,7 +30,7 @@ namespace Hooxit.Services.Company.Implemenation
         public RelationRead<PositionSkillsRelation> GetRelation(string candidateUserName, int positionId)
         {
             var user = userRepository.GetByName(candidateUserName);
-            var candidate = candidateRepository.GetBydId(user.Result.Id);
+            var candidate = candidateRepository.GetById(user.Result.Id);
             var candidateSkills = candidateSkillRepository.GetManyByIds(new int[] { candidate.Id });
             var positionSkills = positionSkillRepository.GetManyByIds(new int[] { positionId });
             var skillsWithNames = skillsRepository.GetManyByIds(positionSkills.Select(x => x.SkillId).ToArray());

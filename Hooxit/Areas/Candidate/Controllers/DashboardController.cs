@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-using Hooxit.Data.Contracts;
 using Hooxit.Data.Repository;
-using Hooxit.Presentation.Implemenation;
 using Hooxit.Services.Candidates.Interfaces;
+using Hooxit.Services;
 
 namespace Hooxit.Controllers
 {
@@ -27,7 +24,7 @@ namespace Hooxit.Controllers
         [Route("Candidate/Dashboard")]
         public IActionResult Dashboard()
         {
-            return View(new List<IdNameReadModel>());
+            return View();
         }
 
         [HttpGet]
@@ -42,7 +39,7 @@ namespace Hooxit.Controllers
 
             var suggestions = dashboardManager.GetSuggestions();
 
-            return View(suggestions);
+            return PartialView(suggestions);
         }
     }
 }

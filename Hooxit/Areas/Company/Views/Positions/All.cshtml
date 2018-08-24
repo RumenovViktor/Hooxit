@@ -1,5 +1,5 @@
-﻿@using Hooxit.Presentation.Implemenation
-@model IEnumerable<IdNameReadModel>
+﻿@using Hooxit.Presentation.Implementation.Company.Read
+@model IEnumerable<PositionStatisticsReadModel>
 
 <table class="table table-lg table-hover">
     <thead>
@@ -17,14 +17,13 @@
         @{ var counter = 1; }
         @foreach (var item in Model)
         {
-            
-        <tr>
-            <th scope="row">@counter</th>
-            <td><a href="@Url.Action("View", "Positions", new { area = "Company", username = User.Identity.Name, positionId = item.Id })">@item.Name</a></td>
-            <td>12</td>
-            <td>2</td>
-            <td></td>
-        </tr>
+
+            <tr>
+                <th scope="row">@counter</th>
+                <td><a href="@Url.Action("View", "Positions", new { area = "Company", username = User.Identity.Name, positionId = item.IdName.Id })">@item.IdName.Name</a></td>
+                <td>12</td>
+                <td><a href="@Url.Action("AppliedCandidates", "Positions", new { area = "Company", positionId =  item.IdName.Id })" target="_blank">@item.AppliedCount</a></td>
+            </tr>
 
             counter++;
         }

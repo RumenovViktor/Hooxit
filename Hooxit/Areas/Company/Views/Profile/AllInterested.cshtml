@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Hooxit.Presentation.Implemenation.IdNameReadModel>
+
+<table class="table table-lg table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var counter = 1; }
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <th scope="row">@counter</th>
+                <td><a href="@Url.Action("ViewCandidate", "Profile", new { area = "Company", username = item.Name})">@item.Name</a></td>
+            </tr>
+
+            counter++;
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <h4 class="top">No candidates that you are interested in.</h4>
+}

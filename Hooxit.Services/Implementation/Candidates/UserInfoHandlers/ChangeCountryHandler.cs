@@ -25,7 +25,7 @@ namespace Hooxit.Services.Candidates.UserInfoHandlers
         {
             var user = await userRepository.GetByName(UserInfo.UserName);
             var country = countriesRepository.GetById(command.CountryId);
-            var userInfo = candidateRepository.GetBydId(user.Id);
+            var userInfo = candidateRepository.GetById(user.Id);
 
             userInfo.CountryId = command.CountryId;
 
