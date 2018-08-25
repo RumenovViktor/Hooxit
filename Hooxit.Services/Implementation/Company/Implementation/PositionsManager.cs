@@ -24,6 +24,7 @@ namespace Hooxit.Services.Company.Implemenation
         private readonly IUserRepository userRepository;
         private readonly IPositionSkillRelationManager positionSkillRelationManager;
         private readonly CompanyMatchingExecutor matchingExecutor;
+        private readonly ICompaniesRepository companiesRepository;
 
         public PositionsManager(IUnitOfWork unitOfWork, IUserRepository userRepository, IPositionSkillRelationManager positionSkillRelationManager)
         {
@@ -32,6 +33,7 @@ namespace Hooxit.Services.Company.Implemenation
             skillsReadRepository = unitOfWork.BuildSkillsReadRepository();
             positionsCandidatesRepository = unitOfWork.BuildPositionCandidateReadRepository();
             candidatesRepository = unitOfWork.BuildCandidateRepository();
+            companiesRepository = unitOfWork.BuildCompaniesRepository();
 
             this.userRepository = userRepository;
             this.positionSkillRelationManager = positionSkillRelationManager;

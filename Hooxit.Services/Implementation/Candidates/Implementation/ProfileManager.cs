@@ -8,6 +8,8 @@ using Hooxit.Data.Repository;
 using Hooxit.Models.Users;
 using Hooxit.Services.Candidates.Interfaces;
 using Hooxit.Presentation.Implemenation.Candidate.Read;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Hooxit.Services.Implementation.Managers
 {
@@ -56,7 +58,7 @@ namespace Hooxit.Services.Implementation.Managers
                 .ToList();
 
 
-            return BuildProfileReadModel(userInfo, experience, countryName, user.Email, candidateSkills, user.UserName);
+            return BuildProfileReadModel(userInfo, experience, countryName, user.Email, candidateSkills, user.UserName, userInfo.Picture);
         }
 
         public async Task<bool> Apply(int positionId)
@@ -73,9 +75,33 @@ namespace Hooxit.Services.Implementation.Managers
             return true;
         }
 
-        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills, string userName)
+        public async Task UploadPicture(IFormFile picture)
         {
-            return new ProfileReadModel(user, experience, countryName, email, skills, userName);
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var candidate = candidateRepository.GetById(user.Id);
+
+            if (picture != null && picture.Length > 0)
+            {
+                byte[] pictureBytes = null;
+
+                using (var fileStream = picture.OpenReadStream())
+                {
+                    using (var memoryStram = new MemoryStream())
+                    {
+                        fileStream.CopyTo(memoryStram);
+                        pictureBytes = memoryStram.ToArray();
+                    }
+                }
+
+                candidate.Picture = pictureBytes;
+                candidateRepository.Update(candidate);
+                candidateRepository.Save();
+            }
+        }
+
+        private ProfileReadModel BuildProfileReadModel(Candidate user, IList<ExperienceReadModel> experience, string countryName, string email, IList<Skill> skills, string userName, byte[] picture)
+        {
+            return new ProfileReadModel(user, experience, countryName, email, skills, userName, picture);
         }
     }
 }

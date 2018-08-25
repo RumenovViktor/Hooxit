@@ -26,6 +26,11 @@ namespace Hooxit.Data.Repository
             return this.context.Companies.Where(x => x.UserId == id).FirstOrDefault();
         }
 
+        public void Update(Company company)
+        {
+            context.Companies.Update(company);
+        }
+
         public void Save()
         {
             this.context.SaveChanges();

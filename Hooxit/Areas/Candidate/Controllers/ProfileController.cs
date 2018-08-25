@@ -12,6 +12,7 @@ using Hooxit.Data.Contracts;
 using Hooxit.Models;
 using Hooxit.Presentation.Implemenation.Company.Read;
 using Hooxit.Presentation.Implementation.Candidate.Write;
+using Microsoft.AspNetCore.Http;
 
 namespace Hooxit.Controllers
 {
@@ -57,9 +58,15 @@ namespace Hooxit.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangePicture()
+        [Route("Candidate/Profile/UploadPicture")]
+        public async Task<IActionResult> UploadPicture(IFormFile picture)
         {
-            return null;
+            if (picture != null)
+            {
+                await profileManager.UploadPicture(picture);
+            }
+
+            return RedirectToAction(nameof(ProfileController.Profile), "Profile", new { username = UserInfo.UserName });
         }
 
         [HttpPost]

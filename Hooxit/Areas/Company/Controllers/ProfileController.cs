@@ -9,6 +9,7 @@ using Hooxit.Presentation.Implementation.Company.Write;
 using Hooxit.Services.Implementation.Company.Interfaces;
 using Hooxit.Presentation.Implementation.Company.Read;
 using Microsoft.AspNetCore.Http;
+using Hooxit.Services;
 
 namespace Hooxit.Areas.Company.Controllers
 {
@@ -37,11 +38,16 @@ namespace Hooxit.Areas.Company.Controllers
             return View(profile);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Company/Profile/UploadPicture")]
         public async Task<IActionResult> UploadPicture(IFormFile picture)
         {
-            return View();
+            if (picture != null)
+            {
+                await companyProfileApplicationService.UploadPicture(picture);
+            }
+
+            return RedirectToAction(nameof(ProfileController.Profile), "Profile", new { username = UserInfo.UserName });
         }
 
         [HttpGet]

@@ -7,6 +7,8 @@ using Hooxit.Data.Repository;
 using Hooxit.Services;
 using Hooxit.Services.Company.Interfaces;
 using Hooxit.Presentation.Implemenation.Company.Read.Matching;
+using System;
+using Hooxit.Presentation.Implementation.Company.Read;
 
 namespace Hooxit.Areas.Company.Controllers
 {
@@ -33,9 +35,20 @@ namespace Hooxit.Areas.Company.Controllers
             var user = userRepository.GetByName(UserInfo.UserName);
             var company = companiesRepository.GetBydId(user.Result.Id);
 
-            var dashboardModel = positionsManager.GetPositionsBasicData(company.Id);
+            var positionsBasicData = positionsManager.GetPositionsBasicData(company.Id);
+            string companyPicture = null;
 
-            return View(dashboardModel);
+            if (company.Picture != null)
+            {
+                var imageBase64 = Convert.ToBase64String(company.Picture);
+                companyPicture = string.Format("data:image/gif;base64,{0}", imageBase64);
+            }
+
+            return View(new CompanyBasicDataReadModel
+            {
+                IdsNames = positionsBasicData,
+                Picture = companyPicture
+            });
         }
 
         [Route("Company/SuggestedCandidates/{positionId}")]

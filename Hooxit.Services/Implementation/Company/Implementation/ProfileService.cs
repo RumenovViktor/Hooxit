@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ using Hooxit.Models;
 using Hooxit.Presentation.Implemenation;
 using Hooxit.Presentation.Implemenation.Company.Write;
 using Hooxit.Services.Company.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace Hooxit.Services.Company.Implemenation
 {
@@ -113,6 +115,30 @@ namespace Hooxit.Services.Company.Implemenation
             var candidates = candidatesRepository.GetManyByIds(candidateIds.ToArray());
 
             return candidates.Select(x => new IdNameReadModel { Name = userRepository.Get(x.UserId).Result.UserName });
+        }
+
+        public async Task UploadPicture(IFormFile picture)
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var company = companiesRepository.GetBydId(user.Id);
+
+            if (picture != null && picture.Length > 0)
+            {
+                byte[] pictureBytes = null;
+
+                using (var fileStream = picture.OpenReadStream())
+                { 
+                    using (var memoryStram = new MemoryStream())
+                    {
+                        fileStream.CopyTo(memoryStram);
+                        pictureBytes = memoryStram.ToArray();
+                    }
+                }
+
+                company.Picture = pictureBytes;
+                companiesRepository.Update(company);
+                companiesRepository.Save();
+            }
         }
     }
 }

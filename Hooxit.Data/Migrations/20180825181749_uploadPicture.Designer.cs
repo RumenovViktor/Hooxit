@@ -11,9 +11,10 @@ using System;
 namespace Hooxit.Data.Migrations
 {
     [DbContext(typeof(HooxitDbContext))]
-    partial class HooxitDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180825181749_uploadPicture")]
+    partial class uploadPicture
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -193,8 +194,6 @@ namespace Hooxit.Data.Migrations
                     b.Property<string>("FirstName");
 
                     b.Property<string>("LastName");
-
-                    b.Property<byte[]>("Picture");
 
                     b.Property<string>("UserId");
 

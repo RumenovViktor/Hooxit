@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Hooxit.Data.Contracts;
@@ -38,13 +39,21 @@ namespace Hooxit.Services.Company.Implemenation
             var positionsCount = this.positionsManager.GetAll(company.Id).Count();
             var products = this.productsManager.GetAll(company.Id);
             var interestedInCount = candidateInterestRepository.GetManyByIds(new[] { company.Id }).Count;
+            string profilePicture = null;
+
+            if (company.Picture != null)
+            {
+                var imageBase64 = Convert.ToBase64String(company.Picture);
+                profilePicture = string.Format("data:image/gif;base64,{0}", imageBase64);
+            }
 
             return new ProfileInfoRead
             {
                 CreatedPositions = positionsCount,
                 CompanyDescription = company.CompanyDescription,
                 Products = products,
-                InterestedInCount = interestedInCount
+                InterestedInCount = interestedInCount,
+                Picture = profilePicture
             };
         }
     }

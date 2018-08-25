@@ -12,5 +12,7 @@ namespace Hooxit.Presentation.Implemenation.Company.Read
         public IEnumerable<ProductReadModel> Products { get; set; }
 
         public int InterestedInCount { get; set; }
+
+        public string Picture { get; set; }
     }
 }

@@ -43,6 +43,11 @@ namespace Hooxit.Data.Repository
             return context.Candidates.FirstOrDefault(x => x.UserId == id);
         }
 
+        public void Update(Candidate candidate)
+        {
+            context.Candidates.Update(candidate);
+        }
+
         public void Save()
         {
             this.context.SaveChanges();

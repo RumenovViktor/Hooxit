@@ -11,6 +11,7 @@ namespace Hooxit.Data.Contracts
         Candidate GetById(int id);
         Candidate GetById(string id);
         IEnumerable<Candidate> GetManyByIds(int[] id);
+        void Update(Candidate candidate);
         void Save();
     }
 }

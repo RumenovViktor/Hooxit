@@ -27,5 +27,7 @@ namespace Hooxit.Models.Users
         public virtual ICollection<Product> Products { get; set; }
 
         public virtual ICollection<CandidateInterest> CandidateInterests { get; set; }
+
+        public virtual byte[] Picture { get; set; }
     }
 }

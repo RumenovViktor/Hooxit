@@ -325,8 +325,14 @@ input[type="file"] {
     margin-top: .3em;
 }
 
+.custom-file-upload-candidate {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0.6em 3.8em;
+    cursor: pointer;
+    margin-top: .3em;
+}
 /*file upload*/
-
 .modal-content {
     height: 800px;
 }

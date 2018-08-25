@@ -11,9 +11,10 @@ using System;
 namespace Hooxit.Data.Migrations
 {
     [DbContext(typeof(HooxitDbContext))]
-    partial class HooxitDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180825194551_addCandidatePicture")]
+    partial class addCandidatePicture
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

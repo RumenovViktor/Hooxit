@@ -8,12 +8,16 @@
                 @*<img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap">*@
 
                 <div class="image-container">
-                    <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="ChangePicture">
-                        <button class="btn-info rounded-button">
-                            <i class="fa fa-pencil"></i>
-                        </button>
-                    </form>
-                    <img class="img-fluid" src="~/images/default-avatar.png" />
+                    @if (string.IsNullOrWhiteSpace(Model.Picture))
+                    {
+                        <img class="img-fluid" src="~/images/default-avatar.png" />
+                    }
+                    else
+                    {
+                        <img class="img-fluid" src="@Model.Picture" />
+                    }
+
+                    @Html.Partial("_UploadPicture")
                 </div>
                 <div class="card-block">
                     <h4 class="card-title">@Model.FullName</h4>
@@ -175,4 +179,9 @@
     <script src="~/js/profile/userQualification/userQualification.js"></script>
     <script src="~/js/skills/skillsManager.js"></script>
     <script src="~/js/profile/profileManager.js"></script>
+    <script>
+        $('#file-upload').on('change', function (e) {
+            $('#uploadPicture').submit();
+        });
+    </script>
 }
