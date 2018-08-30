@@ -8,5 +8,6 @@ namespace Hooxit.Services.Candidates.Interfaces
     public interface IExperienceService
     {
         Task<ExperienceReadModel> AddExperience(ExperienceWriteModel experience);
+        Task<ExperienceReadModel> UpdateExperience(ExperienceWriteModel command);
     }
 }

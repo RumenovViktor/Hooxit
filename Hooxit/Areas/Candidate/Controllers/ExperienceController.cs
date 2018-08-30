@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Hooxit.Presentation.Implemenation.Candidate.Write;
 using Hooxit.Services.Candidates.Interfaces;
 using Hooxit.Presentation.Common;
+using Hooxit.Presentation.Implemenation.Candidate.Read;
 
 namespace Hooxit.Controllers
 {
@@ -33,6 +34,22 @@ namespace Hooxit.Controllers
             }
 
             return Json(new CommandExecutionResult<ExperienceWriteModel>(ModelState.IsValid, 
+                                                                        "Please fill all required fields."));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Candidate/Experience/UpdateExperience")]
+        public async Task<IActionResult> UpdateExperience(ExperienceWriteModel experience)
+        {
+            if (ModelState.IsValid)
+            {
+                var newExperience = await experienceApplicationService.UpdateExperience(experience);
+
+                return PartialView("../Experience/_SingleExperiencePartial", newExperience);
+            }
+
+            return Json(new CommandExecutionResult<ExperienceReadModel>(ModelState.IsValid,
                                                                         "Please fill all required fields."));
         }
     }

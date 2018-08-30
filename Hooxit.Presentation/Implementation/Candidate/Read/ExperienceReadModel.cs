@@ -20,6 +20,7 @@ namespace Hooxit.Presentation.Implemenation.Candidate.Read
 
         public ExperienceReadModel(Experience source)
         {
+            Id = source.ExperienceID;
             FromDate = source.FromDate;
             ToDate = source.ToDate;
             Position = source.Position;
@@ -27,6 +28,7 @@ namespace Hooxit.Presentation.Implemenation.Candidate.Read
             Description = source.Description;
         }
 
+        public int Id { get; set; }
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
         public string Position { get; set; }

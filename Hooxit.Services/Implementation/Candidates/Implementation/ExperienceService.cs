@@ -14,14 +14,18 @@ namespace Hooxit.Services.Implementation.ApplicationServices
     public class ExperienceService : IExperienceService
     {
         private readonly IUserRepository userRepository;
-        private readonly IReadRepository<Experience> experienceRepository;
+        private readonly IReadRepository<Experience> experienceReadRepository;
+        private readonly IUpdateRepository<Experience> experienceUpdateRepository;
+        private readonly IRepository<Experience> experienceRepository;
         private readonly ICandidateRepository candidateRepository;
 
         public ExperienceService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this.userRepository = userRepository;
-            this.experienceRepository = unitOfWork.BuildExperienceReadRepository();
+            this.experienceReadRepository = unitOfWork.BuildExperienceReadRepository();
+            this.experienceUpdateRepository = unitOfWork.BuildExperienceUpdateRepository();
             this.candidateRepository = unitOfWork.BuildCandidateRepository();
+            this.experienceRepository = unitOfWork.BuildExperienceRepository();
         }
 
         public async Task<ExperienceReadModel> AddExperience(ExperienceWriteModel command)
@@ -31,7 +35,7 @@ namespace Hooxit.Services.Implementation.ApplicationServices
             var experience = BuildExperienceModel(command);
 
             //TODO: Rename
-            var currentPositionCandidates = experienceRepository
+            var currentPositionCandidates = experienceReadRepository
                 .GetAll()
                 .Where(x => !x.ToDate.HasValue && x.CandidateID == userInfo.Id);
 
@@ -47,6 +51,25 @@ namespace Hooxit.Services.Implementation.ApplicationServices
             candidateRepository.Save();
 
             return new ExperienceReadModel(command);
+        }
+
+        public async Task<ExperienceReadModel> UpdateExperience(ExperienceWriteModel command)
+        {
+            var user = await userRepository.GetByName(UserInfo.UserName);
+            var userInfo = candidateRepository.GetById(user.Id);
+            var experienceEntity = BuildExperienceModel(command);
+
+            var experience = experienceReadRepository.GetById(command.Id);
+
+            experience.CompanyName = command.CompanyName;
+            experience.FromDate = command.FromDate.Value;
+            experience.ToDate = command.ToDate;
+            experience.Position = command.Position;
+
+            experienceUpdateRepository.Update(experience);
+            experienceRepository.Save();
+
+            return new ExperienceReadModel(experienceEntity);
         }
 
         private Experience BuildExperienceModel(ExperienceWriteModel source)

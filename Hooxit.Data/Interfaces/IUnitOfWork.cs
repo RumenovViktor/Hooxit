@@ -5,6 +5,7 @@ namespace Hooxit.Data.Contracts
     public interface IUnitOfWork
     {
         IRepository<Experience> BuildExperienceRepository();
+        IUpdateRepository<Experience> BuildExperienceUpdateRepository();
         IReadRepository<Country> BuildCountriesRepository();
         ICandidateRepository BuildCandidateRepository();
         ICompaniesRepository BuildCompaniesRepository();

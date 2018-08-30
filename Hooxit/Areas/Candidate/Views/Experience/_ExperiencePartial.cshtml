@@ -12,4 +12,10 @@ else
 
          @Html.Partial("../Experience/_SingleExperiencePartial", experience)
     }
+    <div class="">
+        @foreach (var experience in Model)
+        {
+            @Html.Partial("../Experience/_UpdateExperience", new Hooxit.Presentation.Implemenation.Candidate.Write.ExperienceWriteModel(experience))
+        }
+    </div>
 }

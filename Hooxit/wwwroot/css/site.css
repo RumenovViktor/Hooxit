@@ -649,3 +649,11 @@ button {
 }
 
 /*END Animated check*/
+
+.hidden{
+    display:none;
+}
+
+.updateExperienceForm {
+    height: 343px;
+}

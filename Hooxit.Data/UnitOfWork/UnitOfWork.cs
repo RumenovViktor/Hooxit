@@ -24,6 +24,11 @@ namespace Hooxit.Data.UnitOfWork
             return new ExperienceRepository(dbContext);
         }
 
+        public IUpdateRepository<Experience> BuildExperienceUpdateRepository()
+        {
+            return new ExperienceRepository(dbContext);
+        }
+
         public IReadRepository<Country> BuildCountriesRepository()
         {
             return new CountriesRepository(dbContext);

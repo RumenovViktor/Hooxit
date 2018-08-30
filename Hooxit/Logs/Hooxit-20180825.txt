@@ -8516,3 +8516,25 @@ WHERE [x].[CandidateId] IN (1)" (0723d8ff)
 2018-08-25T23:16:49.6245909+03:00 0HLGAONEKFH30:00000032 [INF] Executing PartialViewResult, running view at path "/Areas/Company/Views/Dashboard/SuggestedCandidates.cshtml". (6b910aca)
 2018-08-25T23:16:49.6307445+03:00 0HLGAONEKFH30:00000032 [INF] Executed action "Hooxit.Areas.Company.Controllers.DashboardController.SuggestedCandidates (Hooxit)" in 111.7604ms (afa2e885)
 2018-08-25T23:16:49.6392326+03:00 0HLGAONEKFH30:00000032 [INF] Request finished in 127.8239ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-25T23:19:37.8129464+03:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"HooxitDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-08-25T23:19:38.1297675+03:00  [INF] Executed DbCommand ("50"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-25T23:19:38.1642505+03:00  [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-08-25T23:19:39.0695815+03:00 0HLGAP0AJKQB9:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/   (ca22a1cb)
+2018-08-25T23:19:39.1156772+03:00 0HLGAP0AJKQB9:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-25T23:19:39.3451714+03:00 0HLGAP0AJKQB9:00000001 [INF] Executing action method "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-08-25T23:19:42.5363754+03:00 0HLGAP0AJKQB9:00000001 [INF] Executing ViewResult, running view at path "/Areas/Account/Views/Account/Index.cshtml". (9707eebe)
+2018-08-25T23:19:42.9199008+03:00 0HLGAP0AJKQB9:00000001 [INF] Executed action "Hooxit.Account.Controllers.AccountController.Index (Hooxit)" in 3567.7818ms (afa2e885)
+2018-08-25T23:19:42.9667445+03:00 0HLGAP0AJKQBA:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/css/site.css   (ca22a1cb)
+2018-08-25T23:19:42.9688232+03:00 0HLGAP0AJKQBB:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:49743/js/site.js   (ca22a1cb)
+2018-08-25T23:19:42.9986752+03:00 0HLGAP0AJKQBA:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-25T23:19:43.0130644+03:00 0HLGAP0AJKQBA:00000001 [INF] The file "/css/site.css" was not modified (f1f8d725)
+2018-08-25T23:19:43.0184597+03:00 0HLGAP0AJKQB9:00000001 [INF] Request finished in 3963.3281ms 200 text/html; charset=utf-8 (791a596a)
+2018-08-25T23:19:43.0301687+03:00 0HLGAP0AJKQBA:00000001 [INF] Request finished in 113.8828ms 304 text/css (791a596a)
+2018-08-25T23:19:43.0368782+03:00 0HLGAP0AJKQBB:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-08-25T23:19:43.0810216+03:00 0HLGAP0AJKQBB:00000001 [INF] Request finished in 134.8976ms 404  (791a596a)

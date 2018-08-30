@@ -1,0 +1,35 @@
+﻿@model Hooxit.Presentation.Implemenation.Candidate.Write.ExperienceWriteModel
+
+<div class="modal fade" id="updateExp-@Model.Id" tabindex="-1" role="dialog" aria-labelledby="updateExp-@Model.Id" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form asp-antiforgery="true" class="updateExperienceForm" asp-area="Candidate" asp-controller="Experience" asp-action="UpdateExperience" id="@string.Concat(new[] { "updateExperienceForm-", Model.Id.ToString() })" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#content" data-ajax-complete="userExperience.appendUpdatedExperience" data-ajax-failure="code" data-ajax-loading="#">
+                    <div class="md-form">
+                        @Html.HiddenFor(x => x.Id)
+                        <input asp-for="@Model.Position" type="text" class="form-control" placeholder="What was your position?">
+                        <div class="row">
+                            <div class="col">
+                                <input class="datepicker" date-format="mm/dd/yyyy" type="text" asp-for="@Model.FromDate" placeholder="From Date" />
+                            </div>
+                            <div class="col">
+                                <input class="datepicker" date-format="mm/dd/yyyy" type="text" asp-for="@Model.ToDate" placeholder="To Date" />
+                            </div>
+                        </div>
+                        <input asp-for="@Model.CompanyName" type="text" class="form-control" placeholder="What is the name of the company?">
+                        <div class="navbar-toggler-right">
+                            <button type="submit" class="btn btn-md btn-outline-default waves-effect">Save</button>
+                        </div>
+                    </div>
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
